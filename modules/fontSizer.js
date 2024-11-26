@@ -1,5 +1,6 @@
-export function fontSizer(rootElement = document.documentElement) {
-  function changeFontSize() {
+export function fontSizer(scalingFactor) {
+  return function () {
+    const root = document.documentElement;
     const vars = [
       "--header1",
       "--header2",
@@ -8,14 +9,12 @@ export function fontSizer(rootElement = document.documentElement) {
       "--header5",
       "--paragraph",
     ];
+
     vars.forEach((variable) => {
       let size = parseFloat(
-        getComputedStyle(rootElement)
-          .getPropertyValue(variable)
-          .replace("rem", "")
+        getComputedStyle(root).getPropertyValue(variable).replace("rem", "")
       );
-      rootElement.style.setProperty(variable, `${size * 1.1}rem`);
+      root.style.setProperty(variable, `${size * scalingFactor}rem`);
     });
-  }
-  return changeFontSize;
+  };
 }
