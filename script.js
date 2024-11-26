@@ -6,10 +6,8 @@ import { fontSizer } from "./modules/fontSizer.js";
 const increaseButton = document.getElementById("increaseFont");
 const decreaseButton = document.getElementById("decreaseFont");
 
-// SCALINGFACTOR
-const increaseFont = fontSizer(1.2);
-const decreaseFont = fontSizer(0.8);
+const scalingFactorUp = 1.1;
+const scalingFactorDown = 0.9;
 
-// EVENTLISTENERS
-increaseButton.addEventListener("click", increaseFont);
-decreaseButton.addEventListener("click", decreaseFont);
+increaseButton.addEventListener("click", () => fontSizer(scalingFactorUp));
+decreaseButton.addEventListener("click", () => fontSizer(scalingFactorDown));
