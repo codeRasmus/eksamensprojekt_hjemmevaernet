@@ -3,8 +3,13 @@
 import { fontSizer } from "./modules/fontSizer.js";
 
 // GLOBALE VARIABLER & KONSTANTER
-const resizerButton = document.getElementById("fontSizer");
-const resizeFont = fontSizer();
+const increaseButton = document.getElementById("increaseFont");
+const decreaseButton = document.getElementById("decreaseFont");
 
-// EVENTLISTENER SETUP
-resizerButton.addEventListener("click", resizeFont);
+// SCALINGFACTOR
+const increaseFont = fontSizer(1.2);
+const decreaseFont = fontSizer(0.8);
+
+// EVENTLISTENERS
+increaseButton.addEventListener("click", increaseFont);
+decreaseButton.addEventListener("click", decreaseFont);
