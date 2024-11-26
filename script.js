@@ -1,12 +1,10 @@
 "use strict";
-import { test } from "./module1.js";
-console.log(test);
+// MODULE IMPORTS
+import { fontSizer } from "./modules/fontSizer.js";
 
-import { fontSizer } from "./fontSizer.js";
+// GLOBALE VARIABLER & KONSTANTER
+const resizerButton = document.getElementById("fontSizer");
+const resizeFont = fontSizer();
 
-const button = document.getElementById("fontSizer");
-
-button.addEventListener("click", () => {
-  const resizeFont = fontSizer(); // Initialize the function
-  resizeFont(); // Execute the changeFontSize logic
-});
+// EVENTLISTENER SETUP
+resizerButton.addEventListener("click", resizeFont);
