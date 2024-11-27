@@ -1,6 +1,7 @@
 "use strict";
 // MODULE IMPORTS
 import { fontSizer } from "./modules/fontSizer.js";
+import { handleUserPrompt } from "./modules/promptHandler.js";
 
 // GLOBALE VARIABLER & KONSTANTER
 const increaseButton = document.getElementById("increaseFont");
@@ -11,3 +12,5 @@ const scalingFactorDown = 0.9;
 
 increaseButton.addEventListener("click", () => fontSizer(scalingFactorUp));
 decreaseButton.addEventListener("click", () => fontSizer(scalingFactorDown));
+
+handleUserPrompt("userprompt", "sendprompt_btn");
