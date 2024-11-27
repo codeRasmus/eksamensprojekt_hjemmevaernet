@@ -7,6 +7,7 @@ export function handleUserPrompt(inputSelector, buttonSelector) {
   function handleInput() {
     const userPrompt = inputField.value;
     userQuestion.textContent = userPrompt;
+    document.getElementById("chat").classList.add("show-username");
     botAnswer.textContent = "Hello, I am far from intelligent yet";
     inputField.value = "";
   }

@@ -175,13 +175,51 @@ button:hover {
   font-size: var(--paragraph);
 }
 
+#chat {
+  position: relative;
+}
+
+#chat #user_questions {
+  position: absolute;
+  right: 0;
+}
+
 #chat .user_question {
+  top: 20px;
+  position: relative;
   text-align: right;
   font-size: var(--paragraph);
 }
+
+#chat .user_question::before {
+  content: "Username";
+  display: none;
+  position: absolute;
+  top: -20px;
+  right: 0px;
+}
+
+#chat #bot_answers {
+  position: absolute;
+  top: 100px;
+  left: 0;
+}
 #chat .bot_answer {
+  position: relative;
   text-align: left;
   font-size: var(--paragraph);
+  line-height: 1.5;
+}
+#chat .bot_answer::before {
+  content: "Botname";
+  display: none;
+  position: absolute;
+  top: -20px;
+}
+
+#chat.show-username .user_question::before,
+#chat.show-username .bot_answer::before {
+  display: inline;
 }
 
 #chatbtns_container {
