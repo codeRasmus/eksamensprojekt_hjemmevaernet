@@ -30,20 +30,31 @@
       </nav>
       <nav id="bottom_menu">
         <ul>
-          <li>Aktuelt</li>
-          <li>Opgaver</li>
-          <li>Organisation</li>
-          <li>Kapaciteter</li>
-          <li>Bliv frivillig</li>
+          <li>Chat</li>
+          <li>Chatoversigt</li>
+          <li>FAQ</li>
+          <li>Undervisningsmateriale</li>
           <li><i class="fa-solid fa-magnifying-glass"></i></li>
         </ul>
       </nav>
     </header>
-    <button id="increaseFont">Increase Font</button>
-    <button id="decreaseFont">Decrease Font</button>
-    <div class="input_container">
-      <input id="userprompt" type="text" placeholder="Skriv et spørgsmål..." />
-      <i class="fa-solid fa-arrow-up" id="sendprompt_btn"></i>
+    <div id="chat_container">
+      <div id="chat">
+        <div class="user_question"></div>
+        <div class="bot_answer"></div>
+      </div>
+      <div id="chatbtns_container">
+        <button id="decreaseFont">A</button>
+        <button id="increaseFont">A</button>
+      </div>
+      <div class="input_container">
+        <input
+          id="userprompt"
+          type="text"
+          placeholder="Skriv et spørgsmål..."
+        />
+        <i class="fa-solid fa-arrow-up" id="sendprompt_btn"></i>
+      </div>
     </div>
     <h1>Test</h1>
     <h2>Test</h2>

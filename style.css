@@ -67,7 +67,7 @@ p {
 }
 a.link {
   color: var(--black);
-  border-bottom: 2px solid #c8102e;
+  border-bottom: 2px solid var(--red);
   text-decoration: none !important;
   line-height: 1.5;
   font-weight: bold;
@@ -77,7 +77,7 @@ a.link {
 header {
   width: 100%;
   height: 100px;
-  border: 1px solid black;
+  border: 1px solid var(--black);
   position: sticky;
   top: 0;
   z-index: 2;
@@ -150,10 +150,10 @@ header #nav_logo {
 }
 
 button {
+  border: solid 2px black;
   background-color: transparent;
   padding: 10px;
   color: var(--black);
-  font-weight: bold;
   transition: background-color 0.3s linear;
   cursor: pointer;
 }
@@ -164,6 +164,46 @@ button:hover {
   transition: background-color 0.3s linear;
 }
 
+#chat_container {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  border: solid 1px var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: var(--paragraph);
+}
+
+#chat .user_question {
+  text-align: right;
+  font-size: var(--paragraph);
+}
+#chat .bot_answer {
+  text-align: left;
+  font-size: var(--paragraph);
+}
+
+#chatbtns_container {
+  display: flex;
+  position: absolute;
+  bottom: 60px;
+}
+
+button#increaseFont {
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+}
+
+button#decreaseFont {
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  font-size: 0.75rem;
+}
+
 .input_container {
   position: relative;
   width: 100%;
@@ -171,10 +211,10 @@ button:hover {
 
 .input_container input#userprompt {
   width: 100%;
-  height: 40px;
+  height: 50px;
   padding-left: 20px;
   padding-right: 40px;
-  margin: 10px 0;
+  margin: 10px 0 0 0;
   background-color: var(--grey);
   border: none;
 }
@@ -186,10 +226,11 @@ input:focus {
 .input_container i {
   position: absolute;
   right: 20px;
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
   cursor: pointer;
   color: #333; /* Adjust icon color */
+  font-size: 1.2rem !important;
 }
 
 /* Tablet */
