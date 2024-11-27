@@ -225,6 +225,7 @@ input:focus {
   header #top_menu ul li {
     margin: 0px 0 0 25px;
     font-size: 0.7rem;
+    cursor: pointer;
   }
 
   header #bottom_menu {
@@ -241,6 +242,7 @@ input:focus {
     margin: 10px;
     font-size: 0.8rem;
     font-weight: bold;
+    cursor: pointer;
   }
   .input_container {
     position: relative;
