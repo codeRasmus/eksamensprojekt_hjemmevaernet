@@ -114,7 +114,7 @@ header #nav_logo {
   width: 100%;
   border: 1px solid #3f5b58;
   background-color: #3f5b58;
-  margin: 60px 0;
+  margin: 20px 0;
 }
 .boxlink {
   width: 370px;
@@ -292,6 +292,31 @@ input:focus {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* UNDERVISNINGSMATERIALE */
+.materiale {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--grey);
+}
+.materiale .materiale_billede img {
+  width: 200px;
+}
+
+.materiale .materiale_info {
+  margin: 10px;
+  display: flex;
+  flex-direction: column; /* Aligns items vertically */
+  justify-content: space-between; /* Distributes space between items along the y-axis */
+}
+
+.materiale .materiale_info .materiale_navn {
+  font-size: 20px;
+}
+
+.materiale .materiale_info .materiale_beskrivelse {
+  font-size: 12px;
 }
 
 /* Tablet */
