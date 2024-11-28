@@ -268,14 +268,20 @@ input:focus {
 
 /* Loader */
 .loader {
+  display: none;
   border: 8px solid #d9d9d9;
   border-top: 8px solid #8d1b3d;
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .loader.active {
+  display: block;
   animation: spin 1s linear infinite;
 }
 
