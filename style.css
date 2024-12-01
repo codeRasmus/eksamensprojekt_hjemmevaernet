@@ -77,7 +77,6 @@ a.link {
 header {
   width: 100%;
   height: 100px;
-  border: 1px solid var(--black);
   position: sticky;
   top: 0;
   z-index: 2;
@@ -101,6 +100,81 @@ header #nav_logo {
   background-repeat: no-repeat;
   width: 50px;
   height: 50px;
+}
+
+/* Mobile-only Burger Menu */
+#burger_menu {
+  display: block;
+  position: relative;
+}
+
+#burger_icon {
+  position: absolute;
+  font-size: 2rem;
+  color: var(--black);
+  cursor: pointer;
+  padding: 10px;
+  right: 0;
+  top: 25px;
+  z-index: 2;
+}
+
+#burger_nav {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  position: absolute;
+  top: 100px;
+  width: 90vw;
+  height: 70vh;
+  background-color: var(--white);
+  box-shadow: var(--boxShadow);
+  z-index: 2;
+  transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  right: -400px;
+  opacity: 0;
+}
+
+#burger_nav.active {
+  display: flex;
+  right: 0;
+  opacity: 1;
+  border: 1px solid black;
+  transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+#burger_nav ul {
+  list-style: none;
+  width: 100%;
+  padding: 20px;
+}
+
+#burger_nav ul div {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#burger_nav ul div img {
+  width: 50px;
+  height: 50px;
+  background-color: var(--grey);
+  padding: 10px;
+}
+
+#burger_nav ul li {
+  width: 100%;
+  padding: 14px 14px;
+  font-size: var(--paragraph);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#burger_nav ul li p {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: lighter;
 }
 
 /* Graphics elements */
@@ -373,6 +447,10 @@ input:focus {
     font-size: 0.8rem;
     font-weight: bold;
     cursor: pointer;
+  }
+
+  #burger_menu {
+    display: none;
   }
   .input_container {
     position: relative;
