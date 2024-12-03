@@ -36,6 +36,12 @@ const mime = {
     "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
 };
 
+const dotenv = require("dotenv");
+dotenv.config();
+
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const OPENAI_ORG_ID = process.env.OPENAI_ORG_ID;
+
 // Starter serveren
 server.listen(port, hostname, function () {
   console.log("Lokalserveren kører");
