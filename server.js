@@ -38,9 +38,13 @@ const mime = {
 
 const dotenv = require("dotenv");
 dotenv.config();
-
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const OPENAI_ORG_ID = process.env.OPENAI_ORG_ID;
+
+function validateLogin(name, password) {
+  const users = JSON.parse(fs.readFileSync("./assets/jsonLogin/users.json", "utf8"));
+  return users.some(user => user.name === name && user.password === password);
+}
 
 // Starter serveren
 server.listen(port, hostname, function () {
@@ -49,6 +53,36 @@ server.listen(port, hostname, function () {
 
 // Udfører serverens opgave
 function callback(request, response) {
+
+  // Håndterer login
+  if (request.method === "POST" && request.url === "/login") {
+    let body = "";
+    request.on("data", (chunk) => {
+      body += chunk.toString();
+    });
+
+    request.on("end", () => {
+      try {
+          const { name, password } = JSON.parse(body); // Parse JSON-body
+          const isValid = validateLogin(name, password); // Valider login
+
+          if (isValid) {
+              response.writeHead(200, { "Content-Type": "application/json" });
+              response.end(JSON.stringify({ success: true }));
+          } else {
+              response.writeHead(401, { "Content-Type": "application/json" });
+              response.end(JSON.stringify({ success: false }));
+          }
+      } catch (error) {
+          console.error("Fejl ved behandling af login:", error);
+          response.writeHead(400, { "Content-Type": "application/json" });
+          response.end(JSON.stringify({ success: false, error: "Invalid JSON input" }));
+      }
+  });
+
+  return; // Stop yderligere behandling for denne forespørgsel
+}
+
   let filePath;
   let pathName = getPathName(request.url);
 
