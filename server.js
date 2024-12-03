@@ -1,12 +1,15 @@
 "use strict";
+
 const http = require("http"),
   path = require("path"),
-  port = 3000,
-  hostname = "127.0.0.1";
-const server = http.createServer();
-server.on("request", callback);
+  fs = require("fs"),
+  dotenv = require("dotenv");
+const { processUserMessage } = require("./modules/APIHandler");
 
-const fs = require("fs");
+// Load environment variables
+dotenv.config();
+const port = 3000;
+const hostname = "127.0.0.1";
 
 const mime = {
   ".js": "application/javascript",
@@ -36,19 +39,58 @@ const mime = {
     "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
 };
 
-const dotenv = require("dotenv");
-dotenv.config();
+// Create server
+const server = http.createServer();
+server.on("request", callback);
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-const OPENAI_ORG_ID = process.env.OPENAI_ORG_ID;
-
-// Starter serveren
+// Start server
 server.listen(port, hostname, function () {
-  console.log("Lokalserveren kører");
+  console.log(`Server running at http://${hostname}:${port}/`);
 });
 
+// Validate login
+function validateLogin(name, password) {
+  const users = JSON.parse(fs.readFileSync("./assets/jsonLogin/users.json", "utf8"));
+  return users.some(user => user.name === name && user.password === password);
+}
+
 // Udfører serverens opgave
-function callback(request, response) {
+async function callback(request, response) {
+
+  // Håndterer login
+  if (request.method === "POST" && request.url === "/login") {
+    let body = "";
+    request.on("data", (chunk) => {
+      body += chunk.toString();
+    });
+
+    request.on("end", () => {
+      try {
+        const { name, password } = JSON.parse(body); // Parse JSON-body
+        const isValid = validateLogin(name, password); // Valider login
+
+        if (isValid) {
+          response.writeHead(200, { "Content-Type": "application/json" });
+          response.end(JSON.stringify({ success: true }));
+        } else {
+          response.writeHead(401, { "Content-Type": "application/json" });
+          response.end(JSON.stringify({ success: false }));
+        }
+      } catch (error) {
+        console.error("Fejl ved behandling af login:", error);
+        response.writeHead(400, { "Content-Type": "application/json" });
+        response.end(JSON.stringify({ success: false, error: "Invalid JSON input" }));
+      }
+    });
+
+    return; // Stop yderligere behandling for denne forespørgsel
+  }
+
+  if (request.method === "POST" && request.url === "/ask-assistant") {
+    await handleAssistantQuery(request, response);
+    return;
+  }
+
   let filePath;
   let pathName = getPathName(request.url);
 
@@ -88,4 +130,37 @@ function getPathName(url) {
   else doubleSlash = 0;
   let slash = url.indexOf("/", doubleSlash);
   return url.substring(slash + 1, questionMark);
+}
+
+// Handle assistant query endpoint
+async function handleAssistantQuery(request, response) {
+  let body = "";
+  request.on("data", (chunk) => (body += chunk.toString())); // Collect data chunks from the request
+
+  request.on("end", async () => {
+    try {
+      const { question } = JSON.parse(body); // Parse the JSON body to extract the question
+      if (!question) {
+        response.writeHead(400, { "Content-Type": "application/json" }); // Respond with 400 if question is missing
+        return response.end(JSON.stringify({ error: "Question is required" }));
+      }
+
+      // Call processUserMessage to get the assistant's response
+      const responseChunks = [];
+      await processUserMessage(question, (textDelta) => {
+        responseChunks.push(textDelta); // Collect response text as it streams in
+        response.write(textDelta); // Write each chunk of the response to the client as it comes in
+      });
+
+      // End the response after all the chunks are sent
+      response.writeHead(200, { "Content-Type": "application/json" });
+      response.end(JSON.stringify({
+        response: responseChunks.join(""), // Join all the text chunks to form the final response
+      }));
+    } catch (error) {
+      console.error("Error handling assistant query:", error); // Log any errors
+      response.writeHead(500, { "Content-Type": "application/json" }); // Respond with 500 if an error occurs
+      response.end(JSON.stringify({ error: "Failed to process assistant query" }));
+    }
+  });
 }

@@ -4,7 +4,6 @@ import { fontSizer } from "./modules/fontSizer.js";
 import { handleUserPrompt } from "./modules/promptHandler.js";
 import { storeDataLocal } from "./modules/storageModule.js"; // Need resturcturing
 import { loadAni, stopLoadAni } from "./modules/loadAni.js";
-import { createAssistant, createThread, createMessage, createRun } from "./modules/APIHandler.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const increaseButton = document.getElementById("increaseFont");
@@ -18,51 +17,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
     handleUserPrompt("userprompt", "sendprompt_btn");
 
-    loadAni();
-    main();
+    document.getElementById("sendprompt_btn").addEventListener("click", () => {
+        const userInput = document.getElementById("userprompt").value;
+        askAssistant(userInput);
+    });
 });
 
-async function main() {
+// Send user input to the server and display the assistant's response
+async function askAssistant(userInput) {
     try {
-        // #1: Set up assistant and thread
-        const assistantId = await createAssistant();
-        const threadId = await createThread();
+        loadAni();
+        const responseDiv = document.getElementById("bot_answers");
 
-        // #2: Send user's message
-        await createMessage(threadId, question);
+        const response = await fetch("/ask-assistant", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ question: userInput }),
+        });
 
-        // #3: Start streaming the assistant's response
-        await createRun(
-            threadId,
-            assistantId,
-            // Callback for real-time text updates
-            (textChunk) => {
-                console.log("Text chunk received:", textChunk);
-                const responseDiv = document.getElementById("assistant-response");
-                responseDiv.innerText += textChunk; // Update UI incrementally
-            },
-            // Callback for tool usage
-            (toolCall) => {
-                console.log("Tool called:", toolCall.type);
-                // Handle tool-specific logic if needed
-            },
-            // Callback for file search results
-            (fileSearchResults) => {
-                console.log("File search results:", fileSearchResults);
-                const resultsDiv = document.getElementById("file-search-results");
-                resultsDiv.innerHTML = fileSearchResults
-                    .map(result => `<li>${result.name}</li>`)
-                    .join(""); // Display results in a list
-            }
-        );
+        if (!response.ok) {
+            throw new Error(`Server error: ${response.statusText}`);
+        }
+
+        // Read and stream response body in real-time
+        const reader = response.body.getReader();
+        let result = "";
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+
+            const chunk = new TextDecoder("utf-8").decode(value);
+            result += chunk;
+            responseDiv.innerText = result; // Update response as chunks arrive
+        }
     } catch (error) {
-        console.error("Error interacting with assistant:", error);
+        console.error("Error communicating with assistant:", error);
     } finally {
         stopLoadAni();
     }
-}
-
-async function fetchData() {
-    // fake a fetch call
-    return new Promise((resolve) => setTimeout(resolve, 2000));
 }

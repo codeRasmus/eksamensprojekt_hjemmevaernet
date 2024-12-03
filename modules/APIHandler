@@ -1,82 +1,43 @@
 import OpenAI from "openai";
 
-const configuration = new Configuration({
-    apiKey: "",
-    organization: ""
+// Initialize OpenAI client
+const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+    organization: process.env.OPENAI_ORG_ID,
 });
 
-const openai = new OpenAI(configuration);
+let assistantId;
+let threadId;
 
-// #1: Create an assistant
-export async function createAssistant() {
-    try {
+// Initialize Assistant and Thread (if not already initialized)
+async function initializeAssistantAndThread() {
+    if (!assistantId) {
         const assistant = await openai.beta.assistants.create({
             name: "ChatBot",
-            instructions: "You are a helper for volunteer tutors at 'Hjemmeværnsskolen'. You answer questions about their tasks and help them find the right resources.",
-            tools: [{ type: "file_search" }], // The assistant uses the file_search tool type thingy
-            model: "gpt-4o" // Using GPT-4o
+            instructions: "You are a helper for volunteer tutors at 'Hjemmeværnsskolen'.",
+            tools: [{ type: "file_search" }],
+            model: "gpt-4o",
         });
-        return assistant.id;
-    } catch (error) {
-        console.error("Failed to create assistant:", error);
-        throw error;
+        assistantId = assistant.id;
     }
-}
-
-// #2: Create a thread for the conversation
-// Tror nok det er den vi skal gemme
-export async function createThread() {
-    try {
+    if (!threadId) {
         const thread = await openai.beta.threads.create();
-        return thread.id;
-    } catch (error) {
-        console.error("Failed to create thread:", error);
-        throw error;
+        threadId = thread.id;
     }
 }
 
-// #3: Add the user's message to the thread
-export async function createMessage(threadId, userMessage) {
-    try {
-        await openai.beta.messages.create(threadId, {
-            role: "user",
-            content: userMessage
+// Process user message and stream assistant's response
+export async function processUserMessage(question, onTextDelta) {
+    await initializeAssistantAndThread();
+
+    // Add user message to thread
+    await openai.beta.messages.create(threadId, { role: "user", content: question });
+
+    // Stream assistant response
+    const run = await openai.beta.threads.runs.stream(threadId, { assistant_id: assistantId })
+        .on("textDelta", textDelta => {
+            if (onTextDelta) onTextDelta(textDelta.value); // Send chunk to server
         });
-    } catch (error) {
-        console.error("Failed to create message:", error);
-        throw error;
-    }
-}
 
-// #4: Run the assistant with real-time streaming
-// Så kan man se beskeden i real-time
-export async function createRun(threadId, assistantId, onTextDelta, onToolCall, onFileSearch) {
-    try {
-        const run = await openai.beta.threads.runs.stream(threadId, {
-            assistant_id: assistantId
-        })
-            // Stream assistant text chunks
-            .on("textDelta", (textDelta) => {
-                if (onTextDelta) {
-                    onTextDelta(textDelta.value); // Send chunk to frontend
-                }
-            })
-            // Notify about tool calls
-            .on("toolCallCreated", (toolCall) => {
-                if (onToolCall) {
-                    onToolCall(toolCall); // Notify frontend
-                }
-            })
-            // Send file search results incrementally
-            .on("toolCallDelta", (toolCallDelta) => {
-                if (toolCallDelta.type === "file_search" && toolCallDelta.file_search.results) {
-                    onFileSearch(toolCallDelta.file_search.results); // Send results to frontend
-                }
-            });
-
-        return { status: "completed" };
-    } catch (error) {
-        console.error("Failed to create run:", error);
-        throw error;
-    }
+    return run;
 }
