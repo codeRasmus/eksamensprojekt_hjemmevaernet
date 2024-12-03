@@ -4,8 +4,11 @@ import { fontSizer } from "./modules/fontSizer.js";
 import { handleUserPrompt } from "./modules/promptHandler.js";
 import { storeDataLocal } from "./modules/storageModule.js"; // Need resturcturing
 import { loadAni, stopLoadAni } from "./modules/loadAni.js";
+// import { createAssistant, createThread, createMessage, createRun } from "./modules/APIHandler.js";
+import { createLoginComponent } from "./modules/login.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+    createLoginComponent("login-container");
     const increaseButton = document.getElementById("increaseFont");
     const decreaseButton = document.getElementById("decreaseFont");
 

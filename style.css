@@ -140,8 +140,28 @@ header #nav_logo {
   display: flex;
   right: 0;
   opacity: 1;
-  border: 1px solid black;
+  border: 1px solid var(--black);
   transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+#user_info {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px 0 20px;
+}
+
+#user_info #user_avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: var(--red) solid;
+}
+
+#user_info #user_settings {
+  font-size: 20px;
 }
 
 #burger_nav ul {
@@ -260,7 +280,7 @@ button#decreaseFont {
   border: solid 1px var(--grey);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   font-size: var(--paragraph);
   padding: 10px;
 }
@@ -310,7 +330,13 @@ button#decreaseFont {
 #chatbtns_container {
   display: flex;
   position: absolute;
-  bottom: 60px;
+  margin-bottom: 100px;
+}
+
+#chat_container #disclaimer {
+  font-size: 10px;
+  text-align: center;
+  padding: 10px;
 }
 
 /* User input */
@@ -472,5 +498,12 @@ input:focus {
   }
   #chat_container {
     height: 600px;
+  }
+  #loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
 }
