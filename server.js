@@ -1,12 +1,14 @@
 "use strict";
 const http = require("http"),
   path = require("path"),
-  port = 3000,
-  hostname = "127.0.0.1";
-const server = http.createServer();
-server.on("request", callback);
+  fs = require("fs"),
+  dotenv = require("dotenv"),
+  OpenAI = require("openai");
 
-const fs = require("fs");
+// Load environment variables
+dotenv.config();
+const port = 3000;
+const hostname = "127.0.0.1";
 
 const mime = {
   ".js": "application/javascript",
@@ -42,7 +44,136 @@ server.listen(port, hostname, function () {
 });
 
 // Udfører serverens opgave
-function callback(request, response) {
+async function callback(request, response) {
+
+  // Håndterer login
+  if (request.method === "POST" && request.url === "/login") {
+    let body = "";
+    request.on("data", (chunk) => {
+      body += chunk.toString();
+    });
+
+    request.on("end", () => {
+      try {
+        const { name, password } = JSON.parse(body); // Parse JSON-body
+        const isValid = validateLogin(name, password); // Valider login
+
+        if (isValid) {
+          response.writeHead(200, { "Content-Type": "application/json" });
+          response.end(JSON.stringify({ success: true }));
+        } else {
+          response.writeHead(401, { "Content-Type": "application/json" });
+          response.end(JSON.stringify({ success: false }));
+        }
+      } catch (error) {
+        console.error("Fejl ved behandling af login:", error);
+        response.writeHead(400, { "Content-Type": "application/json" });
+        response.end(JSON.stringify({ success: false, error: "Invalid JSON input" }));
+      }
+    });
+
+    return; // Stop yderligere behandling for denne forespørgsel
+  }
+
+  // Handle assistant query endpoint
+  if (request.method === "POST" && request.url === "/ask-assistant") {
+    console.log("Received assistant query");
+    let body = "";
+    request.on("data", (chunk) => (body += chunk.toString())); // Collect data chunks from the request
+
+    request.on("end", async () => {
+      try {
+        console.log("Received body:", body); // Log the received body
+        const { question } = JSON.parse(body); // Parse the JSON body to extract the question
+        if (!question) {
+          response.writeHead(400, { "Content-Type": "application/json" }); // Respond with 400 if question is missing
+          return response.end(JSON.stringify({ error: "Question is required" }));
+        }
+
+        // Initialize OpenAI client
+        dotenv.config();
+
+        const apiKey = process.env.OPENAI_API_KEY;
+        const organization = process.env.OPENAI_ORG_ID;
+
+        if (!apiKey) {
+          throw new Error("The OPENAI_API_KEY environment variable is missing or empty.");
+        }
+
+        if (!organization) {
+          throw new Error("The OPENAI_ORG_ID environment variable is missing or empty.");
+        }
+
+        const openai = new OpenAI({
+          apiKey: apiKey,
+          organization: organization,
+        });
+
+        let assistantId;
+        let threadId;
+        // Call processUserMessage to get the assistant's response
+        const responseChunks = [];
+        try {
+          try {
+            console.log("Initializing assistant and thread...");
+            try {
+              if (!assistantId) {
+                console.log("Creating new assistant...");
+                const assistant = await openai.beta.assistants.create({
+                  name: "ChatBot",
+                  instructions: "You are a helper for volunteer tutors at 'Hjemmeværnsskolen'.",
+                  tools: [{ type: "file_search" }],
+                  model: "gpt-4o-mini",
+                });
+                assistantId = assistant.id;
+                console.log("Assistant created with ID:", assistantId);
+              }
+              if (!threadId) {
+                console.log("Creating new thread...");
+                const thread = await openai.beta.threads.create();
+                threadId = thread.id;
+                console.log("Thread created with ID:", threadId);
+              }
+            } catch (error) {
+              console.error("Error initializing assistant and thread:", error);
+              throw error;
+            }
+
+            console.log("Adding user message to thread...");
+            // Add user message to thread
+            await openai.beta.messages.create(threadId, { role: "user", content: question });
+
+            console.log("Streaming assistant response...");
+            // Stream assistant response
+            const run = await openai.beta.threads.runs.stream(threadId, { assistant_id: assistantId })
+              .on("textDelta", textDelta => {
+                if (responseChunks.push(textDelta)) onTextDelta(textDelta.value); // Send chunk to server
+              });
+
+            return run;
+          } catch (error) {
+            console.error("Error processing user message:", error);
+            throw new Error("Failed to process user message");
+          }
+        } catch (error) {
+          console.error("Error processing user message:", error);
+          response.writeHead(500, { "Content-Type": "application/json" });
+          return response.end(JSON.stringify({ error: "Failed to process user message" }));
+        }
+
+        // End the response after all the chunks are sent
+        response.writeHead(200, { "Content-Type": "application/json" });
+        response.end(JSON.stringify({
+          response: responseChunks.join(""), // Join all the text chunks to form the final response
+        }));
+      } catch (error) {
+        console.error("Error handling assistant query:", error); // Log any errors
+        response.writeHead(500, { "Content-Type": "application/json" }); // Respond with 500 if an error occurs
+        response.end(JSON.stringify({ error: "Failed to process assistant query" }));
+      }
+    });
+  }
+
   let filePath;
   let pathName = getPathName(request.url);
 
