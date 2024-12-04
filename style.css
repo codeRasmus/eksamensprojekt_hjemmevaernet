@@ -475,9 +475,10 @@ input:focus {
     cursor: pointer;
   }
 
-  #burger_menu {
-    display: none;
+  #burger_nav {
+    display: block;
   }
+
   .input_container {
     position: relative;
     width: 50%;
