@@ -1,10 +1,8 @@
 "use strict";
 // MODULE IMPORTS
 import { fontSizer } from "./modules/fontSizer.js";
-import { handleUserPrompt } from "./modules/promptHandler.js";
-import { storeDataLocal } from "./modules/storageModule.js"; // Need resturcturing
+import { storeDataLocal } from "./modules/storageModule.js"; // Need restructuring
 import { loadAni, stopLoadAni } from "./modules/loadAni.js";
-// import { createAssistant, createThread, createMessage, createRun } from "./modules/APIHandler.js";
 import { createLoginComponent } from "./modules/login.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -18,28 +16,38 @@ document.addEventListener("DOMContentLoaded", () => {
     increaseButton.addEventListener("click", () => fontSizer(scalingFactorUp));
     decreaseButton.addEventListener("click", () => fontSizer(scalingFactorDown));
 
-    handleUserPrompt("userprompt", "sendprompt_btn");
-
     document.getElementById("sendprompt_btn").addEventListener("click", () => {
         const userInput = document.getElementById("userprompt").value;
-        askAssistant(userInput);
+        console.log("User input:", userInput); // Log the user input
+        if (userInput.trim() === "") {
+            alert("Please enter a question.");
+            return;
+        }
+        document.querySelector(".user_question").textContent = userInput;
+        document.getElementById("chat").classList.add("show-username");
+        // askAssistant(userInput); // Den her crasher serveren pga. invalid API key
     });
 });
 
-// Send user input to the server and display the assistant's response
 async function askAssistant(userInput) {
     try {
         loadAni();
-        const responseDiv = document.getElementById("bot_answers");
+        const responseDiv = document.querySelector(".bot_answer");
+
+        const requestData = { question: userInput };
+        console.log("Sending request data:", requestData); // Log the request data
 
         const response = await fetch("/ask-assistant", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ question: userInput }),
+            body: JSON.stringify(requestData),
         });
 
+        console.log("Received response:", response); // Log the response
+
         if (!response.ok) {
-            throw new Error(`Server error: ${response.statusText}`);
+            const errorText = await response.text();
+            throw new Error(`Server error: ${response.statusText} - ${errorText}`);
         }
 
         // Read and stream response body in real-time
@@ -51,7 +59,7 @@ async function askAssistant(userInput) {
 
             const chunk = new TextDecoder("utf-8").decode(value);
             result += chunk;
-            responseDiv.innerText = result; // Update response as chunks arrive
+            responseDiv.textContent = result; // Update response as chunks arrive
         }
     } catch (error) {
         console.error("Error communicating with assistant:", error);
