@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         document.querySelector(".user_question").textContent = userInput;
         document.getElementById("chat").classList.add("show-username");
-        // askAssistant(userInput); // Den her crasher serveren pga. invalid API key
+        askAssistant(userInput); // Den her crasher serveren pga. invalid API key
     });
 });
 
