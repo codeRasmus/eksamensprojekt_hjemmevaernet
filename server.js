@@ -49,13 +49,14 @@ server.listen(port, hostname, function () {
 
 // Validate login
 function validateLogin(name, password) {
-  const users = JSON.parse(fs.readFileSync("./assets/jsonLogin/users.json", "utf8"));
-  return users.some(user => user.name === name && user.password === password);
+  const users = JSON.parse(
+    fs.readFileSync("./assets/jsonLogin/users.json", "utf8")
+  );
+  return users.some((user) => user.name === name && user.password === password);
 }
 
 // Udfører serverens opgave
 async function callback(request, response) {
-
   // Håndterer login
   if (request.method === "POST" && request.url === "/login") {
     let body = "";
@@ -78,7 +79,9 @@ async function callback(request, response) {
       } catch (error) {
         console.error("Fejl ved behandling af login:", error);
         response.writeHead(400, { "Content-Type": "application/json" });
-        response.end(JSON.stringify({ success: false, error: "Invalid JSON input" }));
+        return response.end(
+          JSON.stringify({ success: false, error: "Invalid JSON input" })
+        );
       }
     });
 
@@ -97,7 +100,9 @@ async function callback(request, response) {
         const { question } = JSON.parse(body); // Parse the JSON body to extract the question
         if (!question) {
           response.writeHead(400, { "Content-Type": "application/json" }); // Respond with 400 if question is missing
-          return response.end(JSON.stringify({ error: "Question is required" }));
+          return response.end(
+            JSON.stringify({ error: "Question is required" })
+          );
         }
 
         // Initialize OpenAI client
@@ -107,11 +112,15 @@ async function callback(request, response) {
         const organization = process.env.OPENAI_ORG_ID;
 
         if (!apiKey) {
-          throw new Error("The OPENAI_API_KEY environment variable is missing or empty.");
+          throw new Error(
+            "The OPENAI_API_KEY environment variable is missing or empty."
+          );
         }
 
         if (!organization) {
-          throw new Error("The OPENAI_ORG_ID environment variable is missing or empty.");
+          throw new Error(
+            "The OPENAI_ORG_ID environment variable is missing or empty."
+          );
         }
 
         const openai = new OpenAI({
@@ -131,7 +140,8 @@ async function callback(request, response) {
                 console.log("Creating new assistant...");
                 const assistant = await openai.beta.assistants.create({
                   name: "ChatBot",
-                  instructions: "You are a helper for volunteer tutors at 'Hjemmeværnsskolen'.",
+                  instructions:
+                    "You are a helper for volunteer tutors at 'Hjemmeværnsskolen'.",
                   tools: [{ type: "file_search" }],
                   model: "gpt-4o-mini",
                 });
@@ -151,13 +161,18 @@ async function callback(request, response) {
 
             console.log("Adding user message to thread...");
             // Add user message to thread
-            await openai.beta.messages.create(threadId, { role: "user", content: question });
+            await openai.beta.threads.messages.create(threadId, {
+              role: "user",
+              content: question,
+            });
 
             console.log("Streaming assistant response...");
             // Stream assistant response
-            await openai.beta.threads.runs.stream(threadId, { assistant_id: assistantId })
-              .on("textDelta", textDelta => {
-                if (responseChunks.push(textDelta)) onTextDelta(textDelta.value); // Send chunk to server
+            await openai.beta.threads.runs
+              .stream(threadId, { assistant_id: assistantId })
+              .on("textDelta", (textDelta) => {
+                if (responseChunks.push(textDelta))
+                  onTextDelta(textDelta.value); // Send chunk to server
               });
           } catch (error) {
             console.error("Error processing user message:", error);
@@ -166,18 +181,24 @@ async function callback(request, response) {
         } catch (error) {
           console.error("Error processing user message:", error);
           response.writeHead(500, { "Content-Type": "application/json" });
-          return response.end(JSON.stringify({ error: "Failed to process user message" }));
+          return response.end(
+            JSON.stringify({ error: "Failed to process user message" })
+          );
         }
 
         // End the response after all the chunks are sent
         response.writeHead(200, { "Content-Type": "application/json" });
-        response.end(JSON.stringify({
-          response: responseChunks.join(""), // Join all the text chunks to form the final response
-        }));
+        return response.end(
+          JSON.stringify({
+            response: responseChunks.join(""), // Join all the text chunks to form the final response
+          })
+        );
       } catch (error) {
         console.error("Error handling assistant query:", error); // Log any errors
         response.writeHead(500, { "Content-Type": "application/json" }); // Respond with 500 if an error occurs
-        response.end(JSON.stringify({ error: "Failed to process assistant query" }));
+        return response.end(
+          JSON.stringify({ error: "Failed to process assistant query" })
+        );
       }
     });
   }
@@ -206,9 +227,12 @@ async function callback(request, response) {
     } else {
       if (fileType) {
         response.writeHead(200, { "Content-Type": mime[fileType] });
+        response.write(data);
+        response.end();
+      } else {
+        response.writeHead(404, "Filetype is not supported");
+        response.end();
       }
-      response.write(data);
-      response.end();
     }
   });
 }
