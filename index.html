@@ -102,7 +102,7 @@
 
       <div class="sidebar">
         <ul class="sidebar_container">
-          <li class="sidebar_item" id="start_chat">
+          <li class="sidebar_item" id="start_chat_button">
             <span class="material-symbols-outlined">
               edit_square
               </span>
@@ -114,7 +114,7 @@
               </span>
               <div id="sidebar_dropdown"> 
               <p>Chat Oversigt</p>
-              <span class="material-symbols-outlined">
+              <span class="material-symbols-outlined" id="arrow_down">
                 keyboard_arrow_down
                 </span>
               </div>
@@ -160,12 +160,16 @@
           <button id="decreaseFont">A</button>
           <button id="increaseFont">A</button>
         </div>
+        <div id="chat_input">
         <input
           id="userprompt"
           type="text"
           placeholder="Skriv et spørgsmål..."
         />
-        <i class="fa-solid fa-arrow-up" id="sendprompt_btn"></i>
+        <span class="material-symbols-outlined" id="sendprompt_btn">
+          arrow_upward
+          </span>
+        </div>
       </div>
       <p id="disclaimer">
         Jeg er ikke 100% fejlfri. Gennemtjek altid vigtig information.
