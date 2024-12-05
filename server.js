@@ -4,6 +4,7 @@ const http = require("http"),
   fs = require("fs"),
   dotenv = require("dotenv");
 const { OpenAI } = require("openai");
+const { eventNames } = require("process");
 
 // Load environment variables
 dotenv.config();
@@ -164,17 +165,26 @@ async function callback(request, response) {
 
         try {
           console.log("Streaming assistant response...");
-          await openai.beta.threads.runs
-            .stream(threadId, { assistant_id: assistantId })
-            .on("textDelta", (textDelta) => {
-              responseChunks.push(textDelta.value);
-            })
-            .on("end", () => {
-              response.writeHead(200, { "Content-Type": "application/json" });
-              response.end(
-                JSON.stringify({ response: responseChunks.join("") })
-              );
-            });
+          const stream = await openai.beta.threads.runs.create(threadId, {
+            assistant_id: assistantId,
+            stream: true,
+          });
+          for await (const event of stream) {
+            console.log(event);
+          }
+
+          // await openai.beta.threads.runs
+          //   .stream(threadId, { assistant_id: assistantId })
+          //   .on("textDelta", (textDelta) => {
+          //     console.log("1");
+          //     responseChunks.push(textDelta.value);
+          //   });
+
+          if (responseChunks.length > 0) {
+            console.log("2");
+            response.writeHead(200, { "Content-Type": "application/json" });
+            response.end(JSON.stringify({ response: responseChunks.join("") }));
+          }
         } catch (error) {
           console.error("Error streaming assistant response:", error);
           throw error;
