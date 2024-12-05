@@ -4,5 +4,6 @@ export function toggleBurgerMenu() {
 
   burgerIcon.addEventListener("click", () => {
     burgerNav.classList.toggle("active");
+    burgerIcon.classList.toggle("active");
   });
 }

@@ -93,13 +93,7 @@ header #bottom_menu {
 }
 
 header #nav_logo {
-  position: absolute;
-  top: 25%;
-  left: 20px;
-  background-image: url("assets/hjv_logo.svg");
-  background-repeat: no-repeat;
   width: 50px;
-  height: 50px;
 }
 
 /* Mobile-only Burger Menu */
@@ -109,15 +103,69 @@ header #nav_logo {
 }
 
 #burger_icon {
-  position: absolute;
-  font-size: 2rem;
-  color: var(--black);
   cursor: pointer;
-  padding: 10px;
-  right: 0;
-  top: 25px;
   z-index: 2;
+  height: 32px;
+  width: 40px;
+  margin: 10px 0 0 0;
 }
+
+#burger_icon span,
+#burger_icon span::before,
+#burger_icon span::after {
+  background: black;
+  border-radius: 3px;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  margin-top: 13px;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+#burger_icon span::before {
+  margin-top: -12px;
+}
+
+#burger_icon span::after {
+  margin-top: 12px;
+}
+
+#burger_icon.active span {
+  background: transparent;
+}
+
+#burger_icon.active span::before {
+  margin-top: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#burger_icon.active span::after {
+  margin-top: 0;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.mobile {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.desktop {
+  display: none;
+}
+
 
 #burger_nav {
   display: none;
@@ -436,11 +484,20 @@ input:focus {
     padding-left: 150px;
     padding-right: 150px;
   }
-  header #nav_logo {
-    background-image: url("assets/hjemmevaernet_logo.svg");
-    top: 20%;
-    width: 280px;
-    height: 80px;
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    align-content: center;
+    height: 100%;
+    width: auto;
+    display: block;
+  }
+
+  .hjv_logo_stor {
+    height: 85%;
+    padding: 10px 0 0 20px;
   }
   header #top_menu {
     display: block;
