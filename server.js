@@ -111,96 +111,85 @@ async function callback(request, response) {
         const apiKey = process.env.OPENAI_API_KEY;
         const organization = process.env.OPENAI_ORG_ID;
 
-        if (!apiKey) {
-          throw new Error(
-            "The OPENAI_API_KEY environment variable is missing or empty."
-          );
+        if (!apiKey || !organization) {
+          throw new Error("Missing OpenAI API key or organization ID.");
         }
 
-        if (!organization) {
-          throw new Error(
-            "The OPENAI_ORG_ID environment variable is missing or empty."
-          );
-        }
-
-        const openai = new OpenAI({
-          apiKey: apiKey,
-          organization: organization,
-        });
+        const openai = new OpenAI({ apiKey, organization });
 
         let assistantId;
         let threadId;
-        // Call processUserMessage to get the assistant's response
         const responseChunks = [];
+
         try {
-          try {
-            console.log("Initializing assistant and thread...");
-            try {
-              if (!assistantId) {
-                console.log("Creating new assistant...");
-                const assistant = await openai.beta.assistants.create({
-                  name: "ChatBot",
-                  instructions:
-                    "You are a helper for volunteer tutors at 'Hjemmeværnsskolen'.",
-                  tools: [{ type: "file_search" }],
-                  model: "gpt-4o-mini",
-                });
-                assistantId = assistant.id;
-                console.log("Assistant created with ID:", assistantId);
-              }
-              if (!threadId) {
-                console.log("Creating new thread...");
-                const thread = await openai.beta.threads.create();
-                threadId = thread.id;
-                console.log("Thread created with ID:", threadId);
-              }
-            } catch (error) {
-              console.error("Error initializing assistant and thread:", error);
-              throw error;
-            }
-
-            console.log("Adding user message to thread...");
-            // Add user message to thread
-            await openai.beta.threads.messages.create(threadId, {
-              role: "user",
-              content: question,
+          if (!assistantId) {
+            console.log("Creating new assistant...");
+            const assistant = await openai.beta.assistants.create({
+              name: "ChatBot",
+              instructions:
+                "You are a helper for volunteer tutors at 'Hjemmeværnsskolen'.",
+              tools: [{ type: "file_search" }],
+              model: "gpt-4o-mini",
             });
-
-            console.log("Streaming assistant response...");
-            // Stream assistant response
-            await openai.beta.threads.runs
-              .stream(threadId, { assistant_id: assistantId })
-              .on("textDelta", (textDelta) => {
-                if (responseChunks.push(textDelta))
-                  onTextDelta(textDelta.value); // Send chunk to server
-              });
-          } catch (error) {
-            console.error("Error processing user message:", error);
-            throw new Error("Failed to process user message");
+            assistantId = assistant.id;
+            console.log("Assistant created with ID:", assistantId);
           }
         } catch (error) {
-          console.error("Error processing user message:", error);
-          response.writeHead(500, { "Content-Type": "application/json" });
-          return response.end(
-            JSON.stringify({ error: "Failed to process user message" })
-          );
+          console.error("Error creating assistant:", error);
+          throw error;
         }
 
-        // End the response after all the chunks are sent
-        response.writeHead(200, { "Content-Type": "application/json" });
-        return response.end(
-          JSON.stringify({
-            response: responseChunks.join(""), // Join all the text chunks to form the final response
-          })
-        );
+        try {
+          if (!threadId) {
+            console.log("Creating new thread...");
+            const thread = await openai.beta.threads.create();
+            threadId = thread.id;
+            console.log("Thread created with ID:", threadId);
+          }
+        } catch (error) {
+          console.error("Error creating thread:", error);
+          throw error;
+        }
+
+        try {
+          console.log("Adding user message to thread...");
+          await openai.beta.threads.messages.create(threadId, {
+            role: "user",
+            content: question,
+          });
+        } catch (error) {
+          console.error("Error adding user message to thread:", error);
+          throw error;
+        }
+
+        try {
+          console.log("Streaming assistant response...");
+          await openai.beta.threads.runs
+            .stream(threadId, { assistant_id: assistantId })
+            .on("textDelta", (textDelta) => {
+              responseChunks.push(textDelta.value);
+            })
+            .on("end", () => {
+              response.writeHead(200, { "Content-Type": "application/json" });
+              response.end(
+                JSON.stringify({ response: responseChunks.join("") })
+              );
+            });
+        } catch (error) {
+          console.error("Error streaming assistant response:", error);
+          throw error;
+        }
       } catch (error) {
         console.error("Error handling assistant query:", error); // Log any errors
-        response.writeHead(500, { "Content-Type": "application/json" }); // Respond with 500 if an error occurs
-        return response.end(
-          JSON.stringify({ error: "Failed to process assistant query" })
-        );
+        if (!response.headersSent) {
+          response.writeHead(500, { "Content-Type": "application/json" }); // Respond with 500 if an error occurs
+          response.end(
+            JSON.stringify({ error: "Failed to process assistant query" })
+          );
+        }
       }
     });
+    return;
   }
 
   let filePath;
