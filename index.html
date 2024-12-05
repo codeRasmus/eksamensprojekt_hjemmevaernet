@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <title>Hjemmeværnskolen's Læringsportal</title>
   </head>
 
@@ -98,8 +98,56 @@
         </ul>
       </nav>
     </header>
+    <div class="main">
+
+      <div class="sidebar">
+        <ul class="sidebar_container">
+          <li class="sidebar_item" id="start_chat">
+            <span class="material-symbols-outlined">
+              edit_square
+              </span>
+              <p>Start ny chat</p>
+          </li>
+          <li class="sidebar_item">
+            <span class="material-symbols-outlined">
+              library_books
+              </span>
+              <div id="sidebar_dropdown"> 
+              <p>Chat Oversigt</p>
+              <span class="material-symbols-outlined">
+                keyboard_arrow_down
+                </span>
+              </div>
+          </li>
+          <li class="sidebar_item">
+            <span class="material-symbols-outlined">
+              quiz
+              </span>
+              <p>Ofte Stillede Spørgsmål</p>
+          </li>
+          <li class="sidebar_item">
+            <span class="material-symbols-outlined">
+              collections_bookmark
+              </span>
+              <p>Undervisningsmaterialer</p>
+          </li>
+        </ul>
+        <div class="user">
+        <div id="user_info">
+          <div>
+          <img src="assets/avatar.png" alt="" id="user_avatar" />
+          <p id="user_name">Anders Jon Andersen</p>
+        </div>
+          <span class="material-symbols-outlined">
+            settings
+            </span>
+        </div>
+      </div>
+      </div>
+
     <div id="chat_container">
       <div id="chat">
+        <h1>Hvad kan jeg hjælpe dig med?</h1>
         <div id="user_questions">
           <div class="user_question"></div>
         </div>
@@ -107,11 +155,11 @@
           <div class="bot_answer"></div>
         </div>
       </div>
-      <div id="chatbtns_container">
-        <button id="decreaseFont">A</button>
-        <button id="increaseFont">A</button>
-      </div>
       <div class="input_container">
+        <div id="chatbtns_container">
+          <button id="decreaseFont">A</button>
+          <button id="increaseFont">A</button>
+        </div>
         <input
           id="userprompt"
           type="text"
@@ -124,6 +172,7 @@
       </p>
       <div class="loader"></div>
     </div>
+  </div>
     <!-- <div class="bigbreaker"></div>
     <div class="smallbreaker"></div> -->
     <!-- <div class="boxlink">
