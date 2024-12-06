@@ -120,7 +120,6 @@ async function callback(request, response) {
 
         let assistantId;
         let threadId;
-        const responseChunks = [];
 
         try {
           if (!assistantId) {
@@ -169,21 +168,64 @@ async function callback(request, response) {
             assistant_id: assistantId,
             stream: true,
           });
-          for await (const event of stream) {
-            console.log(event);
-          }
 
-          // await openai.beta.threads.runs
-          //   .stream(threadId, { assistant_id: assistantId })
-          //   .on("textDelta", (textDelta) => {
-          //     console.log("1");
-          //     responseChunks.push(textDelta.value);
-          //   });
+          response.writeHead(200, {
+            "Content-Type": "application/json",
+            "Transfer-Encoding": "chunked",
+          });
 
-          if (responseChunks.length > 0) {
-            console.log("2");
-            response.writeHead(200, { "Content-Type": "application/json" });
-            response.end(JSON.stringify({ response: responseChunks.join("") }));
+          let deltaBuffer = "";
+
+          for await (const event of stream) {         
+            // Håndter thread.message.delta
+            if (event.event === "thread.message.delta") {
+              const deltaContent = event.data.delta?.content;
+              if (Array.isArray(deltaContent)) {
+                deltaContent.forEach((delta) => {
+                  console.log(`Delta Message:`, delta.text.value);
+            
+                  // Korrekt akkumulation af tekst i buffer
+                  deltaBuffer += delta.text.value;
+                  console.log(`Current buffer: "${deltaBuffer}" (length: ${deltaBuffer.length})`);
+            
+                  if (/[.?!]\s*$/.test(deltaBuffer)) {
+                    const chunk = JSON.stringify({ response: deltaBuffer });
+                    console.log("Sending chunk:", chunk);
+                    response.write(chunk + "\n"); // Send til klienten
+                    deltaBuffer = ""; // Ryd buffer
+                  }
+                });
+              }
+            }
+            
+            // Håndter thread.message.completed
+            else if (event.event === "thread.message.completed") {
+              const completedContent = event.data.content;
+              if (Array.isArray(completedContent)) {
+                completedContent.forEach((message) => {
+                  console.log(`Completed Message:`, message.text.value);
+            
+                  // Send færdige beskeder som én chunk
+                  const chunk = JSON.stringify({ response: message.text.value });
+                  console.log("Sending completed chunk:", chunk);
+                  response.write(chunk + "\r\n");
+                });
+              }
+            
+              // Send resterende tekst i buffer
+              if (deltaBuffer.length > 0) {
+                const chunk = JSON.stringify({ response: deltaBuffer });
+                console.log("Sending remaining buffer:", chunk);
+                response.write(chunk + "\r\n");
+                deltaBuffer = ""; // Ryd buffer
+              }
+            }
+            
+            // Luk forbindelsen, når thread.run.completed er modtaget
+            if (event.event === "thread.run.completed") {
+              console.log("All chunks sent. Closing connection.");
+              response.end(); // Afslut HTTP-responsen
+            }      
           }
         } catch (error) {
           console.error("Error streaming assistant response:", error);

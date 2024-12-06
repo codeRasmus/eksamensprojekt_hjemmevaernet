@@ -51,27 +51,43 @@ async function askAssistant(userInput) {
       );
     }
 
-    const responseText = await response.text();
-    console.log("Received text response:", responseText);
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder("utf-8");
+    let buffer = "";
 
-    try {
-      const responseData = JSON.parse(responseText);
-      console.log("Parsed response data:", responseData);
-
-      if (responseData && responseData.response) {
-        responseDiv.textContent = responseData.response;
-      } else {
-        responseDiv.textContent = "No answer received from the server.";
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+    
+      // Akkumulér tekst i buffer
+      buffer += decoder.decode(value, { stream: true });
+    
+      let boundary;
+      while ((boundary = buffer.indexOf("\n")) !== -1) {
+        const chunk = buffer.slice(0, boundary).trim(); // Få teksten før "\n"
+        buffer = buffer.slice(boundary + 1); // Fjern behandlet chunk
+    
+        if (chunk) {
+          // Parse chunk og opdater DOM'en
+          try {
+            const parsedChunk = JSON.parse(chunk);
+            console.log("Parsed chunk:", parsedChunk);
+    
+            // Tilføj teksten til DOM'en med en mellemrum for at sikre korrekt formatering
+            responseDiv.textContent += parsedChunk.response + " ";
+          } catch (error) {
+            console.error("Failed to parse chunk:", chunk, error);
+          }
+        }
       }
-    } catch (error) {
-      console.error("Error parsing response:", error);
-      responseDiv.textContent = "Invalid response format.";
     }
-  } catch (error) {
+    
+    
+} catch (error) {
     console.error("Error communicating with assistant:", error);
     alert(`An error occurred: ${error.message}`);
-    responseDiv.textContent = "There was an error with the request.";
   } finally {
     stopLoadAni();
   }
 }
+
