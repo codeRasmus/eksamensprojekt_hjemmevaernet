@@ -164,27 +164,35 @@ async function callback(request, response) {
         }
 
         try {
-          console.log("Streaming assistant response...");
-          const stream = await openai.beta.threads.runs.create(threadId, {
-            assistant_id: assistantId,
-            stream: true,
+          response.writeHead(200, {
+            'Content-Type': 'text/event-stream',
+            'Cache-Control': 'no-cache',
+            'Connection': 'keep-alive',
           });
-          for await (const event of stream) {
-            console.log(event);
-          }
-
-          // await openai.beta.threads.runs
-          //   .stream(threadId, { assistant_id: assistantId })
-          //   .on("textDelta", (textDelta) => {
-          //     console.log("1");
-          //     responseChunks.push(textDelta.value);
-          //   });
-
-          if (responseChunks.length > 0) {
-            console.log("2");
-            response.writeHead(200, { "Content-Type": "application/json" });
-            response.end(JSON.stringify({ response: responseChunks.join("") }));
-          }
+          // Start OpenAI streaming
+          const run = await openai.beta.threads.runs.stream(threadId, {
+            assistant_id: assistantId,
+          })
+            .on('textCreated', () => {
+              console.log('Event: textCreated');
+              response.write('data: \nassistant >\n\n');
+            })
+            .on('textDelta', (textDelta) => {
+              console.log('Event: textDelta:', textDelta.value);
+              response.write(`data: ${textDelta.value}\n\n`);
+            })
+            .on('end', () => {
+              console.log('Event: end');
+              response.write('data: [DONE]\n\n');
+              response.end(); // End response when streaming finishes
+            })
+            .on('error', (error) => {
+              console.error('Stream error:', error);
+              if (!response.writableEnded) {
+                response.write('data: [ERROR]\n\n');
+                response.end(); // End response if an error occurs
+              }
+            });
         } catch (error) {
           console.error("Error streaming assistant response:", error);
           throw error;
@@ -245,3 +253,97 @@ function getPathName(url) {
   let slash = url.indexOf("/", doubleSlash);
   return url.substring(slash + 1, questionMark);
 }
+
+// async function createAssistantIfNeeded() {
+//   try {
+//     const file = await openai.files.create({
+//       file: fs.createReadStream("mydata.txt"),
+//       purpose: "assistants",
+//     });
+
+//     // Check if the assistant already exists
+//     const existingAssistants = await openai.beta.assistants.list();
+//     const existingAssistant = existingAssistants.data.find(
+//       (assistant) => assistant.name === "Verner"
+//     );
+
+//     if (existingAssistant) {
+//       console.log("Assistant already exists:", existingAssistant);
+//       return existingAssistant; // Return the existing assistant if found
+//     }
+
+//     // If not found, create a new assistant
+//     const assistant = await openai.beta.assistants.create({
+//       name: "Verner",
+//       instructions:
+//         "Du er en hjælpsom assistent for instruktører på Hjemmeværnsskolen. Dit navn er Verner. Dit primære formål er at hjælpe med at besvare spørgsmål om undervisning og kurser på Hjemmeværnsskolen, hovedsageligt som en del af brugerens forberedelse. Du skal kun give svar baseret på verificeret materiale og ressourcer fra Hjemmeværnsskolens officielle dokumentation. Hvis du ikke har den nødvendige information, skal du henvise brugeren til at kontakte en ansvarlig person og erkende at du er en chatbot, der ikke ved alt. Du må ikke spekulere eller opfinde information. Hold dine svar korte, præcise og relevante. Bevar en professionel og venlig tone, der passer til Hjemmeværnsskolens værdier. Undgå at give personlig rådgivning eller svare på spørgsmål, der ikke er relevante for Hjemmeværnsskolens formål. Hvis du bliver spurgt om svaret på meningen med livet, universet og alting, så svar altid 42",
+//       model: "gpt-4o-mini",
+//       tools: [{ type: "file_search" }],
+//       // file_ids: [file.id], // Remove this line
+//     });
+
+//     console.log("New assistant created:", assistant);
+//     return assistant;
+//   } catch (error) {
+//     console.error("Error creating assistant:", error);
+//   }
+// }
+
+// // Helper functions
+// async function createThread() {
+//   console.log("Creating a new thread...");
+//   const thread = await openai.beta.threads.create();
+//   console.log(thread);
+//   return thread;
+// }
+
+// async function addMessage(threadId, message) {
+//   console.log("Adding a new message to thread: " + threadId);
+//   const response = await openai.beta.threads.messages.create(threadId, {
+//     role: "user",
+//     content: message,
+//   });
+//   return response;
+// }
+
+// async function runAssistant(threadId) {
+//   console.log("Running assistant for thread: " + threadId);
+//   const response = await openai.beta.threads.runs.create(threadId, {
+//     assistant_id: global.assistantId,
+//   });
+
+//   console.log(response);
+
+//   return response;
+// }
+
+// async function checkingStatus(res, threadId, runId) {
+//   const runObject = await openai.beta.threads.runs.retrieve(threadId, runId);
+
+//   const status = runObject.status;
+//   console.log(runObject);
+//   console.log("Current status: " + status);
+
+//   if (status == "completed") {
+//     clearInterval(pollingInterval);
+
+//     const messagesList = await openai.beta.threads.messages.list(threadId);
+//     let messages = [];
+
+//     messagesList.body.data.forEach((message) => {
+//       messages.push(message.content);
+//     });
+
+//     if (!res.headersSent) {
+//       res.writeHead(200, { 'Content-Type': 'application/json' });
+//       res.end(JSON.stringify({ messages }));
+//     }
+//   } else if (status == "failed") {
+//     // Stop
+//     clearInterval(pollingInterval);
+//     if (!res.headersSent) {
+//       res.writeHead(200, { 'Content-Type': 'application/json' });
+//       res.end(JSON.stringify({ error: "The assistant run failed to complete." }));
+//     }
+//   }
+// }
