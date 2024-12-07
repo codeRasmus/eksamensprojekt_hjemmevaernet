@@ -6,6 +6,7 @@ import { loadAni, stopLoadAni } from "./modules/loadAni.js";
 import { createLoginComponent } from "./modules/login.js";
 
 let currentThreadId = "";
+let userName = document.getElementById("user_name").textContent;
 
 document.addEventListener("DOMContentLoaded", () => {
   createLoginComponent("login-container");
@@ -39,7 +40,11 @@ async function askAssistant(userInput) {
   try {
     loadAni();
 
-    const requestData = { question: userInput, currentThread: currentThreadId };
+    const requestData = {
+      question: userInput,
+      currentThread: currentThreadId,
+      userName: userName,
+    };
     console.log("Sending request data:", requestData);
 
     const response = await fetch("/ask-assistant", {
@@ -92,13 +97,11 @@ async function askAssistant(userInput) {
 
 async function showThreads() {
   console.log("Fetching threads...");
-  const userNameElm = document.getElementById("user_name");
-  const userNameContent = userNameElm.textContent;
 
   const response = await fetch("/getThreads", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ userName: userNameContent }),
+    body: JSON.stringify({ userName: userName }),
   });
   if (!response.ok) {
     throw new Error(`Error fetching threads: ${response.status}`);
