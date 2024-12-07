@@ -206,9 +206,9 @@ async function callback(request, response) {
                   console.log(`Completed Message:`, message.text.value);
             
                   // Send færdige beskeder som én chunk
-                  const chunk = JSON.stringify({ response: message.text.value });
-                  console.log("Sending completed chunk:", chunk);
-                  response.write(chunk + "\r\n");
+                  // const chunk = JSON.stringify({ response: message.text.value });
+                  // console.log("Sending completed chunk:", chunk);
+                  // response.write(chunk + "\r\n");
                 });
               }
             

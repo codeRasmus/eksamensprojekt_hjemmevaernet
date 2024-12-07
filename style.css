@@ -703,4 +703,47 @@ input:focus {
     align-items: center;
     height: 100vh;
   }
+
+  #chatbox {
+    width: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: transparent; /* Ingen baggrundsfarve */
+}
+
+.userMessage, .chatMessage {
+  max-width: 70%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.userMessage {
+  align-self: flex-end; /* Højrejuster brugerens besked */
+  text-align: right; /* Sørg for at teksten er højrejusteret */
+}
+
+.chatMessage {
+  align-self: flex-start; /* Venstrejuster chatbot-beskeden */
+  text-align: left; /* Sørg for at teksten er venstrejusteret */
+}
+
+.userName {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--red);
+  margin-bottom: 5px;
+  text-align: right; /* Højrejuster brugernavnet */
+}
+
+.senderName {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--red);
+  margin-bottom: 5px;
+  text-align: left; /* Venstrejuster chatbot-navnet */
+}
 }

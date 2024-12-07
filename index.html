@@ -1,159 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    <title>Hjemmeværnskolen's Læringsportal</title>
-  </head>
 
-  <body>
-    <div id="login-container" hidden></div>
-    <header>
-      <div class="desktop">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <title>Hjemmeværnskolen's Læringsportal</title>
+</head>
+
+<body>
+  <div id="login-container" hidden></div>
+  <header>
+    <div class="desktop">
       <img src="assets/hjemmevaernet_logo.svg" alt="Hjemmeværnets Logo" class="hjv_logo_stor" />
-      </div>
-      <div class="mobile">
+    </div>
+    <div class="mobile">
       <img src="assets/hjv_logo.svg" alt="HJV Logo" id="nav_logo">
       <div id="burger_menu">
         <div id="burger_icon">
           <span></span>
+        </div>
       </div>
-      </div>
-        <nav id="burger_nav">
-          <div id="user_info">
-            <img src="assets/avatar.png" alt="" id="user_avatar" />
-            <p id="user_name">Anders Jon Andersen</p>
-            <i class="fa-solid fa-gear" id="user_settings"></i>
-          </div>
-          <ul>
-            <div id="ny_chat">
-              <img src="assets/icons/start_chat.png" alt="" class="icon" />
-              <div>
-                <li>
-                  Ny chat
-                  <p>Start en ny chat</p>
-                </li>
-              </div>
-            </div>
-            <div id="chat_oversigt">
-              <img src="assets/icons/chat_oversigt.png" alt="" class="icon" />
-              <div>
-                <li>
-                  Chat oversigt
-                  <p>Overblik over alle tidligere samtaler</p>
-                </li>
-              </div>
-            </div>
-            <div id="ofte_stillede_spoergsmaal">
-              <img src="assets/icons/faq.png" alt="" class="icon" />
-              <div>
-                <li>
-                  Ofte stillede spørgsmål
-                  <p>Svar på mest almindelige spørgsmål</p>
-                </li>
-              </div>
-            </div>
-            <div id="undervisningsmaterialer">
-              <img
-                src="assets/icons/undervisningsmaterialer.png"
-                alt=""
-                class="icon"
-              />
-              <div>
-                <li>
-                  Undervisningsmaterialer
-                  <p>Direkte adgang til kursusmaterialer</p>
-                </li>
-              </div>
-            </div>
-          </ul>
-        </nav>
-      </div>
-      <nav id="top_menu">
-        <ul>
-          <li>Login/HJV.dk</li>
-          <li>Om os</li>
-          <li>Kontakt</li>
-          <li>English</li>
-        </ul>
-      </nav>
-      <nav id="bottom_menu">
-        <ul>
-          <li>Chat</li>
-          <li>Chatoversigt</li>
-          <li>FAQ</li>
-          <li>Undervisningsmateriale</li>
-          <li><i class="fa-solid fa-magnifying-glass"></i></li>
-        </ul>
-      </nav>
-    </header>
-    <div class="main">
-
-      <div class="sidebar">
-        <ul class="sidebar_container">
-          <li class="sidebar_item" id="start_chat_button">
-            <span class="material-symbols-outlined">
-              edit_square
-              </span>
-              <p>Start ny chat</p>
-          </li>
-          <li class="sidebar_item">
-            <span class="material-symbols-outlined">
-              library_books
-              </span>
-              <div id="sidebar_dropdown"> 
-              <p>Chat Oversigt</p>
-              <span class="material-symbols-outlined" id="arrow_down">
-                keyboard_arrow_down
-                </span>
-              </div>
-          </li>
-          <li class="sidebar_item">
-            <span class="material-symbols-outlined">
-              quiz
-              </span>
-              <p>Ofte Stillede Spørgsmål</p>
-          </li>
-          <li class="sidebar_item">
-            <span class="material-symbols-outlined">
-              collections_bookmark
-              </span>
-              <p>Undervisningsmaterialer</p>
-          </li>
-        </ul>
-        <div class="user">
+      <nav id="burger_nav">
         <div id="user_info">
-          <div>
           <img src="assets/avatar.png" alt="" id="user_avatar" />
           <p id="user_name">Anders Jon Andersen</p>
+          <i class="fa-solid fa-gear" id="user_settings"></i>
         </div>
+        <ul>
+          <div id="ny_chat">
+            <img src="assets/icons/start_chat.png" alt="" class="icon" />
+            <div>
+              <li>
+                Ny chat
+                <p>Start en ny chat</p>
+              </li>
+            </div>
+          </div>
+          <div id="chat_oversigt">
+            <img src="assets/icons/chat_oversigt.png" alt="" class="icon" />
+            <div>
+              <li>
+                Chat oversigt
+                <p>Overblik over alle tidligere samtaler</p>
+              </li>
+            </div>
+          </div>
+          <div id="ofte_stillede_spoergsmaal">
+            <img src="assets/icons/faq.png" alt="" class="icon" />
+            <div>
+              <li>
+                Ofte stillede spørgsmål
+                <p>Svar på mest almindelige spørgsmål</p>
+              </li>
+            </div>
+          </div>
+          <div id="undervisningsmaterialer">
+            <img src="assets/icons/undervisningsmaterialer.png" alt="" class="icon" />
+            <div>
+              <li>
+                Undervisningsmaterialer
+                <p>Direkte adgang til kursusmaterialer</p>
+              </li>
+            </div>
+          </div>
+        </ul>
+      </nav>
+    </div>
+    <nav id="top_menu">
+      <ul>
+        <li>Login/HJV.dk</li>
+        <li>Om os</li>
+        <li>Kontakt</li>
+        <li>English</li>
+      </ul>
+    </nav>
+    <nav id="bottom_menu">
+      <ul>
+        <li>Chat</li>
+        <li>Chatoversigt</li>
+        <li>FAQ</li>
+        <li>Undervisningsmateriale</li>
+        <li><i class="fa-solid fa-magnifying-glass"></i></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="main">
+
+    <div class="sidebar">
+      <ul class="sidebar_container">
+        <li class="sidebar_item" id="start_chat_button">
+          <span class="material-symbols-outlined">
+            edit_square
+          </span>
+          <p>Start ny chat</p>
+        </li>
+        <li class="sidebar_item">
+          <span class="material-symbols-outlined">
+            library_books
+          </span>
+          <div id="sidebar_dropdown">
+            <p>Chat Oversigt</p>
+            <span class="material-symbols-outlined" id="arrow_down">
+              keyboard_arrow_down
+            </span>
+          </div>
+        </li>
+        <li class="sidebar_item">
+          <span class="material-symbols-outlined">
+            quiz
+          </span>
+          <p>Ofte Stillede Spørgsmål</p>
+        </li>
+        <li class="sidebar_item">
+          <span class="material-symbols-outlined">
+            collections_bookmark
+          </span>
+          <p>Undervisningsmaterialer</p>
+        </li>
+      </ul>
+      <div class="user">
+        <div id="user_info">
+          <div>
+            <img src="assets/avatar.png" alt="" id="user_avatar" />
+            <p id="user_name">Anders Jon Andersen</p>
+          </div>
           <span class="material-symbols-outlined">
             settings
-            </span>
+          </span>
         </div>
       </div>
-      </div>
+    </div>
 
     <div id="chat_container">
+      <h1 id="welcome-text">Hvad kan jeg hjælpe dig med?</h1>
       <div id="chat">
-        <h1>Hvad kan jeg hjælpe dig med?</h1>
-        <div id="user_questions">
-          <div class="user_question"></div>
-        </div>
-        <div id="bot_answers">
-          <div class="bot_answer"></div>
-        </div>
+        <div id="chatbox"></div>
       </div>
       <div class="input_container">
         <div id="chatbtns_container">
@@ -161,13 +149,9 @@
           <button id="increaseFont">A</button>
         </div>
         <div id="chat_input">
-        <input
-          id="userprompt"
-          type="text"
-          placeholder="Skriv et spørgsmål..."
-        />
-        <span class="material-symbols-outlined" id="sendprompt_btn">
-          arrow_upward
+          <input id="userprompt" type="text" placeholder="Skriv et spørgsmål..." />
+          <span class="material-symbols-outlined" id="sendprompt_btn">
+            arrow_upward
           </span>
         </div>
       </div>
@@ -177,11 +161,12 @@
       <div class="loader"></div>
     </div>
   </div>
-    <!-- <div class="bigbreaker"></div>
+  <!-- <div class="bigbreaker"></div>
     <div class="smallbreaker"></div> -->
-    <!-- <div class="boxlink">
+  <!-- <div class="boxlink">
       <div class="overlay"><div>Flyverhjemmeværn</div></div>
     </div> -->
-    <script src="script.js" type="module"></script>
-  </body>
+  <script src="script.js" type="module"></script>
+</body>
+
 </html>
