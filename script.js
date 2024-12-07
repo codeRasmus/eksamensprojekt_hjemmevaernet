@@ -45,7 +45,12 @@ async function askAssistant(userInput) {
         const reader = response.body.getReader();
         const decoder = new TextDecoder();
         let content = '';
-        const messagesDiv = document.querySelector(".bot_answer");
+        const messagesDiv = document.querySelector("#bot_answers");
+
+        // Create a new div for the response
+        const newDiv = document.createElement("div");
+        newDiv.classList.add("bot_answer");
+        messagesDiv.appendChild(newDiv);
 
         while (true) {
             const { value, done } = await reader.read();
@@ -54,14 +59,19 @@ async function askAssistant(userInput) {
             const chunk = decoder.decode(value, { stream: true });
             content += chunk;
 
-            const lines = content.split('\n').filter(line => line.trim() !== '');
+            const lines = content.split('\n');
             for (const line of lines) {
-                if (line.startsWith('data:')) {
-                    const text = line.slice(5); // Remove "data: " prefix
-                    if (text === '[DONE]') return;
-                    messagesDiv.innerHTML += `<span>${text}</span>`;
+                if (line.startsWith('data: ')) {
+                    let text = line.slice(6); // Remove "data: " prefix
+                    if (text === '[DONE]') {
+                        text = "";
+                        return; // Stop processing when [DONE] is received
+                    }
+                    newDiv.textContent += text; // Append the chunk to the new div
                 }
             }
+            // Clear content to avoid duplicating chunks
+            content = '';
         }
     } catch (error) {
         console.error("Error communicating with assistant:", error);

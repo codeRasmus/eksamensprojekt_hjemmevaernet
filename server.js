@@ -5,6 +5,7 @@ const http = require("http"),
   dotenv = require("dotenv");
 const { OpenAI } = require("openai");
 const { eventNames } = require("process");
+const { thread_Id } = require("worker_threads");
 
 // Load environment variables
 dotenv.config();
@@ -89,6 +90,70 @@ async function callback(request, response) {
     return; // Stop yderligere behandling for denne forespørgsel
   }
 
+  if (method === 'GET' && pathname === '/newThread') {
+    let body = "";
+    request.on("data", (chunk) => {
+      body += chunk.toString();
+    });
+
+    request.on("end", async () => {
+      let thread;
+      let user;
+      try {
+        thread = await createThread();
+      } catch (error) {
+        console.error("Error creating thread:", error);
+        response.writeHead(500, { "Content-Type": "application/json" });
+        return response.end(JSON.stringify({ success: false }));
+      }
+
+      try {
+        user = await getUser(body);
+        if (!user) {
+          response.writeHead(404, { "Content-Type": "application/json" });
+          return response.end(JSON.stringify({ success: false, error: "User not found" }));
+        }
+      } catch (error) {
+        console.error("Error fetching user:", error);
+        response.writeHead(500, { "Content-Type": "application/json" });
+        return response.end(JSON.stringify({ success: false }));
+      }
+
+      try {
+        await addThreadToUser(user.name, thread);
+      } catch (error) {
+        console.error("Error adding thread to user:", error);
+        response.writeHead(500, { "Content-Type": "application/json" });
+        return response.end(JSON.stringify({ success: false }));
+      }
+    });
+    return;
+  }
+
+  if (request.method === "GET" && request.url === "/getThreads") {
+    let body = "";
+    request.on("data", (chunk) => {
+      body += chunk.toString();
+    });
+
+    request.on("end", async () => {
+      try {
+        const user = await getUser(body);
+        if (!user) {
+          response.writeHead(404, { "Content-Type": "application/json" });
+          return response.end(JSON.stringify({ success: false, error: "User not found" }));
+        }
+        response.writeHead(200, { "Content-Type": "application/json" });
+        response.end(JSON.stringify({ success: true, threads: user.threads })); // Return the user's threads
+      } catch (error) {
+        console.error("Error fetching threads:", error);
+        response.writeHead(500, { "Content-Type": "application/json" });
+        response.end(JSON.stringify({ success: false }));
+      }
+    });
+    return; // Stop yderligere behandling for denne forespørgsel
+  }
+
   // Handle assistant query endpoint
   if (request.method === "POST" && request.url === "/ask-assistant") {
     console.log("Received assistant query");
@@ -120,7 +185,6 @@ async function callback(request, response) {
 
         let assistantId;
         let threadId;
-        const responseChunks = [];
 
         try {
           if (!assistantId) {
@@ -254,96 +318,144 @@ function getPathName(url) {
   return url.substring(slash + 1, questionMark);
 }
 
-// async function createAssistantIfNeeded() {
-//   try {
-//     const file = await openai.files.create({
-//       file: fs.createReadStream("mydata.txt"),
-//       purpose: "assistants",
-//     });
+async function createAssistantIfNeeded() {
+  // try {
+  //   const file = await openai.files.create({
+  //     file: fs.createReadStream("mydata.txt"),
+  //     purpose: "assistants",
+  //   });
+  // } catch (error) {
+  //   console.error("Error creating file:", error);
+  //   throw error;
+  // }
+  try {
+    // Check if the assistant already exists
+    const existingAssistants = await openai.beta.assistants.list();
+    const existingAssistant = existingAssistants.data.find(
+      (assistant) => assistant.name === "Verner"
+    );
+    if (existingAssistant) {
+      console.log("Assistant already exists:", existingAssistant);
+      return existingAssistant; // Return the existing assistant if found
+    }
+  } catch (error) {
+    console.error("Error listing assistants:", error);
+    throw error;
+  }
+  try {
+    // If not found, create a new assistant
+    const assistant = await openai.beta.assistants.create({
+      name: "Verner",
+      instructions:
+        "Du er en hjælpsom assistent for instruktører på Hjemmeværnsskolen. Dit navn er Verner. Dit primære formål er at hjælpe med at besvare spørgsmål om undervisning og kurser på Hjemmeværnsskolen, hovedsageligt som en del af brugerens forberedelse. Du skal kun give svar baseret på verificeret materiale og ressourcer fra Hjemmeværnsskolens officielle dokumentation. Hvis du ikke har den nødvendige information, skal du henvise brugeren til at kontakte en ansvarlig person og erkende at du er en chatbot, der ikke ved alt. Du må ikke spekulere eller opfinde information. Hold dine svar korte, præcise og relevante. Bevar en professionel og venlig tone, der passer til Hjemmeværnsskolens værdier. Undgå at give personlig rådgivning eller svare på spørgsmål, der ikke er relevante for Hjemmeværnsskolens formål. Hvis du bliver spurgt om svaret på meningen med livet, universet og alting, så svar altid 42",
+      model: "gpt-4o-mini",
+      tools: [{ type: "file_search" }],
+    });
+    console.log("New assistant created:", assistant);
+    return assistant;
+  } catch (error) {
+    console.error("Error creating assistant:", error);
+    throw error;
+  }
+}
 
-//     // Check if the assistant already exists
-//     const existingAssistants = await openai.beta.assistants.list();
-//     const existingAssistant = existingAssistants.data.find(
-//       (assistant) => assistant.name === "Verner"
-//     );
+// Helper functions
+async function createThread() {
+  try {
+    console.log("Creating a new thread...");
+    const thread = await openai.beta.threads.create();
+    let threadId = thread.id;
+    console.log("Thread created with ID:", threadId);
+    return threadId;
+  } catch (error) {
+    console.error("Error creating thread:", error);
+    throw error;
+  }
+}
 
-//     if (existingAssistant) {
-//       console.log("Assistant already exists:", existingAssistant);
-//       return existingAssistant; // Return the existing assistant if found
-//     }
+async function getUser(body) {
+  try {
+    console.log("Received body:", body);
+    const { userName } = JSON.parse(body); // The fetch in frontend must send the username
+    const data = await fs.readFile("./assets/jsonLogin/users.json", "utf8");
+    const users = JSON.parse(data);
 
-//     // If not found, create a new assistant
-//     const assistant = await openai.beta.assistants.create({
-//       name: "Verner",
-//       instructions:
-//         "Du er en hjælpsom assistent for instruktører på Hjemmeværnsskolen. Dit navn er Verner. Dit primære formål er at hjælpe med at besvare spørgsmål om undervisning og kurser på Hjemmeværnsskolen, hovedsageligt som en del af brugerens forberedelse. Du skal kun give svar baseret på verificeret materiale og ressourcer fra Hjemmeværnsskolens officielle dokumentation. Hvis du ikke har den nødvendige information, skal du henvise brugeren til at kontakte en ansvarlig person og erkende at du er en chatbot, der ikke ved alt. Du må ikke spekulere eller opfinde information. Hold dine svar korte, præcise og relevante. Bevar en professionel og venlig tone, der passer til Hjemmeværnsskolens værdier. Undgå at give personlig rådgivning eller svare på spørgsmål, der ikke er relevante for Hjemmeværnsskolens formål. Hvis du bliver spurgt om svaret på meningen med livet, universet og alting, så svar altid 42",
-//       model: "gpt-4o-mini",
-//       tools: [{ type: "file_search" }],
-//       // file_ids: [file.id], // Remove this line
-//     });
+    const user = users.find((user) => user.name === userName);
+    return user;
+  } catch (error) {
+    console.error("Error reading user data:", error);
+    throw error;
+  }
+}
 
-//     console.log("New assistant created:", assistant);
-//     return assistant;
-//   } catch (error) {
-//     console.error("Error creating assistant:", error);
-//   }
-// }
+async function addThreadToUser(userName, threadId) {
+  try {
+    const data = await fs.readFile("./assets/jsonLogin/users.json", "utf8");
+    const users = JSON.parse(data);
 
-// // Helper functions
-// async function createThread() {
-//   console.log("Creating a new thread...");
-//   const thread = await openai.beta.threads.create();
-//   console.log(thread);
-//   return thread;
-// }
+    const user = users.find((user) => user.name === userName);
+    if (!user) {
+      throw new Error("User not found");
+    }
+  } catch (error) {
+    console.error("Error reading user data:", error);
+    throw error;
+  }
+  try {
+    user.threads.push(threadId); // Add thread ID to user's threads
+    await fs.writeFile("./assets/jsonLogin/users.json", JSON.stringify(users, null, 4));
+  } catch (error) {
+    console.error("Error updating user threads:", error);
+    throw error;
+  }
+}
 
-// async function addMessage(threadId, message) {
-//   console.log("Adding a new message to thread: " + threadId);
-//   const response = await openai.beta.threads.messages.create(threadId, {
-//     role: "user",
-//     content: message,
-//   });
-//   return response;
-// }
+async function addMessage(threadId, message) {
+  try {
+    console.log("Adding a new message to thread: " + threadId);
+    await openai.beta.threads.messages.create(threadId, {
+      role: "user",
+      content: message,
+    });
+  } catch (error) {
+    console.error("Error adding user message to thread:", error);
+    throw error;
+  }
+}
 
-// async function runAssistant(threadId) {
-//   console.log("Running assistant for thread: " + threadId);
-//   const response = await openai.beta.threads.runs.create(threadId, {
-//     assistant_id: global.assistantId,
-//   });
-
-//   console.log(response);
-
-//   return response;
-// }
-
-// async function checkingStatus(res, threadId, runId) {
-//   const runObject = await openai.beta.threads.runs.retrieve(threadId, runId);
-
-//   const status = runObject.status;
-//   console.log(runObject);
-//   console.log("Current status: " + status);
-
-//   if (status == "completed") {
-//     clearInterval(pollingInterval);
-
-//     const messagesList = await openai.beta.threads.messages.list(threadId);
-//     let messages = [];
-
-//     messagesList.body.data.forEach((message) => {
-//       messages.push(message.content);
-//     });
-
-//     if (!res.headersSent) {
-//       res.writeHead(200, { 'Content-Type': 'application/json' });
-//       res.end(JSON.stringify({ messages }));
-//     }
-//   } else if (status == "failed") {
-//     // Stop
-//     clearInterval(pollingInterval);
-//     if (!res.headersSent) {
-//       res.writeHead(200, { 'Content-Type': 'application/json' });
-//       res.end(JSON.stringify({ error: "The assistant run failed to complete." }));
-//     }
-//   }
-// }
+async function runAssistant(threadId, assistantId) {
+  try {
+    response.writeHead(200, {
+      'Content-Type': 'text/event-stream',
+      'Cache-Control': 'no-cache',
+      'Connection': 'keep-alive',
+    });
+    // Start OpenAI streaming
+    const run = await openai.beta.threads.runs.stream(threadId, {
+      assistant_id: assistantId,
+    })
+      .on('textCreated', () => {
+        console.log('Event: textCreated');
+        response.write('data: \nassistant >\n\n');
+      })
+      .on('textDelta', (textDelta) => {
+        console.log('Event: textDelta:', textDelta.value);
+        response.write(`data: ${textDelta.value}\n\n`);
+      })
+      .on('end', () => {
+        console.log('Event: end');
+        response.write('data: [DONE]\n\n');
+        response.end(); // End response when streaming finishes
+      })
+      .on('error', (error) => {
+        console.error('Stream error:', error);
+        if (!response.writableEnded) {
+          response.write('data: [ERROR]\n\n');
+          response.end(); // End response if an error occurs
+        }
+      });
+  } catch (error) {
+    console.error("Error streaming assistant response:", error);
+    throw error;
+  }
+}
