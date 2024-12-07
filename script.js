@@ -5,6 +5,8 @@ import { storeDataLocal } from "./modules/storageModule.js"; // Need restructuri
 import { loadAni, stopLoadAni } from "./modules/loadAni.js";
 import { createLoginComponent } from "./modules/login.js";
 
+let currentThreadId = "";
+
 document.addEventListener("DOMContentLoaded", () => {
   createLoginComponent("login-container");
   const increaseButton = document.getElementById("increaseFont");
@@ -37,7 +39,7 @@ async function askAssistant(userInput) {
   try {
     loadAni();
 
-    const requestData = { question: userInput };
+    const requestData = { question: userInput, currentThread: currentThreadId };
     console.log("Sending request data:", requestData);
 
     const response = await fetch("/ask-assistant", {
@@ -109,11 +111,10 @@ async function showThreads() {
 
   threads.forEach((thread) => {
     const threadDiv = document.createElement("div");
-    threadDiv.innerHTML = `
-        <p>${thread}</p>
-      `;
+    threadDiv.innerHTML = `${thread}`;
     threadsContainer.appendChild(threadDiv);
     threadDiv.addEventListener("click", async () => {
+      currentThreadId = thread;
       messageResponse = await fetch("/getThreadMessages", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
