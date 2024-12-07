@@ -4,13 +4,13 @@
         "name": "admin",
         "password": "admin123",
         "role": "admin",
-        "threads": []
+        "threads": ["123", "456"]
     },
     {
         "id": 2,
         "name": "user",
         "password": "user123",
         "role": "user",
-        "threads": []
+        "threads": ["789", "101112"]
     }
 ]
