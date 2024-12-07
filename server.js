@@ -97,46 +97,6 @@ async function callback(request, response) {
     return; // Stop yderligere behandling for denne forespørgsel
   }
 
-  if (method === 'POST' && pathname === '/newThread') {
-    let body = "";
-    request.on("data", (chunk) => {
-      body += chunk.toString();
-    });
-
-    request.on("end", async () => {
-      let thread;
-      let user;
-      try {
-        thread = await createThread();
-      } catch (error) {
-        console.error("Error creating thread:", error);
-        response.writeHead(500, { "Content-Type": "application/json" });
-        return response.end(JSON.stringify({ success: false }));
-      }
-
-      try {
-        user = await getUser(body);
-        if (!user) {
-          response.writeHead(404, { "Content-Type": "application/json" });
-          return response.end(JSON.stringify({ success: false, error: "User not found" }));
-        }
-      } catch (error) {
-        console.error("Error fetching user:", error);
-        response.writeHead(500, { "Content-Type": "application/json" });
-        return response.end(JSON.stringify({ success: false }));
-      }
-
-      try {
-        await addThreadToUser(user.name, thread);
-      } catch (error) {
-        console.error("Error adding thread to user:", error);
-        response.writeHead(500, { "Content-Type": "application/json" });
-        return response.end(JSON.stringify({ success: false }));
-      }
-    });
-    return;
-  }
-
   if (request.method === "POST" && request.url === "/getThreads") {
     let body = "";
     request.on("data", (chunk) => {
@@ -145,7 +105,8 @@ async function callback(request, response) {
 
     request.on("end", async () => {
       try {
-        const user = await getUser(body);
+        const { userName } = JSON.parse(body); // The fetch in frontend must send the username
+        const user = await getUser(userName);
         if (!user) {
           response.writeHead(404, { "Content-Type": "application/json" });
           return response.end(JSON.stringify({ success: false, error: "User not found" }));
@@ -194,13 +155,14 @@ async function callback(request, response) {
     request.on("end", async () => {
       try {
         console.log("Received body:", body); // Log the received body
-        const { question } = JSON.parse(body); // Parse the JSON body to extract the question
+        const { question, currentThread, userName } = JSON.parse(body); // Parse the JSON body to extract the question
         if (!question) {
           response.writeHead(400, { "Content-Type": "application/json" }); // Respond with 400 if question is missing
           return response.end(JSON.stringify({ error: "Question is required" }));
         }
 
         let assistantId;
+        let threadId;
 
         try {
           // Initialize the assistant
@@ -216,85 +178,50 @@ async function callback(request, response) {
           throw error;
         }
 
-        try {
-          if (!threadId) {
-            let thread;
-            let user;
-            try {
-              thread = await createThread();
-            } catch (error) {
-              console.error("Error creating thread:", error);
-              response.writeHead(500, { "Content-Type": "application/json" });
-              return response.end(JSON.stringify({ success: false }));
-            }
-
-            try {
-              user = await getUser(body);
-              if (!user) {
-                response.writeHead(404, { "Content-Type": "application/json" });
-                return response.end(JSON.stringify({ success: false, error: "User not found" }));
-              }
-            } catch (error) {
-              console.error("Error fetching user:", error);
-              response.writeHead(500, { "Content-Type": "application/json" });
-              return response.end(JSON.stringify({ success: false }));
-            }
-
-            try {
-              await addThreadToUser(user.name, thread);
-              threadId = thread;
-            } catch (error) {
-              console.error("Error adding thread to user:", error);
-              response.writeHead(500, { "Content-Type": "application/json" });
-              return response.end(JSON.stringify({ success: false }));
-            }
+        if (currentThread === "") {
+          let thread;
+          let user;
+          try {
+            thread = await createThread();
+          } catch (error) {
+            console.error("Error creating thread:", error);
+            response.writeHead(500, { "Content-Type": "application/json" });
+            return response.end(JSON.stringify({ success: false }));
           }
-        } catch (error) {
-          console.error("Error creating thread:", error);
-          throw error;
+
+          try {
+            user = await getUser(userName);
+            if (!user) {
+              response.writeHead(404, { "Content-Type": "application/json" });
+              return response.end(JSON.stringify({ success: false, error: "User not found" }));
+            }
+          } catch (error) {
+            console.error("Error fetching user:", error);
+            response.writeHead(500, { "Content-Type": "application/json" });
+            return response.end(JSON.stringify({ success: false }));
+          }
+
+          try {
+            await addThreadToUser(user.name, thread);
+            threadId = thread;
+          } catch (error) {
+            console.error("Error adding thread to user:", error);
+            response.writeHead(500, { "Content-Type": "application/json" });
+            return response.end(JSON.stringify({ success: false }));
+          }
         }
 
         try {
           console.log("Adding user message to thread...");
-          await openai.beta.threads.messages.create(threadId, {
-            role: "user",
-            content: question,
-          });
+          addMessage(threadId, question)
         } catch (error) {
           console.error("Error adding user message to thread:", error);
           throw error;
         }
 
         try {
-          response.writeHead(200, {
-            'Content-Type': 'text/event-stream',
-            'Cache-Control': 'no-cache',
-            'Connection': 'keep-alive',
-          });
-          // Start OpenAI streaming
-          const run = await openai.beta.threads.runs.stream(threadId, {
-            assistant_id: assistantId,
-          })
-            .on('textCreated', () => {
-              console.log('Event: textCreated');
-              response.write('data: \nassistant >\n\n');
-            })
-            .on('textDelta', (textDelta) => {
-              console.log('Event: textDelta:', textDelta.value);
-              response.write(`data: ${textDelta.value}\n\n`);
-            })
-            .on('end', () => {
-              console.log('Event: end');
-              response.write('data: [DONE]\n\n');
-              response.end(); // End response when streaming finishes
-            })
-            .on('error', (error) => {
-              console.error('Stream error:', error);
-              if (!response.writableEnded) {
-                response.write('data: [ERROR]\n\n');
-                response.end(); // End response if an error occurs
-              }
-            });
+          console.log("Running assistant for thread...");
+          runAssistant(threadId, assistantId);
         } catch (error) {
           console.error("Error streaming assistant response:", error);
           throw error;
@@ -411,10 +338,8 @@ async function createThread() {
   }
 }
 
-async function getUser(body) {
+async function getUser(userName) {
   try {
-    console.log("Received body:", body);
-    const { userName } = JSON.parse(body); // The fetch in frontend must send the username
     const data = await fs.readFile("./assets/jsonLogin/users.json", "utf8");
     const users = JSON.parse(data);
 
