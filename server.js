@@ -432,8 +432,7 @@ async function addThreadToUser(userName, threadId) {
   const openai = new OpenAI({ apiKey, organization });
   let user;
   let users;
-  let _currentThreadId;
-  let _currentThreadCreatedAt;
+  let thread;
   try {
     const data = await fs.readFileSync("./assets/jsonLogin/users.json", "utf8");
     users = JSON.parse(data);
@@ -450,14 +449,14 @@ async function addThreadToUser(userName, threadId) {
     const _currentThread = await openai.beta.threads.retrieve(
       threadId
     );
-    _currentThreadId = _currentThread.id;
-    _currentThreadCreatedAt = _currentThread.created_at;
+    // Make object with thread ID and created_at to push to user threads
+    thread = { id: _currentThread.id, created_at: _currentThread.created_at };
   } catch (error) {
     console.error("Error repacking thread:", error);
     throw error;
   }
   try {
-    user.threads.push(threadId); // Add thread ID to user"s threads
+    user.threads.push(thread); // Add thread ID to user"s threads
     await fs.writeFileSync("./assets/jsonLogin/users.json", JSON.stringify(users, null, 4));
   } catch (error) {
     console.error("Error updating user threads:", error);
