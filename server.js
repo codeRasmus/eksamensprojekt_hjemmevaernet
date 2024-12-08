@@ -320,20 +320,20 @@ async function createAssistantIfNeeded() {
   }
   const openai = new OpenAI({ apiKey, organization });
 
-  try {
-    // Check if the assistant already exists
-    const existingAssistants = await openai.beta.assistants.list();
-    const existingAssistant = existingAssistants.data.find(
-      (assistant) => assistant.name === "Verner"
-    );
-    if (existingAssistant) {
-      console.log("Assistant already exists:", existingAssistant);
-      return existingAssistant; // Return the existing assistant if found
-    }
-  } catch (error) {
-    console.error("Error listing assistants:", error);
-    throw error;
-  }
+  // try {
+  //   // Check if the assistant already exists
+  //   const existingAssistants = await openai.beta.assistants.list();
+  //   const existingAssistant = existingAssistants.data.find(
+  //     (assistant) => assistant.name === "Verner"
+  //   );
+  //   if (existingAssistant) {
+  //     console.log("Assistant already exists:", existingAssistant);
+  //     return existingAssistant; // Return the existing assistant if found
+  //   }
+  // } catch (error) {
+  //   console.error("Error listing assistants:", error);
+  //   throw error;
+  // }
   let _vectorStoreId;
   try {
     const fileStreams = ["fih.txt"].map((path) => // Add the paths to the files
@@ -345,7 +345,7 @@ async function createAssistantIfNeeded() {
       name: "Hjemmeværnsskolens dokumentation",
     });
 
-    await openai.beta.vectorStores.fileBatches.uploadAndPoll(vectorStore.id, fileStreams);
+    await openai.beta.vectorStores.fileBatches.uploadAndPoll(vectorStore.id, { files: fileStreams, });
     _vectorStoreId = vectorStore.id;
   } catch (error) {
     console.error("Error uploading files:", error);
@@ -366,6 +366,7 @@ async function createAssistantIfNeeded() {
       }
     });
     console.log("New assistant created:", assistant);
+    console.log("Vector store ID:", _vectorStoreId);
     return assistant;
   } catch (error) {
     console.error("Error creating assistant:", error);
