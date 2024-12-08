@@ -72,6 +72,7 @@ async function askAssistant(userInput) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(requestData),
     });
+    currentThreadId = response.headers.get("Thread-Id");
 
     const reader = response.body.getReader();
     const decoder = new TextDecoder();
@@ -125,7 +126,10 @@ async function showThreads() {
   }
   const data = await response.json();
   const threadsContainer = document.getElementById("threads_container");
+  const arrowDown = document.getElementById("arrow_down");
   threadsContainer.innerHTML = "";
+  threadsContainer.classList.toggle("active");
+  arrowDown.classList.toggle("active");
   console.log(data.threads);
   let threads = data.threads;
 
@@ -142,5 +146,9 @@ async function showThreads() {
         body: JSON.stringify({ threadId: thread }),
       });
     });
+  });
+  threadsContainer.addEventListener("click", () => {
+    threadsContainer.classList.toggle("active");
+    arrowDown.toggle("active");
   });
 }

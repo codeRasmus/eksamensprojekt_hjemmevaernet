@@ -499,7 +499,7 @@ input:focus {
   position: absolute;
   text-align: center;
   top: 30%;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 /* Loader */
@@ -661,14 +661,6 @@ input:focus {
     font-weight: bold;
   }
 
-  .threads_container div.active {
-    font-size: 0.1rem;
-  }
-
-  #arrow_down {
-    margin: 0 30px 0 0;
-  }
-
   #sidebar_dropdown {
     display: flex;
     flex-direction: column;
@@ -682,6 +674,25 @@ input:focus {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+  }
+  #threads_container {
+    display: none;
+  }
+
+  #threads_container.active {
+    max-height: 200px;
+    overflow-y: auto;
+    display: block;
+  }
+
+  #arrow_down {
+    margin: 0 30px 0 0;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #arrow_down.active {
+    transform: rotate(180deg);
   }
 
   .thread {
