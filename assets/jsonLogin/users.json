@@ -8,6 +8,14 @@
             {
                 "id": "thread_abc123",
                 "created_at": 1699014083
+            },
+            {
+                "id": "thread_Uq2hVp6qIXMjMBigAaVP0xRd",
+                "created_at": 1733670386
+            },
+            {
+                "id": "thread_o3FPqIB5oBB1RGGNCASMd4px",
+                "created_at": 1733671005
             }
         ]
     },
@@ -16,7 +24,6 @@
         "name": "user",
         "password": "user123",
         "role": "user",
-        "threads": [
-        ]
+        "threads": []
     }
 ]

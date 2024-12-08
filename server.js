@@ -321,20 +321,20 @@ async function createAssistantIfNeeded() {
   }
   const openai = new OpenAI({ apiKey, organization });
 
-  // try {
-  //   // Check if the assistant already exists
-  //   const existingAssistants = await openai.beta.assistants.list();
-  //   const existingAssistant = existingAssistants.data.find(
-  //     (assistant) => assistant.name === "Verner"
-  //   );
-  //   if (existingAssistant) {
-  //     console.log("Assistant already exists:", existingAssistant);
-  //     return existingAssistant; // Return the existing assistant if found
-  //   }
-  // } catch (error) {
-  //   console.error("Error listing assistants:", error);
-  //   throw error;
-  // }
+  try {
+    // Check if the assistant already exists
+    const existingAssistants = await openai.beta.assistants.list();
+    const existingAssistant = existingAssistants.data.find(
+      (assistant) => assistant.name === "Verner"
+    );
+    if (existingAssistant) {
+      console.log("Assistant already exists:", existingAssistant);
+      return existingAssistant; // Return the existing assistant if found
+    }
+  } catch (error) {
+    console.error("Error listing assistants:", error);
+    throw error;
+  }
   let _vectorStoreId;
   try {
     const fileStreams = ["./files/9000-120-02-Didaktiske-Design-Overvejelser-1.pdf", "./files/Faglærer-i-Hæren.pdf", "./files/Instruktørvirke-i-Forsvaret.pdf"].map((path) => // Add the paths to the files
