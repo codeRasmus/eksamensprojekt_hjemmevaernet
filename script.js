@@ -5,17 +5,17 @@ import { loadAni, stopLoadAni } from "./modules/loadAni.js";
 import { createLoginComponent } from "./modules/login.js";
 import { formatUnix } from "./modules/formatUnix.js";
 
-let currentThreadId = ""; // The current thread ID
+let currentThreadId = "thread_dQ4LJOd4oGyins0FEqPjFblz"; // The current thread ID
 let userName = document.getElementById("user_name").textContent;
 
 document.addEventListener("DOMContentLoaded", () => {
   createLoginComponent("login-container");
   const chat = document.getElementById("chat");
   const newChatBtn = document.getElementById("start_chat_button");
-  newChatBtn.addEventListener(
-    "click",
-    askAssistant(document.getElementById("userprompt").value)
-  );
+  newChatBtn.addEventListener("click", () => {
+    document.getElementById("chatbox").innerHTML = "";
+    document.getElementById("welcome-text").style.display = "block";
+  });
   const chatOversigt = document.querySelectorAll("#chat_oversigt");
   chatOversigt.forEach((chat) => {
     chat.addEventListener("click", () => showThreads());
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // Opdater UI og start loading
     chat.classList.add("show-username");
-    document.getElementById("welcome-text").textContent = "";
+    document.getElementById("welcome-text").style.display = "none";
     chat.style.width = "60%";
     askAssistant(userInput);
 
@@ -52,7 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
 async function askAssistant(userInput) {
   try {
     document.getElementById("userprompt").value = "";
+    const chatbox = document.getElementById("chatbox");
     loadAni();
+
+    if (chatbox.innerHTML === "") {
+      currentThreadId = "";
+      console.log("Thread er ingenting");
+    }
 
     const requestData = {
       question: userInput,
