@@ -4,13 +4,27 @@
         "name": "admin",
         "password": "admin123",
         "role": "admin",
-        "threads": ["123", "456"]
+        "threads": [
+            "123",
+            "456",
+            "thread_3sHgPAn1mHjJSaxPeYIoPpIj",
+            "thread_zB7TupKJIEKeKiKiaCrXXRLT",
+            "thread_6gsjEykSlOHhnR8YzamMIDHz",
+            "thread_c5VpJYRYiLHDFsIwIDd5vMFy",
+            "thread_kifKI7jIz9cUw6EQXwlzLoGL",
+            "thread_jFagLdVj2UdXrtXv7BKhFAHk",
+            "thread_J8jGYaaGZoSkYny3DeDqvQKU",
+            "thread_lRjKsoSvfA7kACDDaASrJtPg"
+        ]
     },
     {
         "id": 2,
         "name": "user",
         "password": "user123",
         "role": "user",
-        "threads": ["789", "101112"]
+        "threads": [
+            "789",
+            "101112"
+        ]
     }
 ]

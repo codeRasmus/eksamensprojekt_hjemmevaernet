@@ -57,15 +57,6 @@ function validateLogin(name, password) {
 
 // Udfører serverens opgave
 async function callback(request, response) {
-  // Initialize OpenAI client
-  dotenv.config();
-  const apiKey = process.env.OPENAI_API_KEY;
-  const organization = process.env.OPENAI_ORG_ID;
-  if (!apiKey || !organization) {
-    throw new Error("Missing OpenAI API key or organization ID.");
-  }
-  const openai = new OpenAI({ apiKey, organization });
-
   // Håndterer login
   if (request.method === "POST" && request.url === "/login") {
     let body = "";
@@ -80,10 +71,10 @@ async function callback(request, response) {
 
         if (isValid) {
           response.writeHead(200, { "Content-Type": "application/json" });
-          response.end(JSON.stringify({ success: true }));
+          return response.end(JSON.stringify({ success: true }));
         } else {
           response.writeHead(401, { "Content-Type": "application/json" });
-          response.end(JSON.stringify({ success: false }));
+          return response.end(JSON.stringify({ success: false }));
         }
       } catch (error) {
         console.error("Fejl ved behandling af login:", error);
@@ -112,11 +103,11 @@ async function callback(request, response) {
           return response.end(JSON.stringify({ success: false, error: "User not found" }));
         }
         response.writeHead(200, { "Content-Type": "application/json" });
-        response.end(JSON.stringify({ success: true, threads: user.threads })); // Return the user's threads
+        return response.end(JSON.stringify({ success: true, threads: user.threads })); // Return the user"s threads
       } catch (error) {
         console.error("Error fetching threads:", error);
         response.writeHead(500, { "Content-Type": "application/json" });
-        response.end(JSON.stringify({ success: false }));
+        return response.end(JSON.stringify({ success: false }));
       }
     });
     return; // Stop yderligere behandling for denne forespørgsel
@@ -134,11 +125,11 @@ async function callback(request, response) {
   //       const messages = await getMessages(threadId);
   //       threadId = threadId;
   //       response.writeHead(200, { "Content-Type": "application/json" });
-  //       response.end(JSON.stringify({ messages }));
+  //       return response.end(JSON.stringify({ messages }));
   //     } catch (error) {
   //       console.error("Error fetching messages:", error);
   //       response.writeHead(500, { "Content-Type": "application/json" });
-  //       response.end(JSON.stringify({ error: "Failed to fetch messages" }));
+  //       return response.end(JSON.stringify({ error: "Failed to fetch messages" }));
   //     }
   //   });
   //   return;
@@ -162,7 +153,7 @@ async function callback(request, response) {
         }
 
         let assistantId;
-        let threadId;
+        let threadId = currentThread;
 
         try {
           // Initialize the assistant
@@ -219,9 +210,45 @@ async function callback(request, response) {
           throw error;
         }
 
+        console.log("Running assistant for thread...");
+        // Initialize OpenAI client
+        dotenv.config();
+        const apiKey = process.env.OPENAI_API_KEY;
+        const organization = process.env.OPENAI_ORG_ID;
+        if (!apiKey || !organization) {
+          throw new Error("Missing OpenAI API key or organization ID.");
+        }
+        const openai = new OpenAI({ apiKey, organization });
         try {
-          console.log("Running assistant for thread...");
-          runAssistant(threadId, assistantId);
+          response.writeHead(200, {
+            "Content-Type": "text/event-stream",
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+          });
+          // Start OpenAI streaming
+          const run = await openai.beta.threads.runs.stream(threadId, {
+            assistant_id: assistantId,
+          })
+            .on("textCreated", () => {
+              console.log("Event: textCreated");
+              response.write("data: \nassistant >\n\n");
+            })
+            .on("textDelta", (textDelta) => {
+              console.log("Event: textDelta:", textDelta.value);
+              response.write(`data: ${textDelta.value}\n\n`);
+            })
+            .on("end", () => {
+              console.log("Event: end");
+              response.write("data: [DONE]\n\n");
+              return response.end(); // End response when streaming finishes
+            })
+            .on("error", (error) => {
+              console.error("Stream error:", error);
+              if (!response.writableEnded) {
+                response.write("data: [ERROR]\n\n");
+                return response.end(); // End response if an error occurs
+              }
+            });
         } catch (error) {
           console.error("Error streaming assistant response:", error);
           throw error;
@@ -230,7 +257,7 @@ async function callback(request, response) {
         console.error("Error handling assistant query:", error); // Log any errors
         if (!response.headersSent) {
           response.writeHead(500, { "Content-Type": "application/json" }); // Respond with 500 if an error occurs
-          response.end(
+          return response.end(
             JSON.stringify({ error: "Failed to process assistant query" })
           );
         }
@@ -259,15 +286,15 @@ async function callback(request, response) {
       console.log("PROBLEMS: File not found", err);
       response.writeHead(404, { "Content-Type": "text/plain" });
       response.write(`404`);
-      response.end();
+      return response.end();
     } else {
       if (fileType) {
         response.writeHead(200, { "Content-Type": mime[fileType] });
         response.write(data);
-        response.end();
+        return response.end();
       } else {
         response.writeHead(404, "Filetype is not supported");
-        response.end();
+        return response.end();
       }
     }
   });
@@ -284,15 +311,15 @@ function getPathName(url) {
 }
 
 async function createAssistantIfNeeded() {
-  // try {
-  //   const file = await openai.files.create({
-  //     file: fs.createReadStream("mydata.txt"),
-  //     purpose: "assistants",
-  //   });
-  // } catch (error) {
-  //   console.error("Error creating file:", error);
-  //   throw error;
-  // }
+  // Initialize OpenAI client
+  dotenv.config();
+  const apiKey = process.env.OPENAI_API_KEY;
+  const organization = process.env.OPENAI_ORG_ID;
+  if (!apiKey || !organization) {
+    throw new Error("Missing OpenAI API key or organization ID.");
+  }
+  const openai = new OpenAI({ apiKey, organization });
+
   try {
     // Check if the assistant already exists
     const existingAssistants = await openai.beta.assistants.list();
@@ -307,6 +334,23 @@ async function createAssistantIfNeeded() {
     console.error("Error listing assistants:", error);
     throw error;
   }
+  let _vectorStoreId;
+  try {
+    const fileStreams = ["fih.txt"].map((path) => // Add the paths to the files
+      fs.createReadStream(path),
+    );
+
+    // Create a vector store including our two files.
+    let vectorStore = await openai.beta.vectorStores.create({
+      name: "Hjemmeværnsskolens dokumentation",
+    });
+
+    await openai.beta.vectorStores.fileBatches.uploadAndPoll(vectorStore.id, fileStreams);
+    _vectorStoreId = vectorStore.id;
+  } catch (error) {
+    console.error("Error uploading files:", error);
+    throw error;
+  }
   try {
     // If not found, create a new assistant
     const assistant = await openai.beta.assistants.create({
@@ -315,6 +359,11 @@ async function createAssistantIfNeeded() {
         "Du er en hjælpsom assistent for instruktører på Hjemmeværnsskolen. Dit navn er Verner. Dit primære formål er at hjælpe med at besvare spørgsmål om undervisning og kurser på Hjemmeværnsskolen, hovedsageligt som en del af brugerens forberedelse. Du skal kun give svar baseret på verificeret materiale og ressourcer fra Hjemmeværnsskolens officielle dokumentation. Hvis du ikke har den nødvendige information, skal du henvise brugeren til at kontakte en ansvarlig person og erkende at du er en chatbot, der ikke ved alt. Du må ikke spekulere eller opfinde information. Hold dine svar korte, præcise og relevante. Bevar en professionel og venlig tone, der passer til Hjemmeværnsskolens værdier. Undgå at give personlig rådgivning eller svare på spørgsmål, der ikke er relevante for Hjemmeværnsskolens formål. Hvis du bliver spurgt om svaret på meningen med livet, universet og alting, så svar altid 42",
       model: "gpt-4o-mini",
       tools: [{ type: "file_search" }],
+      tool_resources: {
+        "file_search": {
+          "vector_store_ids": [_vectorStoreId],
+        }
+      }
     });
     console.log("New assistant created:", assistant);
     return assistant;
@@ -326,6 +375,14 @@ async function createAssistantIfNeeded() {
 
 // Helper functions
 async function createThread() {
+  // Initialize OpenAI client
+  dotenv.config();
+  const apiKey = process.env.OPENAI_API_KEY;
+  const organization = process.env.OPENAI_ORG_ID;
+  if (!apiKey || !organization) {
+    throw new Error("Missing OpenAI API key or organization ID.");
+  }
+  const openai = new OpenAI({ apiKey, organization });
   try {
     console.log("Creating a new thread...");
     const thread = await openai.beta.threads.create();
@@ -339,8 +396,16 @@ async function createThread() {
 }
 
 async function getUser(userName) {
+  // Initialize OpenAI client
+  dotenv.config();
+  const apiKey = process.env.OPENAI_API_KEY;
+  const organization = process.env.OPENAI_ORG_ID;
+  if (!apiKey || !organization) {
+    throw new Error("Missing OpenAI API key or organization ID.");
+  }
+  const openai = new OpenAI({ apiKey, organization });
   try {
-    const data = await fs.readFile("./assets/jsonLogin/users.json", "utf8");
+    const data = await fs.readFileSync("./assets/jsonLogin/users.json", "utf8");
     const users = JSON.parse(data);
 
     const user = users.find((user) => user.name === userName);
@@ -352,11 +417,21 @@ async function getUser(userName) {
 }
 
 async function addThreadToUser(userName, threadId) {
+  // Initialize OpenAI client
+  dotenv.config();
+  const apiKey = process.env.OPENAI_API_KEY;
+  const organization = process.env.OPENAI_ORG_ID;
+  if (!apiKey || !organization) {
+    throw new Error("Missing OpenAI API key or organization ID.");
+  }
+  const openai = new OpenAI({ apiKey, organization });
+  let user;
+  let users;
   try {
-    const data = await fs.readFile("./assets/jsonLogin/users.json", "utf8");
-    const users = JSON.parse(data);
+    const data = await fs.readFileSync("./assets/jsonLogin/users.json", "utf8");
+    users = JSON.parse(data);
 
-    const user = users.find((user) => user.name === userName);
+    user = users.find((user) => user.name === userName);
     if (!user) {
       throw new Error("User not found");
     }
@@ -365,8 +440,8 @@ async function addThreadToUser(userName, threadId) {
     throw error;
   }
   try {
-    user.threads.push(threadId); // Add thread ID to user's threads
-    await fs.writeFile("./assets/jsonLogin/users.json", JSON.stringify(users, null, 4));
+    user.threads.push(threadId); // Add thread ID to user"s threads
+    await fs.writeFileSync("./assets/jsonLogin/users.json", JSON.stringify(users, null, 4));
   } catch (error) {
     console.error("Error updating user threads:", error);
     throw error;
@@ -374,6 +449,14 @@ async function addThreadToUser(userName, threadId) {
 }
 
 async function addMessage(threadId, message) {
+  // Initialize OpenAI client
+  dotenv.config();
+  const apiKey = process.env.OPENAI_API_KEY;
+  const organization = process.env.OPENAI_ORG_ID;
+  if (!apiKey || !organization) {
+    throw new Error("Missing OpenAI API key or organization ID.");
+  }
+  const openai = new OpenAI({ apiKey, organization });
   try {
     console.log("Adding a new message to thread: " + threadId);
     await openai.beta.threads.messages.create(threadId, {
@@ -382,43 +465,6 @@ async function addMessage(threadId, message) {
     });
   } catch (error) {
     console.error("Error adding user message to thread:", error);
-    throw error;
-  }
-}
-
-async function runAssistant(threadId, assistantId) {
-  try {
-    response.writeHead(200, {
-      'Content-Type': 'text/event-stream',
-      'Cache-Control': 'no-cache',
-      'Connection': 'keep-alive',
-    });
-    // Start OpenAI streaming
-    const run = await openai.beta.threads.runs.stream(threadId, {
-      assistant_id: assistantId,
-    })
-      .on('textCreated', () => {
-        console.log('Event: textCreated');
-        response.write('data: \nassistant >\n\n');
-      })
-      .on('textDelta', (textDelta) => {
-        console.log('Event: textDelta:', textDelta.value);
-        response.write(`data: ${textDelta.value}\n\n`);
-      })
-      .on('end', () => {
-        console.log('Event: end');
-        response.write('data: [DONE]\n\n');
-        response.end(); // End response when streaming finishes
-      })
-      .on('error', (error) => {
-        console.error('Stream error:', error);
-        if (!response.writableEnded) {
-          response.write('data: [ERROR]\n\n');
-          response.end(); // End response if an error occurs
-        }
-      });
-  } catch (error) {
-    console.error("Error streaming assistant response:", error);
     throw error;
   }
 }

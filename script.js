@@ -1,11 +1,10 @@
 "use strict";
 // MODULE IMPORTS
 import { fontSizer } from "./modules/fontSizer.js";
-import { storeDataLocal } from "./modules/storageModule.js"; // Need restructuring
 import { loadAni, stopLoadAni } from "./modules/loadAni.js";
 import { createLoginComponent } from "./modules/login.js";
 
-let currentThreadId = "";
+let currentThreadId = "thread_c5VpJYRYiLHDFsIwIDd5vMFy";
 let userName = document.getElementById("user_name").textContent;
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -31,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     document.querySelector(".user_question").textContent = userInput;
     document.getElementById("chat").classList.add("show-username");
-    askAssistant(userInput); // Den her crasher serveren pga. invalid API key
+    askAssistant(userInput);
     document.getElementById("userprompt").value = "";
   });
 });
@@ -42,7 +41,7 @@ async function askAssistant(userInput) {
 
     const requestData = {
       question: userInput,
-      currentThread: currentThreadId,
+      currentThread: currentThreadId, // Ensure this is set correctly
       userName: userName,
     };
     console.log("Sending request data:", requestData);
@@ -57,9 +56,6 @@ async function askAssistant(userInput) {
     const decoder = new TextDecoder();
     let content = "";
     const messagesDiv = document.querySelector("#bot_answers");
-
-    // Remoce welcome text
-    document.getElementById("welcome_text").textContent = "";
 
     // Create a new div for the response
     const newDiv = document.createElement("div");
