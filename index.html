@@ -116,13 +116,19 @@
             <span class="material-symbols-outlined"> edit_square </span>
             <p>Start ny chat</p>
           </li>
-          <li class="sidebar_item">
+          <li class="sidebar_item" id="chat_oversigt">
             <span class="material-symbols-outlined"> library_books </span>
             <div id="sidebar_dropdown">
-              <p>Chat Oversigt</p>
-              <span class="material-symbols-outlined" id="arrow_down">
-                keyboard_arrow_down
-              </span>
+              <div
+                id="sidebar_dropdown_txt"
+                style="display: flex; flex-direction: row"
+              >
+                <p>Chat Oversigt</p>
+                <span class="material-symbols-outlined" id="arrow_down">
+                  keyboard_arrow_down
+                </span>
+              </div>
+              <div id="threads_container"></div>
             </div>
           </li>
           <li class="sidebar_item">

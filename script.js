@@ -3,6 +3,7 @@
 import { fontSizer } from "./modules/fontSizer.js";
 import { loadAni, stopLoadAni } from "./modules/loadAni.js";
 import { createLoginComponent } from "./modules/login.js";
+import { formatUnix } from "./modules/formatUnix.js";
 
 let currentThreadId = ""; // The current thread ID
 let userName = document.getElementById("user_name").textContent;
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   increaseButton.addEventListener("click", () => fontSizer(scalingFactorUp));
   decreaseButton.addEventListener("click", () => fontSizer(scalingFactorDown));
 
-  const chatOversigt = document.querySelectorAll(".chat_oversigt");
+  const chatOversigt = document.querySelectorAll("#chat_oversigt");
   chatOversigt.forEach((chat) => {
     chat.addEventListener("click", () => showThreads());
   });
@@ -114,14 +115,15 @@ async function showThreads() {
     throw new Error(`Error fetching threads: ${response.status}`);
   }
   const data = await response.json();
-  console.log(data);
-
   const threadsContainer = document.getElementById("threads_container");
   threadsContainer.innerHTML = "";
+  console.log(data.threads);
+  let threads = data.threads;
 
   threads.forEach((thread) => {
     const threadDiv = document.createElement("div");
-    threadDiv.innerHTML = `${thread}`;
+    threadDiv.classList.add("thread");
+    threadDiv.innerHTML = `${formatUnix(thread.created_at)}`;
     threadsContainer.appendChild(threadDiv);
     threadDiv.addEventListener("click", async () => {
       currentThreadId = thread;
