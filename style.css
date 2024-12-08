@@ -196,6 +196,7 @@ header #nav_logo {
 
 #user_info #user_settings {
   font-size: 20px;
+  cursor: pointer;
 }
 
 .user {
@@ -233,6 +234,7 @@ header #nav_logo {
 
 #user_info #user_settings {
   font-size: 20px;
+  cursor: pointer;
 }
 
 #burger_nav ul {
@@ -364,6 +366,7 @@ button#decreaseFont {
 #chat {
   position: relative;
   height: 600px;
+  padding-bottom: 30px;
 }
 
 #chat #user_questions {
@@ -505,17 +508,17 @@ input:focus {
   border: 8px solid #d9d9d9;
   border-top: 8px solid #8d1b3d;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .loader.active {
   display: block;
-  animation: spin 1s linear infinite;
+  animation: spin 0.7s linear infinite;
 }
 
 @keyframes spin {
@@ -575,6 +578,11 @@ input:focus {
     padding: 0;
   }
 
+  header {
+    width: 20%;
+    min-width: 235px;
+  }
+
   .mobile {
     display: none;
   }
@@ -608,6 +616,7 @@ input:focus {
     font-weight: bold;
     width: 80%;
     justify-content: center;
+    align-items: center;
     margin: 30px 20px;
   }
 
@@ -628,7 +637,7 @@ input:focus {
 
   .sidebar_item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 8px 0;
     justify-content: flex-start;
     width: 100%;
@@ -639,9 +648,9 @@ input:focus {
     margin-left: 30px;
   }
 
-  .sidebar_item:hover {
-    color: var(--red);
-    font-weight: bold;
+  li.sidebar_item:hover {
+    /* color: var(--red);
+    font-weight: bold; */
     cursor: pointer;
   }
 
@@ -653,7 +662,7 @@ input:focus {
   }
 
   .threads_container div.active {
-    font-size: 0.2rem;
+    font-size: 0.1rem;
   }
 
   #arrow_down {
@@ -676,7 +685,8 @@ input:focus {
   }
 
   .thread {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
+    margin-top: 10px;
   }
 
   .sidebar_item p {
@@ -789,7 +799,7 @@ input:focus {
   }
 
   #chat {
-    height: 85%;
+    height: 100%;
     display: flex;
     align-items: center;
   }
@@ -814,6 +824,8 @@ input:focus {
     flex-direction: column;
     gap: 100px;
     background-color: transparent;
+    height: 100%;
+    overflow-y: auto;
     /* Ingen baggrundsfarve */
   }
 

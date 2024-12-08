@@ -113,27 +113,38 @@ async function callback(request, response) {
     return; // Stop yderligere behandling for denne forespørgsel
   }
 
-  // if (request.method === "POST" && request.url === "/getThreadMessages") {
-  //   let body = "";
-  //   request.on("data", (chunk) => {
-  //     body += chunk.toString();
-  //   });
+  if (request.method === "POST" && request.url === "/getThreadMessages") {
+    let body = "";
+    request.on("data", (chunk) => {
+      body += chunk.toString();
+    });
 
-  //   request.on("end", async () => {
-  //     try {
-  //       const { threadId } = JSON.parse(body);
-  //       const messages = await getMessages(threadId);
-  //       threadId = threadId;
-  //       response.writeHead(200, { "Content-Type": "application/json" });
-  //       return response.end(JSON.stringify({ messages }));
-  //     } catch (error) {
-  //       console.error("Error fetching messages:", error);
-  //       response.writeHead(500, { "Content-Type": "application/json" });
-  //       return response.end(JSON.stringify({ error: "Failed to fetch messages" }));
-  //     }
-  //   });
-  //   return;
-  // }
+    request.on("end", async () => {
+      // Initialize OpenAI client
+      dotenv.config();
+      const apiKey = process.env.OPENAI_API_KEY;
+      const organization = process.env.OPENAI_ORG_ID;
+      if (!apiKey || !organization) {
+        throw new Error("Missing OpenAI API key or organization ID.");
+      }
+      const openai = new OpenAI({ apiKey, organization });
+
+      try {
+        const { threadId } = JSON.parse(body);
+        const threadMessages = await openai.beta.threads.messages.list(threadId);
+        let messages = threadMessages.data.flatMap((message) => {
+          message.content.map((content) => content.text.value);
+        });
+        response.writeHead(200, { "Content-Type": "application/json" });
+        return response.end(JSON.stringify({ messages }));
+      } catch (error) {
+        console.error("Error fetching messages:", error);
+        response.writeHead(500, { "Content-Type": "application/json" });
+        return response.end(JSON.stringify({ error: "Failed to fetch messages" }));
+      }
+    });
+    return;
+  }
 
   // Handle assistant query endpoint
   if (request.method === "POST" && request.url === "/ask-assistant") {

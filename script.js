@@ -10,15 +10,12 @@ let userName = document.getElementById("user_name").textContent;
 
 document.addEventListener("DOMContentLoaded", () => {
   createLoginComponent("login-container");
-  const increaseButton = document.getElementById("increaseFont");
-  const decreaseButton = document.getElementById("decreaseFont");
   const chat = document.getElementById("chat");
-
-  const scalingFactorUp = 1.1;
-  const scalingFactorDown = 0.9;
-  increaseButton.addEventListener("click", () => fontSizer(scalingFactorUp));
-  decreaseButton.addEventListener("click", () => fontSizer(scalingFactorDown));
-
+  const newChatBtn = document.getElementById("start_chat_button");
+  newChatBtn.addEventListener(
+    "click",
+    askAssistant(document.getElementById("userprompt").value)
+  );
   const chatOversigt = document.querySelectorAll("#chat_oversigt");
   chatOversigt.forEach((chat) => {
     chat.addEventListener("click", () => showThreads());
@@ -44,6 +41,12 @@ document.addEventListener("DOMContentLoaded", () => {
     userMessagesDiv.appendChild(newDiv);
     newDiv.textContent = userInput;
   });
+  const increaseButton = document.getElementById("increaseFont");
+  const decreaseButton = document.getElementById("decreaseFont");
+  const scalingFactorUp = 1.1;
+  const scalingFactorDown = 0.9;
+  increaseButton.addEventListener("click", () => fontSizer(scalingFactorUp));
+  decreaseButton.addEventListener("click", () => fontSizer(scalingFactorDown));
 });
 
 async function askAssistant(userInput) {
