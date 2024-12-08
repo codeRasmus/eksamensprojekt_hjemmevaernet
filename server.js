@@ -225,7 +225,7 @@ async function callback(request, response) {
             "Cache-Control": "no-cache",
             "Connection": "keep-alive",
           });
-          
+
           // Start OpenAI streaming
           const run = await openai.beta.threads.runs.stream(threadId, {
             assistant_id: assistantId,
@@ -432,6 +432,8 @@ async function addThreadToUser(userName, threadId) {
   const openai = new OpenAI({ apiKey, organization });
   let user;
   let users;
+  let _currentThreadId;
+  let _currentThreadCreatedAt;
   try {
     const data = await fs.readFileSync("./assets/jsonLogin/users.json", "utf8");
     users = JSON.parse(data);
@@ -442,6 +444,16 @@ async function addThreadToUser(userName, threadId) {
     }
   } catch (error) {
     console.error("Error reading user data:", error);
+    throw error;
+  }
+  try {
+    const _currentThread = await openai.beta.threads.retrieve(
+      threadId
+    );
+    _currentThreadId = _currentThread.id;
+    _currentThreadCreatedAt = _currentThread.created_at;
+  } catch (error) {
+    console.error("Error repacking thread:", error);
     throw error;
   }
   try {

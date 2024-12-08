@@ -1,5 +1,6 @@
 /* Variables */
 :root {
+  --userName: "admin";
   /* Colors */
   --black: #212529;
   --white: white;
@@ -18,7 +19,7 @@
   --header3: 3rem;
   --header4: 2rem;
   --header5: 1.5rem;
-  --paragraph: 0.8rem;
+  --paragraph: 1.05rem;
   /* Box-shadow */
   --boxShadow: 0px 8px 8px -10px rgba(0, 0, 0, 0.5);
 }
@@ -378,7 +379,7 @@ button#decreaseFont {
 }
 
 #chat .user_question::before {
-  content: "Bruger";
+  content: var(--userName);
   display: none;
   position: absolute;
   top: -20px;
@@ -399,7 +400,7 @@ button#decreaseFont {
 }
 
 #chat .bot_answer::before {
-  content: "Bot";
+  content: "Verner";
   display: none;
   top: -20px;
 }
@@ -792,11 +793,10 @@ input:focus {
 
   #chatbox {
     width: 100%;
-    overflow-y: auto;
     padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 100px;
     background-color: transparent;
     /* Ingen baggrundsfarve */
   }

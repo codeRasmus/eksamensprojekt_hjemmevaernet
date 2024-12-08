@@ -5,25 +5,10 @@
         "password": "admin123",
         "role": "admin",
         "threads": [
-            "123",
-            "456",
-            "thread_3sHgPAn1mHjJSaxPeYIoPpIj",
-            "thread_zB7TupKJIEKeKiKiaCrXXRLT",
-            "thread_6gsjEykSlOHhnR8YzamMIDHz",
-            "thread_c5VpJYRYiLHDFsIwIDd5vMFy",
-            "thread_kifKI7jIz9cUw6EQXwlzLoGL",
-            "thread_jFagLdVj2UdXrtXv7BKhFAHk",
-            "thread_J8jGYaaGZoSkYny3DeDqvQKU",
-            "thread_lRjKsoSvfA7kACDDaASrJtPg",
-            "thread_UuUoV7frjfqkyZjnVuNVg0o2",
-            "thread_uZLv3rOrLH1RAr65ZUgj5V4i",
-            "thread_vUEYskTfw3KswGvFrci2BtFI",
-            "thread_QLCfqj9BcrkUJPTPFgEqQGwO",
-            "thread_fWzL7PdYMxkuDfabDBT9dXQi",
-            "thread_JVIxr6cBweRfbdWYjZieD01r",
-            "thread_zcFR2UGPO6EE7hQrXHfMdsgj",
-            "thread_HH4c6KwPFov51WAyonvaoUcR",
-            "thread_mdahxEyspMJwhuOfgxMIXVCD"
+            {
+                "id": "thread_abc123",
+                "created_at": 1699014083
+            }
         ]
     },
     {
@@ -32,8 +17,6 @@
         "password": "user123",
         "role": "user",
         "threads": [
-            "789",
-            "101112"
         ]
     }
 ]
