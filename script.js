@@ -3,7 +3,6 @@
 import { fontSizer } from "./modules/fontSizer.js";
 import { loadAni, stopLoadAni } from "./modules/loadAni.js";
 import { createLoginComponent } from "./modules/login.js";
-import { chatDialogue } from "./modules/chatDialogue.js";
 
 let currentThreadId = "";
 let userName = document.getElementById("user_name").textContent;
@@ -31,26 +30,24 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Please enter a question.");
       return;
     }
-    document.querySelector(".user_question").textContent = userInput;
-    document.getElementById("chat").classList.add("show-username");
+    // Opdater UI og start loading
+    chat.classList.add("show-username");
+    document.getElementById("welcome-text").textContent = "";
+    chat.style.width = "60%";
     askAssistant(userInput);
-    document.getElementById("userprompt").value = "";
 
-      // Opdater UI og start loading
-      chat.classList.add("show-username");
-      document.getElementById("welcome-text").textContent = "";
-      chat.style.width = "60%";
-
-      // Tilføj brugerens besked til chatbox
-      chatDialogue("Andreas", userInput);
-
-      // Vent på chatbot-svaret
-      await askAssistant(userInput);
+    const userMessagesDiv = document.querySelector("#chatbox");
+    // Create a new div for the response
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("user_question");
+    userMessagesDiv.appendChild(newDiv);
+    newDiv.textContent = userInput;
   });
 });
 
 async function askAssistant(userInput) {
   try {
+    document.getElementById("userprompt").value = "";
     loadAni();
 
     const requestData = {
@@ -69,7 +66,7 @@ async function askAssistant(userInput) {
     const reader = response.body.getReader();
     const decoder = new TextDecoder();
     let content = "";
-    const messagesDiv = document.querySelector("#bot_answers");
+    const messagesDiv = document.querySelector("#chatbox");
 
     // Create a new div for the response
     const newDiv = document.createElement("div");
@@ -101,7 +98,7 @@ async function askAssistant(userInput) {
     console.error("Error communicating with assistant:", error);
     alert(`An error occurred: ${error.message}`);
   } finally {
-      stopLoadAni();
+    stopLoadAni();
   }
 }
 
