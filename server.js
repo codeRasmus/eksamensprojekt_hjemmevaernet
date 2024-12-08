@@ -225,6 +225,7 @@ async function callback(request, response) {
             "Cache-Control": "no-cache",
             "Connection": "keep-alive",
           });
+          
           // Start OpenAI streaming
           const run = await openai.beta.threads.runs.stream(threadId, {
             assistant_id: assistantId,

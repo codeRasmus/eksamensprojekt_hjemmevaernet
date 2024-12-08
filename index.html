@@ -13,7 +13,10 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
     <title>Hjemmeværnskolen's Læringsportal</title>
   </head>
 
@@ -21,20 +24,28 @@
     <div id="login-container" hidden></div>
     <header>
       <div class="desktop">
-      <img src="assets/hjemmevaernet_logo.svg" alt="Hjemmeværnets Logo" class="hjv_logo_stor" />
+        <img
+          src="assets/hjemmevaernet_logo.svg"
+          alt="Hjemmeværnets Logo"
+          class="hjv_logo_stor"
+        />
       </div>
       <div class="mobile">
-      <img src="assets/hjv_logo.svg" alt="HJV Logo" id="nav_logo">
-      <div id="burger_menu">
-        <div id="burger_icon">
-          <span></span>
-      </div>
-      </div>
+        <img src="assets/hjv_logo.svg" alt="HJV Logo" id="nav_logo" />
+        <div id="burger_menu">
+          <div id="burger_icon">
+            <span></span>
+          </div>
+        </div>
         <nav id="burger_nav">
-          <div id="user_info">
-            <img src="assets/avatar.png" alt="" id="user_avatar" />
-            <p id="user_name">admin</p>
-            <i class="fa-solid fa-gear" id="user_settings"></i>
+          <div class="user">
+            <div id="user_info">
+              <div>
+                <img src="assets/avatar.png" alt="" id="user_avatar" />
+                <p id="user_name">admin</p>
+              </div>
+              <span class="material-symbols-outlined"> settings </span>
+            </div>
           </div>
           <ul>
             <div id="ny_chat">
@@ -99,84 +110,70 @@
       </nav>
     </header>
     <div class="main">
-
       <div class="sidebar">
         <ul class="sidebar_container">
           <li class="sidebar_item" id="start_chat_button">
-            <span class="material-symbols-outlined">
-              edit_square
-              </span>
-              <p>Start ny chat</p>
+            <span class="material-symbols-outlined"> edit_square </span>
+            <p>Start ny chat</p>
           </li>
           <li class="sidebar_item">
-            <span class="material-symbols-outlined">
-              library_books
-              </span>
-              <div id="sidebar_dropdown"> 
+            <span class="material-symbols-outlined"> library_books </span>
+            <div id="sidebar_dropdown">
               <p>Chat Oversigt</p>
               <span class="material-symbols-outlined" id="arrow_down">
                 keyboard_arrow_down
-                </span>
-              </div>
+              </span>
+            </div>
           </li>
           <li class="sidebar_item">
-            <span class="material-symbols-outlined">
-              quiz
-              </span>
-              <p>Ofte Stillede Spørgsmål</p>
+            <span class="material-symbols-outlined"> quiz </span>
+            <p>Ofte Stillede Spørgsmål</p>
           </li>
           <li class="sidebar_item">
             <span class="material-symbols-outlined">
               collections_bookmark
-              </span>
-              <p>Undervisningsmaterialer</p>
+            </span>
+            <p>Undervisningsmaterialer</p>
           </li>
         </ul>
         <div class="user">
-        <div id="user_info">
-          <div>
-          <img src="assets/avatar.png" alt="" id="user_avatar" />
-          <p id="user_name">admin</p>
+          <div id="user_info">
+            <div>
+              <img src="assets/avatar.png" alt="" id="user_avatar" />
+              <p id="user_name">admin</p>
+            </div>
+            <span class="material-symbols-outlined"> settings </span>
+          </div>
         </div>
-          <span class="material-symbols-outlined">
-            settings
-            </span>
-        </div>
-      </div>
       </div>
 
-    <div id="chat_container">
-      <div id="chat">
-        <h1>Hvad kan jeg hjælpe dig med?</h1>
-        <div id="user_questions">
-          <div class="user_question"></div>
+      <div id="chat_container">
+        <h1 id="welcome-text">Hvad kan jeg hjælpe dig med?</h1>
+        <div id="chat">
+          <div id="chatbox"></div>
         </div>
-        <div id="bot_answers">
-          <div class="bot_answer"></div>
+        <div class="input_container">
+          <div id="chatbtns_container">
+            <button id="decreaseFont">A</button>
+            <button id="increaseFont">A</button>
+          </div>
+          <div id="chat_input">
+            <input
+              id="userprompt"
+              type="text"
+              placeholder="Skriv et spørgsmål..."
+            />
+            <span class="material-symbols-outlined" id="sendprompt_btn">
+              arrow_upward
+            </span>
+          </div>
         </div>
+        <p id="disclaimer">
+          Jeg er ikke 100% fejlfri. Gennemtjek altid vigtig information.
+        </p>
+        <div class="loader"></div>
       </div>
-      <div class="input_container">
-        <div id="chatbtns_container">
-          <button id="decreaseFont">A</button>
-          <button id="increaseFont">A</button>
-        </div>
-        <div id="chat_input">
-        <input
-          id="userprompt"
-          type="text"
-          placeholder="Skriv et spørgsmål..."
-        />
-        <span class="material-symbols-outlined" id="sendprompt_btn">
-          arrow_upward
-          </span>
-        </div>
-      </div>
-      <p id="disclaimer">
-        Jeg er ikke 100% fejlfri. Gennemtjek altid vigtig information.
-      </p>
-      <div class="loader"></div>
     </div>
-  </div>
     <!-- <div class="bigbreaker"></div>
     <div class="smallbreaker"></div> -->
     <!-- <div class="boxlink">

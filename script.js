@@ -3,6 +3,7 @@
 import { fontSizer } from "./modules/fontSizer.js";
 import { loadAni, stopLoadAni } from "./modules/loadAni.js";
 import { createLoginComponent } from "./modules/login.js";
+import { chatDialogue } from "./modules/chatDialogue.js";
 
 let currentThreadId = "";
 let userName = document.getElementById("user_name").textContent;
@@ -11,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
   createLoginComponent("login-container");
   const increaseButton = document.getElementById("increaseFont");
   const decreaseButton = document.getElementById("decreaseFont");
+  const chat = document.getElementById("chat");
+
   const scalingFactorUp = 1.1;
   const scalingFactorDown = 0.9;
   increaseButton.addEventListener("click", () => fontSizer(scalingFactorUp));
@@ -32,6 +35,17 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("chat").classList.add("show-username");
     askAssistant(userInput);
     document.getElementById("userprompt").value = "";
+
+      // Opdater UI og start loading
+      chat.classList.add("show-username");
+      document.getElementById("welcome-text").textContent = "";
+      chat.style.width = "60%";
+
+      // Tilføj brugerens besked til chatbox
+      chatDialogue("Andreas", userInput);
+
+      // Vent på chatbot-svaret
+      await askAssistant(userInput);
   });
 });
 
@@ -87,7 +101,7 @@ async function askAssistant(userInput) {
     console.error("Error communicating with assistant:", error);
     alert(`An error occurred: ${error.message}`);
   } finally {
-    stopLoadAni();
+      stopLoadAni();
   }
 }
 
