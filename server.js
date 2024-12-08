@@ -235,6 +235,7 @@ async function callback(request, response) {
             "Content-Type": "text/event-stream",
             "Cache-Control": "no-cache",
             "Connection": "keep-alive",
+            "Thread-Id": threadId // Include thread ID in the response headers
           });
 
           // Start OpenAI streaming

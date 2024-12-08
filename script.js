@@ -5,7 +5,7 @@ import { loadAni, stopLoadAni } from "./modules/loadAni.js";
 import { createLoginComponent } from "./modules/login.js";
 import { formatUnix } from "./modules/formatUnix.js";
 
-let currentThreadId = "thread_dQ4LJOd4oGyins0FEqPjFblz"; // The current thread ID
+let currentThreadId = ""; // The current thread ID
 let userName = document.getElementById("user_name").textContent;
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -72,6 +72,9 @@ async function askAssistant(userInput) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(requestData),
     });
+    currentThreadId = response.headers.get("Thread-Id");
+
+    // Get the thread ID from the response headers
     currentThreadId = response.headers.get("Thread-Id");
 
     const reader = response.body.getReader();
