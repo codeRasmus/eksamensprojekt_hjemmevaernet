@@ -336,7 +336,7 @@ async function createAssistantIfNeeded() {
   // }
   let _vectorStoreId;
   try {
-    const fileStreams = ["fih.txt"].map((path) => // Add the paths to the files
+    const fileStreams = ["./files/9000-120-02-Didaktiske-Design-Overvejelser-1.pdf", "./files/Faglærer-i-Hæren.pdf", "./files/Instruktørvirke-i-Forsvaret.pdf"].map((path) => // Add the paths to the files
       fs.createReadStream(path),
     );
 
@@ -366,7 +366,10 @@ async function createAssistantIfNeeded() {
       }
     });
     console.log("New assistant created:", assistant);
-    console.log("Vector store ID:", _vectorStoreId);
+    const vectorStoreFiles = await openai.beta.vectorStores.files.list(
+      _vectorStoreId
+    );
+    console.log("Vector store files: ", vectorStoreFiles);
     return assistant;
   } catch (error) {
     console.error("Error creating assistant:", error);

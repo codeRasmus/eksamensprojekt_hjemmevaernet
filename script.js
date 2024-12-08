@@ -4,7 +4,7 @@ import { fontSizer } from "./modules/fontSizer.js";
 import { loadAni, stopLoadAni } from "./modules/loadAni.js";
 import { createLoginComponent } from "./modules/login.js";
 
-let currentThreadId = "thread_UuUoV7frjfqkyZjnVuNVg0o2";
+let currentThreadId = "";
 let userName = document.getElementById("user_name").textContent;
 
 document.addEventListener("DOMContentLoaded", () => {
