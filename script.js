@@ -15,8 +15,14 @@ function getCurrentThreadId() {
   return sessionStorage.getItem("currentThreadId");
 }
 
+function updateUserName(name) {
+  userName = name; // Update the global userName variable
+  document.getElementById("user_name").textContent = name;
+  document.documentElement.style.setProperty('--userName', `"${name}"`);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  createLoginComponent();
+  createLoginComponent("login-container", updateUserName);
   const chat = document.getElementById("chat");
   const newChatBtn = document.getElementById("start_chat_button");
   newChatBtn.addEventListener("click", () => {
@@ -71,7 +77,7 @@ async function askAssistant(userInput) {
     const requestData = {
       question: userInput,
       currentThread: getCurrentThreadId(), // Ensure this is set correctly
-      userName: userName,
+      userName: userName, // Ensure userName is passed correctly
     };
     console.log("Sending request data:", requestData);
 

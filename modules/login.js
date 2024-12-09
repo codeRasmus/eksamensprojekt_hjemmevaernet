@@ -1,6 +1,6 @@
 // Login komponent
-export function createLoginComponent() {
-  const container = document.getElementById("login-container");
+export function createLoginComponent(containerId, updateUserName) {
+    const container = document.getElementById(containerId);
 
   // Lav HTML for login
   const loginHTML = `
@@ -47,17 +47,19 @@ export function createLoginComponent() {
         messageElement.style.color = "green";
         document.documentElement.style.setProperty("--userName", name);
 
-        // Skjul login-containeren og vis resten af siden
-        document.getElementById("login-component").style.display = "none";
-        document.querySelectorAll("header, #chat_container").forEach((el) => {
-          el.style.display = ""; // Vis de skjulte elementer
-        });
-      } else {
-        messageElement.textContent = "Login failed!";
-        messageElement.style.color = "red";
-      }
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  });
+                // Skjul login-containeren og vis resten af siden
+                document.getElementById("login-component").style.display = "none";
+                document.querySelectorAll("header, #chat_container").forEach(el => {
+                    el.style.display = ""; // Vis de skjulte elementer
+                });
+
+                updateUserName(name); // Ensure updateUserName is called with the correct name
+            } else {
+                messageElement.textContent = "Login failed!";
+                messageElement.style.color = "red";
+            }
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    });
 }

@@ -210,6 +210,10 @@ header #nav_logo {
   margin: 0 0 0 10px;
 }
 
+#user_name::before {
+  content: var(--userName);
+}
+
 #user_info {
   display: flex;
   height: 100px;
