@@ -1,6 +1,6 @@
 /* Variables */
 :root {
-  --userName: "admin";
+  --userName: "";
   /* Colors */
   --black: #212529;
   --white: white;
@@ -208,6 +208,10 @@ header #nav_logo {
 #user_name {
   font-size: 0.8rem;
   margin: 0 0 0 10px;
+}
+
+#user_name::before {
+  content: var(--userName);
 }
 
 #user_info {

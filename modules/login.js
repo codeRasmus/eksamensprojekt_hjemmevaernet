@@ -1,5 +1,5 @@
 // Login komponent
-export function createLoginComponent(containerId) {
+export function createLoginComponent(containerId, updateUserName) {
     const container = document.getElementById(containerId);
 
     // Lav HTML for login
@@ -51,6 +51,8 @@ export function createLoginComponent(containerId) {
                 document.querySelectorAll("header, #chat_container").forEach(el => {
                     el.style.display = ""; // Vis de skjulte elementer
                 });
+
+                updateUserName(name); // Ensure updateUserName is called with the correct name
             } else {
                 messageElement.textContent = "Login failed!";
                 messageElement.style.color = "red";
