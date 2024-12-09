@@ -132,9 +132,10 @@ async function callback(request, response) {
       try {
         const { threadId } = JSON.parse(body);
         const threadMessages = await openai.beta.threads.messages.list(threadId);
-        let messages = threadMessages.data.flatMap((message) => {
-          message.content.map((content) => content.text.value);
-        });
+        let messages = threadMessages.data.flatMap((message) => 
+          message.content.map((content) => content.text.value)
+        );
+        messages.reverse(); // Reverse the array of messages
         response.writeHead(200, { "Content-Type": "application/json" });
         return response.end(JSON.stringify({ messages }));
       } catch (error) {

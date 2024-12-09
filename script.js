@@ -5,8 +5,15 @@ import { loadAni, stopLoadAni } from "./modules/loadAni.js";
 import { createLoginComponent } from "./modules/login.js";
 import { formatUnix } from "./modules/formatUnix.js";
 
-let currentThreadId = ""; // The current thread ID
 let userName = document.getElementById("user_name").textContent;
+
+function setCurrentThreadId(threadId) {
+  sessionStorage.setItem("currentThreadId", threadId);
+}
+
+function getCurrentThreadId() {
+  return sessionStorage.getItem("currentThreadId");
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   createLoginComponent("login-container");
@@ -15,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   newChatBtn.addEventListener("click", () => {
     document.getElementById("chatbox").innerHTML = "";
     document.getElementById("welcome-text").style.display = "block";
+    setCurrentThreadId(""); // Reset current thread ID
   });
   const chatOversigt = document.querySelectorAll("#chat_oversigt");
   chatOversigt.forEach((chat) => {
@@ -56,13 +64,13 @@ async function askAssistant(userInput) {
     loadAni();
 
     if (chatbox.innerHTML === "") {
-      currentThreadId = "";
+      setCurrentThreadId("");
       console.log("Thread er ingenting");
     }
 
     const requestData = {
       question: userInput,
-      currentThread: currentThreadId, // Ensure this is set correctly
+      currentThread: getCurrentThreadId(), // Ensure this is set correctly
       userName: userName,
     };
     console.log("Sending request data:", requestData);
@@ -72,10 +80,9 @@ async function askAssistant(userInput) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(requestData),
     });
-    currentThreadId = response.headers.get("Thread-Id");
 
     // Get the thread ID from the response headers
-    currentThreadId = response.headers.get("Thread-Id");
+    setCurrentThreadId(response.headers.get("Thread-Id"));
 
     const reader = response.body.getReader();
     const decoder = new TextDecoder();
@@ -142,16 +149,37 @@ async function showThreads() {
     threadDiv.innerHTML = `${formatUnix(thread.created_at)}`;
     threadsContainer.appendChild(threadDiv);
     threadDiv.addEventListener("click", async () => {
-      currentThreadId = thread;
-      messageResponse = await fetch("/getThreadMessages", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ threadId: thread }),
-      });
+      try {
+        console.log("Fetching messages for thread ID:", thread.id);
+        setCurrentThreadId(thread.id);
+        const messageResponse = await fetch("/getThreadMessages", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ threadId: thread.id }),
+        });
+        if (!messageResponse.ok) {
+          throw new Error(`Error fetching messages: ${messageResponse.status}`);
+        }
+        // Opdater UI og start loading
+        chat.classList.add("show-username");
+        document.getElementById("welcome-text").style.display = "none";
+        chat.style.width = "60%";
+        const messages = await messageResponse.json();
+        const chatbox = document.getElementById("chatbox");
+        chatbox.innerHTML = "";
+        messages.messages.forEach((message, index) => {
+          const messageDiv = document.createElement("div");
+          messageDiv.classList.add(index % 2 === 0 ? "user_question" : "bot_answer");
+          messageDiv.textContent = message;
+          chatbox.appendChild(messageDiv);
+        });
+      } catch (error) {
+        console.error("Error fetching messages:", error);
+      }
     });
   });
   threadsContainer.addEventListener("click", () => {
     threadsContainer.classList.toggle("active");
-    arrowDown.toggle("active");
+    arrowDown.classList.toggle("active");
   });
 }
