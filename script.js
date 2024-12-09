@@ -121,18 +121,18 @@ async function askAssistant(userInput) {
       for (const line of lines) {
         if (line.startsWith("data: ")) {
           let text = line.slice(6); // Fjern "data: " prefix
-      
+
           if (text === "[DONE]") {
             // Når vi er færdige, tilpas Markdown-strukturen
             finalResponse = finalResponse
-            .replace(/(\d+)\.(\s*\*\*)/g, "**$1.**$2") // Inkluder tal og punktum indenfor **
-            .replace(/(#+)/g, "\n$1") // Sikr linjeskift før headings
-            .replace(/- /g, "\n- "); // Sikr linjeskift før listeelementer
-      
+              .replace(/(\d+)\.(\s*\*\*)/g, "**$1.**$2") // Inkluder tal og punktum indenfor **
+              .replace(/(#+)/g, "\n$1") // Sikr linjeskift før headings
+              .replace(/- /g, "\n- "); // Sikr linjeskift før listeelementer
+
             newDiv.innerHTML = marked.parse(finalResponse); // Parse med marked
             return;
           }
-      
+
           if (!text.startsWith("[TOOL CALL]")) {
             finalResponse += text; // Saml teksten i finalResponse
             newDiv.innerHTML += text; // Opdater løbende med rå tekst
@@ -208,10 +208,19 @@ async function showThreads() {
         const messages = await messageResponse.json();
         const chatbox = document.getElementById("chatbox");
         chatbox.innerHTML = "";
-        messages.messages.forEach((message, index) => {
+        messages.messages.forEach((message) => {
           const messageDiv = document.createElement("div");
-          messageDiv.classList.add(index % 2 === 0 ? "user_question" : "bot_answer");
-          messageDiv.textContent = message;
+          messageDiv.classList.add(
+            message.role === "user" ? "user_question" : "bot_answer"
+          );
+          messageDiv.textContent = message.text;
+          // Når vi er færdige, tilpas Markdown-strukturen
+          messageDiv.textContent = messageDiv.textContent
+            .replace(/(\d+)\.(\s*\*\*)/g, "**$1.**$2") // Inkluder tal og punktum indenfor **
+            .replace(/(#+)/g, "\n$1") // Sikr linjeskift før headings
+            .replace(/- /g, "\n- "); // Sikr linjeskift før listeelementer
+
+          messageDiv.innerHTML = marked.parse(messageDiv.textContent); // Parse med marked
           chatbox.appendChild(messageDiv);
         });
       } catch (error) {
