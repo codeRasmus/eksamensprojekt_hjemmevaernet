@@ -416,6 +416,39 @@ button#decreaseFont {
   color: var(--red);
 }
 
+.bot_answer h1 {
+  font-size: 2rem;
+  color: var(--red);
+  margin-top: 10px;
+  position: relative;
+  text-align: left;
+  top: 0%;
+}
+
+.bot_answer h2 {
+  font-size: 1.5rem;
+  color: var(--red);
+  margin-top: 10px;
+}
+
+.bot_answer h3 {
+  font-size: 1.2rem;
+  color: var(--red);
+  margin-top: 10px;
+}
+
+.bot_answer h4 {
+  font-size: 1rem;
+  color: var(--red);
+  margin-top: 10px;
+}
+
+.bot_answer ul li {
+  list-style: disc outside none;
+  display: list-item;
+  margin-left: 1em;
+}
+
 #chatbtns_container {
   display: flex;
   position: absolute;
