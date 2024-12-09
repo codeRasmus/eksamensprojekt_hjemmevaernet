@@ -386,7 +386,7 @@ button#decreaseFont {
 }
 
 #chat .user_question::before {
-  content: var(--userName);
+  content: var(--userName, "Default User");
   display: none;
   position: absolute;
   top: -20px;

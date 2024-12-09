@@ -179,7 +179,9 @@ async function showThreads() {
         chatbox.innerHTML = "";
         messages.messages.forEach((message) => {
           const messageDiv = document.createElement("div");
-          messageDiv.classList.add(message.role === "user" ? "user_question" : "bot_answer");
+          messageDiv.classList.add(
+            message.role === "user" ? "user_question" : "bot_answer"
+          );
           messageDiv.textContent = message.text;
           chatbox.appendChild(messageDiv);
         });
