@@ -109,7 +109,11 @@ async function askAssistant(userInput) {
             text = "";
             return; // Stop processing when [DONE] is received
           }
-          newDiv.textContent += text; // Append the chunk to the new div
+          if (text.startsWith("[TOOL CALL]")) {
+            console.log("Tool call event:", text);
+          } else {
+            newDiv.textContent += text; // Append the chunk to the new div
+          }
         }
       }
       // Clear content to avoid duplicating chunks

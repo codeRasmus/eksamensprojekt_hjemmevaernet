@@ -216,7 +216,7 @@ async function callback(request, response) {
 
         try {
           console.log("Adding user message to thread...");
-          addMessage(threadId, question)
+          await addMessage(threadId, question);
         } catch (error) {
           console.error("Error adding user message to thread:", error);
           throw error;
@@ -250,6 +250,10 @@ async function callback(request, response) {
             .on("textDelta", (textDelta) => {
               console.log("Event: textDelta:", textDelta.value);
               response.write(`data: ${textDelta.value}\n\n`);
+            })
+            .on("toolCallCreated", (event) => {
+              console.log("Event: toolCallCreated:", event.type);
+              response.write(`data: [TOOL CALL] ${event.type}\n\n`);
             })
             .on("end", () => {
               console.log("Event: end");
