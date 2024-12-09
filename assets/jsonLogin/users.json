@@ -4,104 +4,7 @@
         "name": "admin",
         "password": "admin123",
         "role": "admin",
-        "threads": [
-            {
-                "id": "thread_44YK2AhTdw2RL5Fetm7EwkYh",
-                "created_at": 1733689752
-            },
-            {
-                "id": "thread_6f9bYkiweObOcvIScNfI9Tcu",
-                "created_at": 1733689796
-            },
-            {
-                "id": "thread_vwMNjV6q1976ODb21aWXMtWc",
-                "created_at": 1733689808
-            },
-            {
-                "id": "thread_YQG5paFyzMmE4v8KGk9vfn5Z",
-                "created_at": 1733689817
-            },
-            {
-                "id": "thread_XEuZEeKNTvRIwgqk818Fq6tb",
-                "created_at": 1733689826
-            },
-            {
-                "id": "thread_eYbD3t4ciElP4Le2BwQnbxuX",
-                "created_at": 1733689842
-            },
-            {
-                "id": "thread_VL3cTzUk2XO8lS1YQcLxYBAC",
-                "created_at": 1733689857
-            },
-            {
-                "id": "thread_55n51VIl313zdaPvtnaGbmuq",
-                "created_at": 1733689868
-            },
-            {
-                "id": "thread_fLkfbOhb6VbDdYVSaF9OHMDm",
-                "created_at": 1733689889
-            },
-            {
-                "id": "thread_olgX8IynQuIJy4E62fJ0aTZ8",
-                "created_at": 1733689911
-            },
-            {
-                "id": "thread_S6jhSqj1sxNwjYWR5SBEyz9q",
-                "created_at": 1733689939
-            },
-            {
-                "id": "thread_X9Cj4jr4CvsF0hRPNZEUtH8b",
-                "created_at": 1733700255
-            },
-            {
-                "id": "thread_7oVWUAoAUU2Nid380ZNkuo3D",
-                "created_at": 1733702187
-            },
-            {
-                "id": "thread_gkosszn9zqJ8BFg880RXVYv8",
-                "created_at": 1733702298
-            },
-            {
-                "id": "thread_1XVf323HmMhMnf0gy456cIQx",
-                "created_at": 1733702328
-            },
-            {
-                "id": "thread_7BJjJ9TJqtxsGiOavdV2UtJI",
-                "created_at": 1733702477
-            },
-            {
-                "id": "thread_w8u3cjqoiNfvJE8QP4cw6GmF",
-                "created_at": 1733702500
-            },
-            {
-                "id": "thread_ECPx0Hf8n6IkuI5X94vzKkG0",
-                "created_at": 1733702520
-            },
-            {
-                "id": "thread_J4JnAV8i2urCwQxTTXT7iLnN",
-                "created_at": 1733705527
-            },
-            {
-                "id": "thread_EgBeQ7YhINdRC1Hmg4UXIjxR",
-                "created_at": 1733705643
-            },
-            {
-                "id": "thread_9n37ghsiUJUcVLy76iOzZeTV",
-                "created_at": 1733710377
-            },
-            {
-                "id": "thread_9pRInvl80uQ8p7LUPdlw5LzY",
-                "created_at": 1733710867
-            },
-            {
-                "id": "thread_dd93vSuxywrW3GeTKr2xo5Zf",
-                "created_at": 1733753273
-            },
-            {
-                "id": "thread_4JXbqliJUg2ibrQtMTijvb1I",
-                "created_at": 1733753421
-            }
-        ]
+        "threads": []
     },
     {
         "id": 2,
@@ -109,5 +12,53 @@
         "password": "user123",
         "role": "user",
         "threads": []
+    },
+    {
+        "id": 3,
+        "name": "Kenneth",
+        "password": "kenneth123",
+        "role": "user",
+        "threads": [
+            {
+                "id": "thread_v1BvBxOewOIKTb9aNz1UV9qD",
+                "created_at": 1733761909
+            },
+            {
+                "id": "thread_G29xFrt9wZuUKJbKbG0NZCBR",
+                "created_at": 1733761997
+            },
+            {
+                "id": "thread_9V1PWbjQTBrDv48tfLiQIdsB",
+                "created_at": 1733762120
+            },
+            {
+                "id": "thread_B7yaqWQo32r3u6fnJvOMdEpx",
+                "created_at": 1733762229
+            },
+            {
+                "id": "thread_uhsVOWdVx0dFYPlYHE02LkOp",
+                "created_at": 1733762625
+            },
+            {
+                "id": "thread_fkazW2lFZQct9JU5aQNnk9Sq",
+                "created_at": 1733762715
+            },
+            {
+                "id": "thread_3HxvlJcSZ6ZLvNiuZsvPyFwd",
+                "created_at": 1733762807
+            },
+            {
+                "id": "thread_kv6WFrp68lakc1DDpZEkF7Br",
+                "created_at": 1733762885
+            },
+            {
+                "id": "thread_AQjEv6X1AsMhcAtKLO3cypus",
+                "created_at": 1733762960
+            },
+            {
+                "id": "thread_Ykfyat587fdvuALxguGCwHQd",
+                "created_at": 1733763018
+            }
+        ]
     }
 ]

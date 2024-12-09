@@ -1,9 +1,9 @@
 // Login komponent
-export function createLoginComponent(containerId) {
-    const container = document.getElementById(containerId);
+export function createLoginComponent() {
+  const container = document.getElementById("login-container");
 
-    // Lav HTML for login
-    const loginHTML = `
+  // Lav HTML for login
+  const loginHTML = `
         <div id="login-component">
             <form id="loginForm">
                 <img src="assets/hjv_logo.svg" alt="Login" width="100">
@@ -23,40 +23,41 @@ export function createLoginComponent(containerId) {
         </div>
     `;
 
-    container.innerHTML = loginHTML;
+  container.innerHTML = loginHTML;
 
-    // Tilføj event listener
-    document.getElementById("loginForm").addEventListener("submit", async (e) => {
-        e.preventDefault();
+  // Tilføj event listener
+  document.getElementById("loginForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-        const name = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
+    const name = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
-        try {
-            const response = await fetch("/login", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ name, password }),
-            });
+    try {
+      const response = await fetch("/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, password }),
+      });
 
-            const data = await response.json();
+      const data = await response.json();
 
-            const messageElement = document.getElementById("login-message");
-            if (data.success) {
-                messageElement.textContent = "Login successful!";
-                messageElement.style.color = "green";
+      const messageElement = document.getElementById("login-message");
+      if (data.success) {
+        messageElement.textContent = "Login successful!";
+        messageElement.style.color = "green";
+        document.documentElement.style.setProperty("--userName", name);
 
-                // Skjul login-containeren og vis resten af siden
-                document.getElementById("login-component").style.display = "none";
-                document.querySelectorAll("header, #chat_container").forEach(el => {
-                    el.style.display = ""; // Vis de skjulte elementer
-                });
-            } else {
-                messageElement.textContent = "Login failed!";
-                messageElement.style.color = "red";
-            }
-        } catch (error) {
-            console.error("Error:", error);
-        }
-    });
+        // Skjul login-containeren og vis resten af siden
+        document.getElementById("login-component").style.display = "none";
+        document.querySelectorAll("header, #chat_container").forEach((el) => {
+          el.style.display = ""; // Vis de skjulte elementer
+        });
+      } else {
+        messageElement.textContent = "Login failed!";
+        messageElement.style.color = "red";
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  });
 }

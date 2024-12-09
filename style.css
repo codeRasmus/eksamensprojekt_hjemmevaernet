@@ -1,6 +1,6 @@
 /* Variables */
 :root {
-  --userName: "admin";
+  --userName: "";
   /* Colors */
   --black: #212529;
   --white: white;
@@ -382,7 +382,7 @@ button#decreaseFont {
 }
 
 #chat .user_question::before {
-  content: var(--userName);
+  content: var(--userName, "Default User");
   display: none;
   position: absolute;
   top: -20px;
