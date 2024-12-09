@@ -171,10 +171,10 @@ async function showThreads() {
         const messages = await messageResponse.json();
         const chatbox = document.getElementById("chatbox");
         chatbox.innerHTML = "";
-        messages.messages.forEach((message, index) => {
+        messages.messages.forEach((message) => {
           const messageDiv = document.createElement("div");
-          messageDiv.classList.add(index % 2 === 0 ? "user_question" : "bot_answer");
-          messageDiv.textContent = message;
+          messageDiv.classList.add(message.role === "user" ? "user_question" : "bot_answer");
+          messageDiv.textContent = message.text;
           chatbox.appendChild(messageDiv);
         });
       } catch (error) {
