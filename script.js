@@ -152,6 +152,18 @@ async function showThreads() {
     threadDiv.classList.add("thread");
     threadDiv.innerHTML = `${formatUnix(thread.created_at)}`;
     threadsContainer.appendChild(threadDiv);
+    threadDiv.addEventListener("mouseenter", function () {
+      this.style.fontWeight = "bold";
+      this.style.textDecoration = "underline";
+      this.style.color = "var(--red)";
+    });
+
+    threadDiv.addEventListener("mouseleave", function () {
+      this.style.fontWeight = "normal";
+      this.style.textDecoration = "none";
+      this.style.color = "var(--black)";
+    });
+
     threadDiv.addEventListener("click", async () => {
       try {
         console.log("Fetching messages for thread ID:", thread.id);
@@ -184,6 +196,7 @@ async function showThreads() {
       }
     });
   });
+
   threadsContainer.addEventListener("click", () => {
     threadsContainer.classList.toggle("active");
     arrowDown.classList.toggle("active");
