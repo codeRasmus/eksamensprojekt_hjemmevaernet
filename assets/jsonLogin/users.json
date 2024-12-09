@@ -4,7 +4,12 @@
         "name": "admin",
         "password": "admin123",
         "role": "admin",
-        "threads": []
+        "threads": [
+            {
+                "id": "thread_S8dJKwpOTYQ3qAPpZ5NVsFOi",
+                "created_at": 1733768870
+            }
+        ]
     },
     {
         "id": 2,
@@ -58,6 +63,34 @@
             {
                 "id": "thread_Ykfyat587fdvuALxguGCwHQd",
                 "created_at": 1733763018
+            },
+            {
+                "id": "thread_Ysdskbxieb6KgiUoURGVCpr4",
+                "created_at": 1733770187
+            },
+            {
+                "id": "thread_YGphp3vvsBEfyA5DsDdBFO70",
+                "created_at": 1733770229
+            },
+            {
+                "id": "thread_6fSjdSCjYac9psenBA8KSJ59",
+                "created_at": 1733770385
+            },
+            {
+                "id": "thread_3gQsSwVH4X1XKts4gVNU9i2C",
+                "created_at": 1733770474
+            },
+            {
+                "id": "thread_ay6qx9W5Kp2SjwIVNiVFZgX6",
+                "created_at": 1733770936
+            },
+            {
+                "id": "thread_87by90DqCH4muQx2bqWthi1P",
+                "created_at": 1733771000
+            },
+            {
+                "id": "thread_nKDqV2wurSQhdUsiqLD1oqWA",
+                "created_at": 1733771038
             }
         ]
     }

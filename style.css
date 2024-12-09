@@ -5,6 +5,7 @@
   --black: #212529;
   --white: white;
   --grey: #d9d9d9;
+  --darkerGrey: #bababa;
   --red: #8d1b3d;
   --oliveGreen: #3f5b58;
   --lightGreen: #597e50;
@@ -701,11 +702,12 @@ input:focus {
   }
 
   .thread {
-    font-size: 0.6rem;
-    margin-top: 10px;
+    font-size: 0.8rem;
     line-height: 20px;
     width: 180px;
     max-width: 180px;
+    padding: 5px 0 5px 10px;
+    margin: 5px 0;
   }
 
   .sidebar_item p {
