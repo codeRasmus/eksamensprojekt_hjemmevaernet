@@ -15,8 +15,14 @@ function getCurrentThreadId() {
   return sessionStorage.getItem("currentThreadId");
 }
 
+function updateUserName(name) {
+  userName = name; // Update the global userName variable
+  document.getElementById("user_name").textContent = name;
+  document.documentElement.style.setProperty("--userName", `"${name}"`);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  createLoginComponent("login-container");
+  createLoginComponent("login-container", updateUserName);
   const chat = document.getElementById("chat");
   const newChatBtn = document.getElementById("start_chat_button");
   newChatBtn.addEventListener("click", () => {
@@ -28,8 +34,16 @@ document.addEventListener("DOMContentLoaded", () => {
   chatOversigt.forEach((chat) => {
     chat.addEventListener("click", () => showThreads());
   });
+  document
+    .getElementById("sendprompt_btn")
+    .addEventListener("click", handleInput);
+  document.getElementById("userprompt").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      handleInput();
+    }
+  });
 
-  document.getElementById("sendprompt_btn").addEventListener("click", () => {
+  function handleInput() {
     const userInput = document.getElementById("userprompt").value;
     console.log("User input:", userInput); // Log the user input
     if (userInput.trim() === "") {
@@ -48,7 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
     newDiv.classList.add("user_question");
     userMessagesDiv.appendChild(newDiv);
     newDiv.textContent = userInput;
-  });
+  }
+
   const increaseButton = document.getElementById("increaseFont");
   const decreaseButton = document.getElementById("decreaseFont");
   const scalingFactorUp = 1.1;
@@ -71,7 +86,7 @@ async function askAssistant(userInput) {
     const requestData = {
       question: userInput,
       currentThread: getCurrentThreadId(), // Ensure this is set correctly
-      userName: userName,
+      userName: userName, // Ensure userName is passed correctly
     };
     console.log("Sending request data:", requestData);
 
@@ -159,6 +174,21 @@ async function showThreads() {
     threadDiv.classList.add("thread");
     threadDiv.innerHTML = `${formatUnix(thread.created_at)}`;
     threadsContainer.appendChild(threadDiv);
+
+    threadDiv.addEventListener("mouseenter", function () {
+      this.style.fontWeight = "bold";
+      this.style.textDecoration = "underline";
+      this.style.color = "var(--red)";
+      this.style.backgroundColor = "var(--darkerGrey)";
+    });
+
+    threadDiv.addEventListener("mouseleave", function () {
+      this.style.fontWeight = "normal";
+      this.style.textDecoration = "none";
+      this.style.color = "var(--black)";
+      this.style.backgroundColor = "inherit";
+    });
+
     threadDiv.addEventListener("click", async () => {
       try {
         console.log("Fetching messages for thread ID:", thread.id);
@@ -189,6 +219,7 @@ async function showThreads() {
       }
     });
   });
+
   threadsContainer.addEventListener("click", () => {
     threadsContainer.classList.toggle("active");
     arrowDown.classList.toggle("active");

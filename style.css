@@ -5,6 +5,7 @@
   --black: #212529;
   --white: white;
   --grey: #d9d9d9;
+  --darkerGrey: #bababa;
   --red: #8d1b3d;
   --oliveGreen: #3f5b58;
   --lightGreen: #597e50;
@@ -208,6 +209,10 @@ header #nav_logo {
 #user_name {
   font-size: 0.8rem;
   margin: 0 0 0 10px;
+}
+
+#user_name::before {
+  content: var(--userName);
 }
 
 #user_info {
@@ -692,6 +697,7 @@ input:focus {
     background-color: var(--light-grey);
     color: var(--red);
     font-weight: bold;
+    cursor: default;
   }
 
   #sidebar_dropdown {
@@ -729,8 +735,12 @@ input:focus {
   }
 
   .thread {
-    font-size: 0.6rem;
-    margin-top: 10px;
+    font-size: 0.8rem;
+    line-height: 20px;
+    width: 180px;
+    max-width: 180px;
+    padding: 5px 0 5px 10px;
+    margin: 5px 0;
   }
 
   .sidebar_item p {
@@ -859,6 +869,15 @@ input:focus {
     justify-content: center;
     align-items: center;
     height: 100vh;
+  }
+
+  #loginForm input {
+    background-color: var(--grey);
+    width: 30%;
+    height: 5%;
+    padding-left: 20px;
+    border: none;
+    margin-top: 10px;
   }
 
   #chatbox {
