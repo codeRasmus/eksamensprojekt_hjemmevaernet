@@ -4,5 +4,5 @@ export function formatUnix(unix) {
   const month = String(date.getMonth() + 1).padStart(2, "0");
   const hours = String(date.getHours()).padStart(2, "0");
   const minutes = String(date.getMinutes()).padStart(2, "0");
-  return `Chat: ${day}/${month} ${hours}:${minutes}`;
+  return `Fra: ${day}/${month} ${hours}:${minutes}`;
 }
