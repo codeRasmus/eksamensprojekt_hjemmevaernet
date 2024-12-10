@@ -100,10 +100,14 @@ async function callback(request, response) {
         const user = await getUser(userName);
         if (!user) {
           response.writeHead(404, { "Content-Type": "application/json" });
-          return response.end(JSON.stringify({ success: false, error: "User not found" }));
+          return response.end(
+            JSON.stringify({ success: false, error: "User not found" })
+          );
         }
         response.writeHead(200, { "Content-Type": "application/json" });
-        return response.end(JSON.stringify({ success: true, threads: user.threads })); // Return the user"s threads
+        return response.end(
+          JSON.stringify({ success: true, threads: user.threads })
+        ); // Return the user"s threads
       } catch (error) {
         console.error("Error fetching threads:", error);
         response.writeHead(500, { "Content-Type": "application/json" });
@@ -131,10 +135,12 @@ async function callback(request, response) {
 
       try {
         const { threadId } = JSON.parse(body);
-        const threadMessages = await openai.beta.threads.messages.list(threadId);
+        const threadMessages = await openai.beta.threads.messages.list(
+          threadId
+        );
         let messages = threadMessages.data.map((message) => ({
           role: message.role,
-          text: message.content.map((content) => content.text.value)
+          text: message.content.map((content) => content.text.value),
         }));
         messages.reverse(); // Reverse the array of messages
         response.writeHead(200, { "Content-Type": "application/json" });
@@ -142,7 +148,9 @@ async function callback(request, response) {
       } catch (error) {
         console.error("Error fetching messages:", error);
         response.writeHead(500, { "Content-Type": "application/json" });
-        return response.end(JSON.stringify({ error: "Failed to fetch messages" }));
+        return response.end(
+          JSON.stringify({ error: "Failed to fetch messages" })
+        );
       }
     });
     return;
@@ -162,7 +170,9 @@ async function callback(request, response) {
         const { question, currentThread, userName } = JSON.parse(body); // Parse the JSON body to extract the question
         if (!question) {
           response.writeHead(400, { "Content-Type": "application/json" }); // Respond with 400 if question is missing
-          return response.end(JSON.stringify({ error: "Question is required" }));
+          return response.end(
+            JSON.stringify({ error: "Question is required" })
+          );
         }
 
         let assistantId;
@@ -174,7 +184,11 @@ async function callback(request, response) {
           if (!assistant) {
             console.error("Failed to create or retrieve assistant.");
             response.writeHead(500, { "Content-Type": "application/json" }); // Respond with 500 if assistant creation fails
-            return response.end(JSON.stringify({ error: "Failed to create or retrieve assistant" }));
+            return response.end(
+              JSON.stringify({
+                error: "Failed to create or retrieve assistant",
+              })
+            );
           }
           assistantId = assistant.id;
         } catch (error) {
@@ -197,7 +211,9 @@ async function callback(request, response) {
             user = await getUser(userName);
             if (!user) {
               response.writeHead(404, { "Content-Type": "application/json" });
-              return response.end(JSON.stringify({ success: false, error: "User not found" }));
+              return response.end(
+                JSON.stringify({ success: false, error: "User not found" })
+              );
             }
           } catch (error) {
             console.error("Error fetching user:", error);
@@ -236,14 +252,15 @@ async function callback(request, response) {
           response.writeHead(200, {
             "Content-Type": "text/event-stream",
             "Cache-Control": "no-cache",
-            "Connection": "keep-alive",
-            "Thread-Id": threadId // Include thread ID in the response headers
+            Connection: "keep-alive",
+            "Thread-Id": threadId, // Include thread ID in the response headers
           });
 
           // Start OpenAI streaming
-          const run = await openai.beta.threads.runs.stream(threadId, {
-            assistant_id: assistantId,
-          })
+          const run = await openai.beta.threads.runs
+            .stream(threadId, {
+              assistant_id: assistantId,
+            })
             .on("textCreated", () => {
               console.log("Event: textCreated");
               response.write("data: \nassistant >\n\n");
@@ -300,23 +317,27 @@ async function callback(request, response) {
   const fileType = path.extname(filePath);
 
   // Check om filer eksisterer
-  fs.readFile(filePath, "utf8", function (err, data) {
-    if (err) {
-      console.log("PROBLEMS: File not found", err);
-      response.writeHead(404, { "Content-Type": "text/plain" });
-      response.write(`404`);
-      return response.end();
-    } else {
-      if (fileType) {
-        response.writeHead(200, { "Content-Type": mime[fileType] });
-        response.write(data);
+  fs.readFile(
+    filePath,
+    fileType === ".png" ? null : "utf8",
+    function (err, data) {
+      if (err) {
+        console.log("PROBLEMS: File not found", err);
+        response.writeHead(404, { "Content-Type": "text/plain" });
+        response.write(`404`);
         return response.end();
       } else {
-        response.writeHead(404, "Filetype is not supported");
-        return response.end();
+        if (fileType) {
+          response.writeHead(200, { "Content-Type": mime[fileType] });
+          response.write(data, fileType === ".png" ? "binary" : "utf8");
+          return response.end();
+        } else {
+          response.writeHead(404, "Filetype is not supported");
+          return response.end();
+        }
       }
     }
-  });
+  );
 }
 
 function getPathName(url) {
@@ -355,8 +376,14 @@ async function createAssistantIfNeeded() {
   }
   let _vectorStoreId;
   try {
-    const fileStreams = ["./files/9000-120-02-Didaktiske-Design-Overvejelser-1.pdf", "./files/Faglærer-i-Hæren.pdf", "./files/Instruktørvirke-i-Forsvaret.pdf"].map((path) => // Add the paths to the files
-      fs.createReadStream(path),
+    const fileStreams = [
+      "./files/9000-120-02-Didaktiske-Design-Overvejelser-1.pdf",
+      "./files/Faglærer-i-Hæren.pdf",
+      "./files/Instruktørvirke-i-Forsvaret.pdf",
+    ].map(
+      (
+        path // Add the paths to the files
+      ) => fs.createReadStream(path)
     );
 
     // Create a vector store including our two files.
@@ -364,7 +391,9 @@ async function createAssistantIfNeeded() {
       name: "Hjemmeværnsskolens dokumentation",
     });
 
-    await openai.beta.vectorStores.fileBatches.uploadAndPoll(vectorStore.id, { files: fileStreams, });
+    await openai.beta.vectorStores.fileBatches.uploadAndPoll(vectorStore.id, {
+      files: fileStreams,
+    });
     _vectorStoreId = vectorStore.id;
   } catch (error) {
     console.error("Error uploading files:", error);
@@ -379,10 +408,10 @@ async function createAssistantIfNeeded() {
       model: "gpt-4o-mini",
       tools: [{ type: "file_search" }],
       tool_resources: {
-        "file_search": {
-          "vector_store_ids": [_vectorStoreId],
-        }
-      }
+        file_search: {
+          vector_store_ids: [_vectorStoreId],
+        },
+      },
     });
     console.log("New assistant created:", assistant);
     const vectorStoreFiles = await openai.beta.vectorStores.files.list(
@@ -464,9 +493,7 @@ async function addThreadToUser(userName, threadId) {
     throw error;
   }
   try {
-    const _currentThread = await openai.beta.threads.retrieve(
-      threadId
-    );
+    const _currentThread = await openai.beta.threads.retrieve(threadId);
     // Make object with thread ID and created_at to push to user threads
     thread = { id: _currentThread.id, created_at: _currentThread.created_at };
   } catch (error) {
@@ -475,7 +502,10 @@ async function addThreadToUser(userName, threadId) {
   }
   try {
     user.threads.push(thread); // Add thread ID to user"s threads
-    await fs.writeFileSync("./assets/jsonLogin/users.json", JSON.stringify(users, null, 4));
+    await fs.writeFileSync(
+      "./assets/jsonLogin/users.json",
+      JSON.stringify(users, null, 4)
+    );
   } catch (error) {
     console.error("Error updating user threads:", error);
     throw error;
