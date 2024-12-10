@@ -366,6 +366,7 @@ button#decreaseFont {
   justify-content: flex-end;
   font-size: var(--paragraph);
   padding: 10px;
+  overflow-y: auto;
 }
 
 #chat {
@@ -543,14 +544,13 @@ input:focus {
 /* Loader */
 .loader {
   display: none;
-  border: 8px solid #d9d9d9;
+  border: 8px solid var(--darkerGrey);
   border-top: 8px solid #8d1b3d;
   border-radius: 50%;
   width: 75px;
   height: 75px;
   position: absolute;
-  top: 30%;
-  left: 50%;
+  top: 35%;
   transform: translate(-50%, -50%);
 }
 
