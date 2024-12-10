@@ -612,7 +612,7 @@ input:focus {
   line-height: 20px;
   width: 180px;
   max-width: 180px;
-  padding: 5px 0 5px 10px;
+  padding: 5px 10px 5px 10px;
   margin: 5px 0;
   cursor: pointer;
 }
