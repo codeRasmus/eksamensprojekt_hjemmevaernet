@@ -57,6 +57,26 @@ function validateLogin(name, password) {
 
 // Udfører serverens opgave
 async function callback(request, response) {
+  // Serve static files from the "files" directory
+  if (request.method === "GET" && request.url.startsWith("/files/")) {
+    const filePath = path.join(__dirname, request.url);
+    const fileType = path.extname(filePath);
+
+    fs.readFile(filePath, (err, data) => {
+      if (err) {
+        console.log("PROBLEMS: File not found", err);
+        response.writeHead(404, { "Content-Type": "text/plain" });
+        response.write(`404`);
+        return response.end();
+      } else {
+        response.writeHead(200, { "Content-Type": mime[fileType] });
+        response.write(data);
+        return response.end();
+      }
+    });
+    return; // Stop further processing for this request
+  }
+
   // Håndterer login
   if (request.method === "POST" && request.url === "/login") {
     let body = "";
@@ -377,9 +397,9 @@ async function createAssistantIfNeeded() {
   let _vectorStoreId;
   try {
     const fileStreams = [
-      "./files/9000-120-02-Didaktiske-Design-Overvejelser-1.pdf",
-      "./files/Faglærer-i-Hæren.pdf",
-      "./files/Instruktørvirke-i-Forsvaret.pdf",
+      "./files/Didaktiske-Design-Overvejelser.pdf",
+      "./files/Faglaerer-i-Haeren.pdf",
+      "./files/Instruktoervirke-i-Forsvaret.pdf",
     ].map(
       (
         path // Add the paths to the files

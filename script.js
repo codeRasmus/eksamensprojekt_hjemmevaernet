@@ -70,6 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const scalingFactorDown = 0.9;
   increaseButton.addEventListener("click", () => fontSizer(scalingFactorUp));
   decreaseButton.addEventListener("click", () => fontSizer(scalingFactorDown));
+
+  const materialerOversigt = document.getElementById("materialer_oversigt");
+  materialerOversigt.addEventListener("click", () => showMaterialer(materialerOversigt));
 });
 
 async function askAssistant(userInput) {
@@ -233,4 +236,29 @@ async function showThreads() {
     threadsContainer.classList.toggle("active");
     arrowDown.classList.toggle("active");
   });
+}
+
+function showMaterialer(materialerOversigt) {
+  const materialerContainer = document.getElementById("materialer_container");
+  const arrowDown = materialerOversigt.querySelector("#arrow_down");
+  materialerContainer.classList.toggle("active");
+  arrowDown.classList.toggle("active");
+
+  if (materialerContainer.innerHTML === "") {
+    const materials = [
+      { name: "Didaktiske Design Overvejelser", url: "./files/Didaktiske-Design-Overvejelser.pdf" },
+      { name: "Faglærer i Hæren", url: "./files/Faglaerer-i-Haeren.pdf" },
+      { name: "Instruktørvirke i Forsvaret", url: "./files/Instruktoervirke-i-Forsvaret.pdf" },
+    ];
+
+    materials.forEach((material) => {
+      const materialDiv = document.createElement("div");
+      materialDiv.classList.add("materiale_item");
+      materialDiv.textContent = material.name;
+      materialDiv.addEventListener("click", () => {
+        window.open(material.url, "_blank");
+      });
+      materialerContainer.appendChild(materialDiv);
+    });
+  }
 }
