@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   newChatBtn.addEventListener("click", () => {
     document.getElementById("chatbox").innerHTML = "";
     document.getElementById("welcome-text").style.display = "block";
+    document.getElementById("current-chat-title").style.display = "none"; // Clear the current chat title
     setCurrentThreadId(""); // Reset current thread ID
   });
   const chatOversigt = document.querySelectorAll("#chat_oversigt");
@@ -186,14 +187,21 @@ async function showThreads() {
     });
 
     threadDiv.addEventListener("mouseleave", function () {
-      this.style.fontWeight = "normal";
-      this.style.textDecoration = "none";
-      this.style.color = "var(--black)";
-      this.style.backgroundColor = "inherit";
+      if (!this.classList.contains("active")) {
+        this.style.fontWeight = "normal";
+        this.style.textDecoration = "none";
+        this.style.color = "var(--black)";
+        this.style.backgroundColor = "inherit";
+      }
     });
 
     threadDiv.addEventListener("click", async () => {
       try {
+        // Remove active class from all threads
+        document.querySelectorAll(".thread").forEach((el) => el.classList.remove("active"));
+        // Add active class to the clicked thread
+        threadDiv.classList.add("active");
+
         console.log("Fetching messages for thread ID:", thread.id);
         setCurrentThreadId(thread.id);
         const messageResponse = await fetch("/getThreadMessages", {
@@ -226,6 +234,11 @@ async function showThreads() {
           messageDiv.innerHTML = marked.parse(messageDiv.textContent); // Parse med marked
           chatbox.appendChild(messageDiv);
         });
+
+        // Set the current chat title
+        const currentChatTitle = document.getElementById("current-chat-title");
+        currentChatTitle.textContent = `${formatUnix(thread.created_at)}`;
+        currentChatTitle.style.display = "block";
       } catch (error) {
         console.error("Error fetching messages:", error);
       }
