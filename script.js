@@ -9,32 +9,37 @@ import { toggleBurgerMenu } from "./modules/burgerMenu.js";
 let userName = document.getElementById("user_name").textContent;
 
 function setCurrentThreadId(threadId) {
-  sessionStorage.setItem("currentThreadId", threadId);
+  sessionStorage.setItem("currentThreadId", threadId); // Gem den aktuelle tråd ID i sessionStorage
 }
 
 function getCurrentThreadId() {
-  return sessionStorage.getItem("currentThreadId");
+  return sessionStorage.getItem("currentThreadId"); // Hent den aktuelle tråd ID fra sessionStorage
 }
 
 function updateUserName(name) {
-  userName = name; // Update the global userName variable
+  userName = name; // Opdater den globale userName variabel
   document.getElementById("user_name").textContent = name;
-  document.documentElement.style.setProperty("--userName", `"${name}"`);
+  document.documentElement.style.setProperty("--userName", `"${name}"`); // Opdater CSS variabel
+}
+
+function scrollToBottom() {
+  const chatbox = document.getElementById("chatbox");
+  chatbox.scrollTop = chatbox.scrollHeight; // Scroll til bunden af chatboxen
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  createLoginComponent("login-container", updateUserName);
-  toggleBurgerMenu();
-  const chat = document.getElementById("chat");
-  const newChatBtn = document.getElementById("start_chat_button");
-  newChatBtn.addEventListener("click", () => {
+  createLoginComponent("login-container", updateUserName); // Opret login komponent
+  toggleBurgerMenu(); // Toggle burger menu
+  const chat = document.getElementById("chat"); 
+  const newChatBtn = document.getElementById("start_chat_button"); 
+  newChatBtn.addEventListener("click", () => {  
     console.log("Ny chat startet");
     document.getElementById("chatbox").innerHTML = "";
     document.getElementById("welcome-text").style.display = "block";
-    document.getElementById("current-chat-title").style.display = "none"; // Clear the current chat title
-    setCurrentThreadId(""); // Reset current thread ID
+    document.getElementById("current-chat-title").style.display = "none"; // Ryd den aktuelle chat titel
+    setCurrentThreadId(""); // Nulstil nuværende tråd ID
   });
-  const chatOversigt = document.querySelectorAll("#chat_oversigt");
+  const chatOversigt = document.querySelectorAll("#chat_oversigt"); 
   chatOversigt.forEach((chat) => {
     chat.addEventListener("click", () => showThreads());
   });
@@ -44,12 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("userprompt").addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       handleInput();
-    }
+    } // Håndter brugerinput ved Enter-tast
   });
 
   function handleInput() {
     const userInput = document.getElementById("userprompt").value;
-    console.log("Input modtaget", userInput); // Log the user input
+    console.log("Input modtaget", userInput); // Log brugerinput
     if (userInput.trim() === "") {
       alert("Please enter a question.");
       return;
@@ -61,13 +66,15 @@ document.addEventListener("DOMContentLoaded", () => {
     askAssistant(userInput);
 
     const userMessagesDiv = document.querySelector("#chatbox");
-    // Create a new div for the response
+    // Opret en ny div til svaret
     const newDiv = document.createElement("div");
     newDiv.classList.add("user_question");
     userMessagesDiv.appendChild(newDiv);
     newDiv.textContent = userInput;
+    scrollToBottom(); // Scroll til bunden efter at have tilføjet brugerinput
   }
 
+  // Fontstørrelse justering
   const increaseButton = document.getElementById("increaseFont");
   const decreaseButton = document.getElementById("decreaseFont");
   const scalingFactorUp = 1.1;
@@ -75,6 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
   increaseButton.addEventListener("click", () => fontSizer(scalingFactorUp));
   decreaseButton.addEventListener("click", () => fontSizer(scalingFactorDown));
 
+  // Materialer oversigt
   const materialerOversigt = document.getElementById("materialer_oversigt");
   materialerOversigt.addEventListener("click", () =>
     showMaterialer(materialerOversigt)
@@ -93,8 +101,8 @@ async function askAssistant(userInput) {
 
     const requestData = {
       question: userInput,
-      currentThread: getCurrentThreadId(), // Ensure this is set correctly
-      userName: userName, // Ensure userName is passed correctly
+      currentThread: getCurrentThreadId(), // Sørg for at dette er sat korrekt
+      userName: userName, // Sørg for at userName sendes korrekt
     };
     console.log("Sender request data:", requestData);
 
@@ -104,29 +112,29 @@ async function askAssistant(userInput) {
       body: JSON.stringify(requestData),
     });
 
-    // Get the thread ID from the response headers
+    // Få tråd ID fra svar headers
     setCurrentThreadId(response.headers.get("Thread-Id"));
 
-    const reader = response.body.getReader();
-    const decoder = new TextDecoder();
-    let content = "";
-    const messagesDiv = document.querySelector("#chatbox");
-    let finalResponse = "";
-
-    // Create a new div for the response
+    const reader = response.body.getReader(); // Opret en reader til at læse svaret
+    const decoder = new TextDecoder(); // Opret en decoder til at dekode svaret
+    let content = ""; // Opret en variabel til at samle svaret
+    const messagesDiv = document.querySelector("#chatbox"); // Hent chatboxen
+    let finalResponse = ""; // Opret en variabel til at samle det endelige svar
+ 
+    // Opret en ny div til svaret
     const newDiv = document.createElement("div");
     newDiv.classList.add("bot_answer");
     messagesDiv.appendChild(newDiv);
 
     while (true) {
-      const { value, done } = await reader.read();
-      if (done) break;
+      const { value, done } = await reader.read(); // Læs svaret fra readeren
+      if (done) break; // Hvis vi er færdige, bryd løkken
 
-      const chunk = decoder.decode(value, { stream: true });
-      content += chunk;
+      const chunk = decoder.decode(value, { stream: true }); // Dekod svaret
+      content += chunk; // Saml svaret i content
 
-      const lines = content.split("\n");
-      for (const line of lines) {
+      const lines = content.split("\n"); // Del svaret op i linjer
+      for (const line of lines) { 
         if (line.startsWith("data: ")) {
           let text = line.slice(6); // Fjern "data: " prefix
 
@@ -147,46 +155,60 @@ async function askAssistant(userInput) {
           }
         }
       }
-      content = "";
+      content = ""; // Nulstil content
+      scrollToBottom(); // Scroll til bunden efter at have modtaget bot svar
     }
   } catch (error) {
-    console.error("Error communicating with assistant:", error);
-    alert(`An error occurred: ${error.message}`);
+    console.error("Fejl ved kommunikation med assistent:", error);
+    alert(`En fejl opstod: ${error.message}`);
   } finally {
-    stopLoadAni();
+    stopLoadAni(); // Stop indlæsningsanimationen
   }
 }
 
 async function showThreads() {
+  // Send en POST anmodning til serveren for at hente tråde
   const response = await fetch("/getThreads", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ userName: userName }),
+    body: JSON.stringify({ userName: userName }), // Send brugernavnet som JSON
   });
+
+  // Håndter fejl ved hentning af tråde
   if (!response.ok) {
-    throw new Error(`Error fetching threads: ${response.status}`);
+    throw new Error(`Fejl ved hentning af tråde: ${response.status}`);
   }
+
+  // Parse JSON data fra serverens svar
   const data = await response.json();
+
+  // Log trådene hvis der er nogen, ellers log en besked om ingen tråde
   if (data.threads.length > 0) {
-    console.log("Henter threads:", data.threads);
+    console.log("Henter tråde:", data.threads);
   } else {
     console.log("Endnu ingen tråde tilknyttet denne bruger");
   }
 
+  // Hent tråd-containeren og pilen fra DOM'en
   const threadsContainer = document.getElementById("threads_container");
   const arrowDown = document.getElementById("arrow_down");
+
+  // Ryd tråd-containeren og skift synligheden
   threadsContainer.innerHTML = "";
   threadsContainer.classList.toggle("active");
   arrowDown.classList.toggle("active");
 
+  // Gem trådene i en variabel
   let threads = data.threads;
 
+  // Iterer over hver tråd og opret et div element for det
   threads.forEach((thread) => {
     const threadDiv = document.createElement("div");
     threadDiv.classList.add("thread");
-    threadDiv.innerHTML = `${formatUnix(thread.created_at)}`;
-    threadsContainer.appendChild(threadDiv);
+    threadDiv.innerHTML = `${formatUnix(thread.created_at)}`; // Formater og vis trådens oprettelsesdato
+    threadsContainer.appendChild(threadDiv); // Tilføj tråden til tråd-containeren
 
+    // Tilføj event listener for mouseenter for at ændre stil ved hover
     threadDiv.addEventListener("mouseenter", function () {
       this.style.fontWeight = "bold";
       this.style.textDecoration = "underline";
@@ -194,6 +216,7 @@ async function showThreads() {
       this.style.backgroundColor = "var(--darkerGrey)";
     });
 
+    // Tilføj event listener for mouseleave for at nulstille stil når musen forlader
     threadDiv.addEventListener("mouseleave", function () {
       if (!this.classList.contains("active")) {
         this.style.fontWeight = "normal";
@@ -203,37 +226,38 @@ async function showThreads() {
       }
     });
 
+    // Tilføj event listener for click for at hente beskeder for den valgte tråd
     threadDiv.addEventListener("click", async () => {
       try {
-        // Remove active class from all threads
+        // Fjern aktiv klasse fra alle tråde
         document
           .querySelectorAll(".thread")
           .forEach((el) => el.classList.remove("active"));
-        // Add active class to the clicked thread
+        // Tilføj aktiv klasse til den klikkede tråd
         threadDiv.classList.add("active");
 
-        console.log("Fetching messages for thread ID:", thread.id);
-        setCurrentThreadId(thread.id);
+        console.log("Henter beskeder for tråd ID:", thread.id);
+        setCurrentThreadId(thread.id); // Sæt den aktuelle tråd ID
         const messageResponse = await fetch("/getThreadMessages", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ threadId: thread.id }),
+          body: JSON.stringify({ threadId: thread.id }), // Send tråd ID som JSON
         });
         if (!messageResponse.ok) {
-          throw new Error(`Error fetching messages: ${messageResponse.status}`);
+          throw new Error(`Fejl ved hentning af beskeder: ${messageResponse.status}`);
         }
         // Opdater UI og start loading
         chat.classList.add("show-username");
         document.getElementById("welcome-text").style.display = "none";
 
-        const messages = await messageResponse.json();
+        const messages = await messageResponse.json(); // Parse JSON data fra serverens svar
         const chatbox = document.getElementById("chatbox");
-        chatbox.innerHTML = "";
+        chatbox.innerHTML = ""; // Ryd chatboxen før indlæsning af nye beskeder
         messages.messages.forEach((message) => {
           const messageDiv = document.createElement("div");
           messageDiv.classList.add(
             message.role === "user" ? "user_question" : "bot_answer"
-          );
+          ); // Tilføj enten user_question eller bot_answer klasse
           messageDiv.textContent = message.text;
           // Når vi er færdige, tilpas Markdown-strukturen
           messageDiv.textContent = messageDiv.textContent
@@ -243,18 +267,20 @@ async function showThreads() {
 
           messageDiv.innerHTML = marked.parse(messageDiv.textContent); // Parse med marked
           chatbox.appendChild(messageDiv);
+          scrollToBottom(); // Scroll til bunden efter indlæsning af beskeder
         });
 
-        // Set the current chat title
+        // Sæt den aktuelle chat titel
         const currentChatTitle = document.getElementById("current-chat-title");
         currentChatTitle.textContent = `${formatUnix(thread.created_at)}`;
         currentChatTitle.style.display = "block";
       } catch (error) {
-        console.error("Error fetching messages:", error);
+        console.error("Fejl ved hentning af beskeder:", error);
       }
     });
   });
 
+  // Tilføj event listener for at skifte synligheden af tråd-containeren
   threadsContainer.addEventListener("click", () => {
     threadsContainer.classList.toggle("active");
     arrowDown.classList.toggle("active");
@@ -264,9 +290,12 @@ async function showThreads() {
 function showMaterialer(materialerOversigt) {
   const materialerContainer = document.getElementById("materialer_container");
   const arrowDown = materialerOversigt.querySelector("#arrow_down");
+
+  // Skift den aktive klasse for at vise/skjule materialer containeren
   materialerContainer.classList.toggle("active");
   arrowDown.classList.toggle("active");
 
+  // Tjek om materialer containeren er tom før den fyldes
   if (materialerContainer.innerHTML === "") {
     const materials = [
       {
@@ -279,15 +308,21 @@ function showMaterialer(materialerOversigt) {
         url: "./files/Instruktoervirke-i-Forsvaret.pdf",
       },
     ];
+
     console.log("Henter materialer:", materials);
 
+    // Iterer over hvert materiale og opret et div element for det
     materials.forEach((material) => {
       const materialDiv = document.createElement("div");
       materialDiv.classList.add("materiale_item");
       materialDiv.textContent = material.name;
+
+      // Tilføj click event for at åbne materialet i en ny fane
       materialDiv.addEventListener("click", () => {
         window.open(material.url, "_blank");
       });
+
+      // Tilføj materialet div til materialer containeren
       materialerContainer.appendChild(materialDiv);
     });
   }
