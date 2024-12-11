@@ -37,7 +37,47 @@
             <span></span>
           </div>
         </div>
-        <nav id="burger_nav">
+
+        <!-- <div class="burgersidebar sidebar">
+          <ul class="sidebar_container">
+            <li class="sidebar_item" id="start_chat_button">
+              <span class="material-symbols-outlined"> edit_square </span>
+              <p>Start ny chat</p>
+            </li>
+            <li class="sidebar_item" id="chat_oversigt">
+              <span class="material-symbols-outlined"> library_books </span>
+              <div id="sidebar_dropdown">
+                <div
+                  id="sidebar_dropdown_txt"
+                  style="display: flex; flex-direction: row"
+                >
+                  <p>Chats</p>
+                  <span class="material-symbols-outlined" id="arrow_down">
+                    keyboard_arrow_down
+                  </span>
+                </div>
+                <div id="threads_container"></div>
+              </div>
+            </li>
+
+            <li class="sidebar_item" id="materialer_oversigt">
+              <span class="material-symbols-outlined">
+                collections_bookmark
+              </span>
+              <div id="sidebar_dropdown">
+                <div
+                  id="sidebar_dropdown_txt"
+                  style="display: flex; flex-direction: row"
+                >
+                  <p>Materialer</p>
+                  <span class="material-symbols-outlined" id="arrow_down">
+                    keyboard_arrow_down
+                  </span>
+                </div>
+                <div id="materialer_container"></div>
+              </div>
+            </li>
+          </ul>
           <div class="user">
             <div id="user_info">
               <div>
@@ -47,41 +87,7 @@
               <span class="material-symbols-outlined"> settings </span>
             </div>
           </div>
-          <ul>
-            <div id="ny_chat">
-              <img src="assets/icons/start_chat.png" alt="" class="icon" />
-              <div>
-                <li>
-                  Ny chat
-                  <p>Start en ny chat</p>
-                </li>
-              </div>
-            </div>
-            <div id="chat_oversigt">
-              <img src="assets/icons/chat_oversigt.png" alt="" class="icon" />
-              <div>
-                <li>
-                  Chat oversigt
-                  <p>Overblik over alle tidligere samtaler</p>
-                </li>
-              </div>
-            </div>
-
-            <div id="undervisningsmaterialer">
-              <img
-                src="assets/icons/undervisningsmaterialer.png"
-                alt=""
-                class="icon"
-              />
-              <div>
-                <li>
-                  Materialer
-                  <p>Direkte adgang til filer</p>
-                </li>
-              </div>
-            </div>
-          </ul>
-        </nav>
+        </div> -->
       </div>
     </header>
     <div class="main">
@@ -136,31 +142,37 @@
         </div>
       </div>
 
-    <div id="chat_container">
-      <h1 id="welcome-text">Hvad kan jeg hjælpe dig med?</h1>
-      <h2 id="current-chat-title" style="display: none;"></h2>
-      <div id="chat">
-        <div id="chatbox"></div>
-      </div>
-      <div class="input_container">
-        <div id="chatbtns_container">
-          <button id="decreaseFont">A</button>
-          <button id="increaseFont">A</button>
+      <div id="chat_container">
+        <h1 id="welcome-text">Hvad kan jeg hjælpe dig med?</h1>
+
+        <h2 id="current-chat-title" style="display: none"></h2>
+
+        <div id="chat">
+          <div id="chatbox"></div>
         </div>
-        <div id="chat_input">
-          <input id="userprompt" type="text" placeholder="Skriv et spørgsmål..." />
-          <span class="material-symbols-outlined" id="sendprompt_btn">
-            arrow_upward
-          </span>
+        <div class="input_container">
+          <div id="chatbtns_container">
+            <button id="decreaseFont">A</button>
+            <button id="increaseFont">A</button>
+          </div>
+          <div id="chat_input">
+            <input
+              id="userprompt"
+              type="text"
+              placeholder="Skriv et spørgsmål..."
+            />
+            <span class="material-symbols-outlined" id="sendprompt_btn">
+              arrow_upward
+            </span>
+          </div>
         </div>
+        <p id="disclaimer">
+          Jeg er ikke 100% fejlfri. Gennemtjek altid vigtig information.
+        </p>
+        <div class="loader"></div>
       </div>
-      <p id="disclaimer">
-        Jeg er ikke 100% fejlfri. Gennemtjek altid vigtig information.
-      </p>
-      <div class="loader"></div>
     </div>
-  </div>
-  <!-- <div class="bigbreaker"></div>
+    <!-- <div class="bigbreaker"></div>
     <div class="smallbreaker"></div> -->
     <!-- <div class="boxlink">
       <div class="overlay"><div>Flyverhjemmeværn</div></div>

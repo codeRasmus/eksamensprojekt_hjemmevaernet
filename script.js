@@ -4,6 +4,7 @@ import { fontSizer } from "./modules/fontSizer.js";
 import { loadAni, stopLoadAni } from "./modules/loadAni.js";
 import { createLoginComponent } from "./modules/login.js";
 import { formatUnix } from "./modules/formatUnix.js";
+import { toggleBurgerMenu } from "./modules/burgerMenu.js";
 
 let userName = document.getElementById("user_name").textContent;
 
@@ -23,6 +24,7 @@ function updateUserName(name) {
 
 document.addEventListener("DOMContentLoaded", () => {
   createLoginComponent("login-container", updateUserName);
+  toggleBurgerMenu();
   const chat = document.getElementById("chat");
   const newChatBtn = document.getElementById("start_chat_button");
   newChatBtn.addEventListener("click", () => {
@@ -54,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Opdater UI og start loading
     chat.classList.add("show-username");
     document.getElementById("welcome-text").style.display = "none";
-    chat.style.width = "60%";
+
     askAssistant(userInput);
 
     const userMessagesDiv = document.querySelector("#chatbox");
@@ -73,7 +75,9 @@ document.addEventListener("DOMContentLoaded", () => {
   decreaseButton.addEventListener("click", () => fontSizer(scalingFactorDown));
 
   const materialerOversigt = document.getElementById("materialer_oversigt");
-  materialerOversigt.addEventListener("click", () => showMaterialer(materialerOversigt));
+  materialerOversigt.addEventListener("click", () =>
+    showMaterialer(materialerOversigt)
+  );
 });
 
 async function askAssistant(userInput) {
@@ -198,7 +202,9 @@ async function showThreads() {
     threadDiv.addEventListener("click", async () => {
       try {
         // Remove active class from all threads
-        document.querySelectorAll(".thread").forEach((el) => el.classList.remove("active"));
+        document
+          .querySelectorAll(".thread")
+          .forEach((el) => el.classList.remove("active"));
         // Add active class to the clicked thread
         threadDiv.classList.add("active");
 
@@ -215,7 +221,7 @@ async function showThreads() {
         // Opdater UI og start loading
         chat.classList.add("show-username");
         document.getElementById("welcome-text").style.display = "none";
-        chat.style.width = "60%";
+
         const messages = await messageResponse.json();
         const chatbox = document.getElementById("chatbox");
         chatbox.innerHTML = "";
@@ -259,9 +265,15 @@ function showMaterialer(materialerOversigt) {
 
   if (materialerContainer.innerHTML === "") {
     const materials = [
-      { name: "Didaktiske Design Overvejelser", url: "./files/Didaktiske-Design-Overvejelser.pdf" },
+      {
+        name: "Didaktiske Design Overvejelser",
+        url: "./files/Didaktiske-Design-Overvejelser.pdf",
+      },
       { name: "Faglærer i Hæren", url: "./files/Faglaerer-i-Haeren.pdf" },
-      { name: "Instruktørvirke i Forsvaret", url: "./files/Instruktoervirke-i-Forsvaret.pdf" },
+      {
+        name: "Instruktørvirke i Forsvaret",
+        url: "./files/Instruktoervirke-i-Forsvaret.pdf",
+      },
     ];
 
     materials.forEach((material) => {
