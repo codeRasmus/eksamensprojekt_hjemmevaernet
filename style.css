@@ -41,24 +41,31 @@ body {
   height: 100vh;
 }
 
-/* Classes */
-.hidden {
-  display: none;
-}
-
-.center {
+/* Login */
+#loginForm {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
-/* Typography */
-a.link {
-  color: var(--black);
-  border-bottom: 2px solid var(--red);
-  text-decoration: none !important;
-  line-height: 1.5;
-  font-weight: bold;
+#loginForm p {
+  font-size: 0.8rem;
+  margin-top: 20px;
+}
+
+#loginForm input {
+  background-color: var(--grey);
+  width: 200px;
+  height: 5%;
+  padding-left: 20px;
+  border: none;
+  margin-top: 10px;
+}
+
+#loginForm button {
+  width: 200px;
 }
 
 /* Mobile First (default styles) */
@@ -69,14 +76,6 @@ header {
   top: 0;
   z-index: 2;
   background-color: var(--white);
-}
-
-header #top_menu {
-  display: none;
-}
-
-header #bottom_menu {
-  display: none;
 }
 
 header #nav_logo {
@@ -252,30 +251,6 @@ header #nav_logo {
   display: none;
 }
 
-#burger_nav {
-  display: none;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: start;
-  position: absolute;
-  top: 100px;
-  width: 100%;
-  height: 80vh;
-  background-color: var(--grey);
-  box-shadow: var(--boxShadow);
-  z-index: 2;
-  transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  right: -400px;
-  opacity: 0;
-}
-
-#burger_nav.active {
-  display: flex;
-  right: 0;
-  opacity: 1;
-  transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-
 #user_info {
   display: flex;
   height: 100px;
@@ -312,15 +287,6 @@ header #nav_logo {
   content: var(--userName);
 }
 
-#user_info {
-  display: flex;
-  height: 100px;
-  width: 80%;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-}
-
 #user_info div {
   display: flex;
   justify-content: flex-start;
@@ -337,88 +303,6 @@ header #nav_logo {
 #user_info #user_settings {
   font-size: 20px;
   cursor: pointer;
-}
-
-#burger_nav ul {
-  list-style: none;
-  width: 100%;
-  padding: 20px;
-}
-
-#burger_nav ul div {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
-
-#burger_nav ul div img {
-  width: 50px;
-  height: 50px;
-  background-color: var(--grey);
-  padding: 10px;
-}
-
-#burger_nav ul li {
-  width: 100%;
-  padding: 14px 14px;
-  font-size: var(--paragraph);
-  font-weight: bold;
-  cursor: pointer;
-}
-
-#burger_nav ul li p {
-  margin-top: 5px;
-  font-size: 14px;
-  font-weight: lighter;
-}
-
-/* Graphics elements */
-.bigbreaker {
-  width: 100%;
-  border: 5px solid #3f5b58;
-  background-color: #3f5b58;
-  margin: 60px 0;
-}
-
-.smallbreaker {
-  width: 100%;
-  border: 1px solid #3f5b58;
-  background-color: #3f5b58;
-  margin: 20px 0;
-}
-
-.boxlink {
-  width: 370px;
-  height: 370px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  background-image: url("https://www.hjemmevaernet.dk/globalassets/hjv/billeder/promo/organisation/-fhv-promo-2024-promo.jpg");
-  background-repeat: no-repeat;
-}
-
-.boxlink .overlay {
-  position: absolute;
-  padding: 10px;
-  width: 90%;
-  height: 30%;
-  background-color: var(--lightBlue);
-  bottom: 20px;
-}
-
-.boxlink .overlay div {
-  color: var(--white);
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding-top: 10px;
-  padding-left: 10px;
-  position: relative;
-}
-
-.boxlink .overlay div::after {
-  content: ">";
-  position: absolute;
-  right: 10px;
 }
 
 /* Buttons */
@@ -461,18 +345,32 @@ button#decreaseFont {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
   font-size: var(--paragraph);
   padding: 10px;
   overflow-y: auto;
 }
 
+#chat_container h1 {
+  position: absolute;
+  text-align: center;
+  top: 25%;
+  font-size: 2rem;
+}
+
 #chat {
+  display: flex;
+  align-items: center;
   position: relative;
   justify-content: center;
-  height: 600px;
+  height: calc(100vh - 100px - 150px);
   padding-bottom: 50px;
   width: 100%;
   overflow-y: auto;
+}
+
+#chat div {
+  gap: 80px;
 }
 
 #chat #chatbox {
@@ -533,14 +431,10 @@ button#decreaseFont {
 
 #current-chat-title {
   position: absolute;
-  top: 10px;
+  top: 0px;
 }
 
-#current-chat-title_container {
-  background-color: var(--white);
-  width: 100%;
-  text-align: center;
-}
+/* Format output */
 
 .bot_answer h1 {
   font-size: 2rem;
@@ -573,11 +467,6 @@ button#decreaseFont {
   list-style: disc outside none;
   display: list-item;
   margin-left: 1em;
-}
-
-#chatbtns_container {
-  display: flex;
-  position: absolute;
 }
 
 #chat_container #disclaimer {
@@ -638,34 +527,8 @@ input:focus {
   padding: 0;
 }
 
-#chat_container {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
 .input_container {
   height: 15%;
-}
-
-#chat {
-  display: flex;
-  align-items: center;
-  height: calc(100vh - 100px - 150px);
-  width: 100%;
-  overflow-y: auto;
-}
-
-#chat div {
-  gap: 80px;
-}
-
-#chat_container h1 {
-  position: absolute;
-  text-align: center;
-  top: 30%;
-  font-size: 2.5rem;
 }
 
 /* Loader */
@@ -697,32 +560,6 @@ input:focus {
 }
 
 /* UNDERVISNINGSMATERIALE */
-.materiale {
-  display: flex;
-  flex-direction: row;
-  background-color: var(--grey);
-}
-
-.materiale .materiale_billede img {
-  width: 200px;
-}
-
-.materiale .materiale_info {
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  /* Aligns items vertically */
-  justify-content: space-between;
-  /* Distributes space between items along the y-axis */
-}
-
-.materiale .materiale_info .materiale_navn {
-  font-size: 20px;
-}
-
-.materiale .materiale_info .materiale_beskrivelse {
-  font-size: 12px;
-}
 
 #materialer_container {
   display: none;
@@ -798,18 +635,6 @@ input:focus {
     flex-direction: column;
     align-items: center;
     list-style: none;
-  }
-
-  #start_chat_button {
-    background-color: var(--red);
-    padding: 10px;
-    color: var(--white);
-    text-transform: uppercase;
-    font-weight: bold;
-    width: 80%;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 20px;
   }
 
   #start_chat_button:hover {
@@ -914,34 +739,11 @@ input:focus {
     padding: 10px 0 0 20px;
   }
 
-  #burger_nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: start;
-    position: relative;
-    width: 30%;
-    height: 670px;
-    background-color: var(--grey);
-    box-shadow: var(--boxShadow);
-    opacity: 1;
-  }
-
   .input_container {
     position: relative;
     width: 50%;
     display: flex;
     align-items: center;
-  }
-
-  #userprompt {
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: var(--grey);
-    font-size: 0.8rem;
-    width: 100%;
-    height: 45px;
   }
 
   #userprompt:focus {
@@ -997,9 +799,10 @@ input:focus {
     align-items: center;
   }
 
-  #chat_container #welcome_text {
+  #chat_container #welcome-text {
     text-align: center;
-    font-size: 4rem;
+    font-size: 2.5rem;
+    top: 30%;
   }
 
   .input_container {
@@ -1011,6 +814,7 @@ input:focus {
     display: flex;
     align-items: center;
     width: 60%;
+    overflow-y: auto;
   }
 
   #chat h1 {
@@ -1048,7 +852,6 @@ input:focus {
     background-color: transparent;
     height: 100%;
     overflow-y: auto;
-    /* Ingen baggrundsfarve */
   }
 
   .userMessage,

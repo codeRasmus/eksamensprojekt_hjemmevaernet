@@ -3,6 +3,7 @@ export function toggleBurgerMenu() {
   const burgerSidebar = document.querySelector(".sidebar");
 
   burgerIcon.addEventListener("click", () => {
+    console.log("Åbner/lukker burger menu");
     burgerSidebar.classList.toggle("active");
     burgerIcon.classList.toggle("active");
   });

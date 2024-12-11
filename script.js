@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const chat = document.getElementById("chat");
   const newChatBtn = document.getElementById("start_chat_button");
   newChatBtn.addEventListener("click", () => {
+    console.log("Ny chat startet");
     document.getElementById("chatbox").innerHTML = "";
     document.getElementById("welcome-text").style.display = "block";
     document.getElementById("current-chat-title").style.display = "none"; // Clear the current chat title
@@ -48,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function handleInput() {
     const userInput = document.getElementById("userprompt").value;
-    console.log("User input:", userInput); // Log the user input
+    console.log("Input modtaget", userInput); // Log the user input
     if (userInput.trim() === "") {
       alert("Please enter a question.");
       return;
@@ -88,7 +89,6 @@ async function askAssistant(userInput) {
 
     if (chatbox.innerHTML === "") {
       setCurrentThreadId("");
-      console.log("Thread er ingenting");
     }
 
     const requestData = {
@@ -96,7 +96,7 @@ async function askAssistant(userInput) {
       currentThread: getCurrentThreadId(), // Ensure this is set correctly
       userName: userName, // Ensure userName is passed correctly
     };
-    console.log("Sending request data:", requestData);
+    console.log("Sender request data:", requestData);
 
     const response = await fetch("/ask-assistant", {
       method: "POST",
@@ -136,7 +136,7 @@ async function askAssistant(userInput) {
               .replace(/(\d+)\.(\s*\*\*)/g, "**$1.**$2") // Inkluder tal og punktum indenfor **
               .replace(/(#+)/g, "\n$1") // Sikr linjeskift før headings
               .replace(/- /g, "\n- "); // Sikr linjeskift før listeelementer
-
+            console.log("Indsætter svar:", finalResponse);
             newDiv.innerHTML = marked.parse(finalResponse); // Parse med marked
             return;
           }
@@ -158,8 +158,6 @@ async function askAssistant(userInput) {
 }
 
 async function showThreads() {
-  console.log("Fetching threads...");
-
   const response = await fetch("/getThreads", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -169,12 +167,18 @@ async function showThreads() {
     throw new Error(`Error fetching threads: ${response.status}`);
   }
   const data = await response.json();
+  if (data.threads.length > 0) {
+    console.log("Henter threads:", data.threads);
+  } else {
+    console.log("Endnu ingen tråde tilknyttet denne bruger");
+  }
+
   const threadsContainer = document.getElementById("threads_container");
   const arrowDown = document.getElementById("arrow_down");
   threadsContainer.innerHTML = "";
   threadsContainer.classList.toggle("active");
   arrowDown.classList.toggle("active");
-  console.log(data.threads);
+
   let threads = data.threads;
 
   threads.forEach((thread) => {
@@ -275,6 +279,7 @@ function showMaterialer(materialerOversigt) {
         url: "./files/Instruktoervirke-i-Forsvaret.pdf",
       },
     ];
+    console.log("Henter materialer:", materials);
 
     materials.forEach((material) => {
       const materialDiv = document.createElement("div");

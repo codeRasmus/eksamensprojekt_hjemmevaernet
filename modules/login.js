@@ -43,6 +43,7 @@ export function createLoginComponent(containerId, updateUserName) {
 
       const messageElement = document.getElementById("login-message");
       if (data.success) {
+        console.log("Login godkendt");
         messageElement.textContent = "Login successful!";
         messageElement.style.color = "green";
         document.documentElement.style.setProperty("--userName", name);

@@ -15,4 +15,5 @@ export function fontSizer(scalingFactor) {
     );
     root.style.setProperty(variable, `${size * scalingFactor}rem`);
   });
+  console.log("Tekst forstørret/formindsket");
 }
