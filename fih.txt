@@ -1,3392 +1,0 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Faglærer i Hæren
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-København, juni 2023.
-
-Forsvarsakademiet
-
-Hærens Sergentskole / Forsvarsakademiets Uddannelsescenter Illustrationer og layout: Forsvarsakademiets Uddannelsescenter Foto: Forsvarsakademiets Uddannelsescenter og Forsvarsgalleriet
-
-
-Copyright (c) 2023 Forsvarsakademiet 1. udgave
-
-
-
-
-2
-
-INDHOLD
-
-
-FORORD	6
-
-
-
-INDLEDNING	8
-
-
-Den nye faglærer:	9
-
-Den rutinerede faglærer:	9
-
-Den specialiserede faglærer:	9
-
-Materialets opbygning	10
-
-KAPITEL 1 - FAGLÆRERENS ROLLER OG ANSVAR	11
-
-
-1.1 Flere roller	12
-
-Forfatter af læringsplan	13
-
-Rådgiver for ledelsen i underafdelingen	13
-
-Leder for, og ansvarlig for faglig udvikling af, instruktører	14
-
-Faglig ekspert for enhedens øvrige personel	15
-
-1.2 Faglighed	15
-
-KAPITEL 2 - PLANLÆGNING	17
-
-
-2.1 Dokumenter	18
-
-Forsvarets uddannelsesstrategi	18
-
-Chefens uddannelsesdirektiv	18
-
-Fagintegration	19
-
-Uddannelsesbeskrivelse	20
-
-Læringsplanen	21
-
-2.2 Sproget i hhv. uddannelsesbeskrivelse og læringsplan	22
-
-KLL-sprog i uddannelsesbeskrivelsen	22
-
-LRH-taksonomien og læringsmålet i læringsplanen	32
-
-Omskrivning fra KLL til LRH - fra beskrivelse af lærings-
-
-udbytte til beskrivelse af læringsmål	35
-
-
-
-
-3
-
-Omsætning af fagets læringsudbytte til fagets læringsmål	36
-
-Eksempel, læringsudbytte	38
-
-Eksempel, læringsmål for faget skyttetjeneste	38
-
-Eksempel, læringsudbytte	39
-
-Eksempel, læringsmål for faget gevær M/95-familien	39
-
-2.3 Sådan udarbejdes læringsplanen	40
-
-Fase 1, formulering af læringsmål og delvis
-
-færdiggørelse af forside	40
-
-Fase 2, udarbejdelse af bedømmelsesplan for faget	41
-
-Del- og slutmål	44
-
-Læringsmål og prøver	44
-
-Læringsmål og læringsaktivitet	45
-
-Læringsaktivitet og prøver	45
-
-Prøveformer	45
-
-Fase 3, valg og beskrivelse af indhold	49
-
-Fase 4, strukturering af fagets indhold	51
-
-Fase 5, sekvensering af fagets indhold	58
-
-Fase 6, udarbejdelse af læringsmål for lektioner og
-
-læringsoversigt	61
-
-Fase 7, udfærdigelse af strukturel oversigt	70
-
-2.4 Digitalisering	73
-
-Tilgængelighed	73
-
-Læringsstile	73
-
-Klassifikation	74
-
-Ophavsret og GDPR	74
-
-KAPITEL 3 - TILRETTELÆGGELSE	75
-
-
-3.1 Læringsplan og rammer	75
-
-3.2 Aktiviteter	77
-
-Faglærermøde med uddannelsesplanlæggere ved enheden	77
-
-Møde med instruktører	78
-
-Udvikling af instruktører	78
-
-
-
-4
-
-3.3 Andre eksempler på tilrettelæggelse	79
-
-Faglærerstyrede uddannelsesdage eller lektioner	79
-
-Instruktørmøde	79
-
-Organisering af faglærerstyrede uddannelsesdage	81
-
-Podieprincippet	81
-
-Stationsprincippet	83
-
-Bestilling af uddannelsesmateriel	84
-
-Koordination med naboenheder	85
-
-Aktivitetsbeskrivelse til enhedsuddannelse	85
-
-KAPITEL 4 - GENNEMFØRELSE	87
-
-
-4.1 Observation af uddannelse	88
-
-Struktureret eller ustruktureret observation	88
-
-Direkte eller indirekte observation	89
-
-4.2 Hvor og hvordan skal du bruge dine observationer?	90
-
-Forfatter af læringsplan	90
-
-Rådgiver for chef og NK	90
-
-Udvikler af instruktører	90
-
-Fagekspert for enhedens personel	91
-
-Tilbagemeldingsmetoder	91
-
-KAPITEL 5 - EVALUERING	93
-
-
-5.1.	Anvendelse af evaluering og kontrol som begreber	93
-
-5.2.	Evaluering af faget	95
-
-Forløbskontrol og resultatkontrol (forfatter af læringsplaner)	95
-
-Tilbagemelding til chef/NK (rådgiver for chef og NK)	98
-
-Evaluering af samarbejde med instruktører
-
-(ansvarlig for faglig udvikling af instruktører)	98
-
-Faglærerens egen udvikling	99
-
-
-
-
-
-
-
-
-5
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-FORORD
-
-Den seneste tids udvikling i verden har vist, at Hæren til stadighed har behov for at uddanne soldater til forskelligartede opgaver, som skal løses i både indland og udland.
-
-En væsentlig forudsætning for en effektiv uddannelse af hærens soldater og enheder, er en solid faglighed hos vores instruktører og faglærere. Omkring årsskiftet 2021/22, fik vores instruktører nogle brugbare værktøjer med "In-struktør i Hæren".
-
-Med det nye materiale "Faglærer i Hæren", får faglærerne nu et tilsvarende middel til at støtte deres virke, til gavn for hærens uddannelse og Forsvarets samlede opgaveløsning. Materialet anvender, på samme måde som "Instruk-tør i Hæren", kombinationen af analoge og digitale midler. Der er således mulighed for at tilgå materialet elektronisk, og det giver dermed en tidssva-rende fleksibilitet i sin anvendelse.
-
-
-
-6
-
-For at sikre en smidig overgang fra rollen som instruktør til virket som fag-lærer, er "Faglærer i Hæren" opbygget efter samme skabelon som "Instruk-tør i Hæren". På den måde er der høj grad af genkendelighed mellem ma-terialerne, og energien kan fokuseres på at skabe høj kvalitet i den del af uddannelsen du som faglærer er ansvarlig for.
-
-Materialet er udarbejdet i et samarbejde mellem Hærens Sergentskole, re-præsentanter fra 1. og 2. brigade, Hærkommandoens G7 og Forsvarsakade-miets Uddannelsescenter.
-
-
-
-
-
-
-Gunnar Arpe Nielsen
-
-generalmajor
-
-Chef for Hæren
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-7
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-INDLEDNING
-
-Som faglærer i Hæren er det din opgave at planlægge, tilrettelægge, gen-nemføre og evaluere samt kontrollere fag, som indgår i uddannelsen af den enhed, du gør tjeneste ved. Det indbefatter også at instruere og vejlede de instruktører, der skal undervise i faget på baggrund af din planlægning, samt give faglig rådgivning til enhedens ledelse, når denne skal planlægge den samlede uddannelse.
-
-
-
-Faglærerens opgave er:
-
-At sikre en struktureret gennemførelse og revision eller udvikling af fag, som giver kompetente soldater på en, for enheden, så effektiv måde som muligt.
-
-
-
-
-
-
-
-
-8
-
-Med udgangspunkt i din faglæreruddannelse er Faglærer i Hæren tænkt som et opslagsværk, du kan bruge, når du skal strukturere dine fag og sikre en effektiv gennemførelse. Med den i hånden kan du sikre dig, at du har over-vejet de væsentlige emner/punkter.
-
-Udgangspunktet er den faglærerrolle, der ses mest ved de operative en-heder; nemlig at være faglærer i en underafdeling. Men analyseværktøjer, metoder og teori fra materialet kan anvendes af alle faglærere.
-
-Nedenfor er beskrevet tre kategorier af faglærere. Du kan sikkert genkende dig selv i en af dem og få en idé om, hvordan du kan anvende materialet.
-
-Den nye faglærer:
-
-Måske har du netop gennemført faglæreruddannelsen og skal tilbage til din enhed og virke. I så fald vil du kunne bruge Faglærer i Hæren som støtte i de forskellige processer i virket, både hvad angår udfærdigelsen af læringspla-nen eller supplement til denne, afholdelse af instruktørmøder og evaluering af faget efter gennemførelse.
-
-Den rutinerede faglærer:
-
-Du har været faglærer i længere tid og har sandsynligvis gået i en eller flere enheder og haft ansvaret for forskellige fag ad flere omgange. Du vil kunne bruge Faglærer i Hæren til at fastholde gode vaner og evt. repetere emner, der ikke altid er i fokus. Hvis du f.eks. i længere tid har været tilknyttet en-heder, der primært har anvendt centralt udviklede læringsplaner, kunne det være i forbindelse med udvikling af læringsplaner. Men det kunne også være til at repetere eller opdatere dig på læringsteori.
-
-Den specialiserede faglærer:
-
-Du har en del års erfaring som faglærer, f.eks. som faglærer/SKYT i en stående enhed, eller sagsbehandler i en af de fagansvarlige tjenestegrene. Måske er det så længe siden, du har gennemført din uddannelse, at begre-berne er ændret. Du vil kunne bruge Faglærer i Hæren til f.eks. at få pudset de udtryk og begreber af, som Hærens instruktører uddannes efter.
-
-
-
-
-
-
-
-
-9
-
-Materialets opbygning
-
-Vægten i Faglærer i Hæren er lagt på, at du lærer at udarbejde en lærings-plan, som er dit værktøj til at samle dine overvejelser. Læringsplanen skal give både dig, instruktøren og enheden overblik over, hvordan faget skal forløbe, hvordan de enkelte lektioner skal gennemføres, samt hvordan der evalueres på målopfyldelsen inden for faget. Udarbejdelse af læringsplan bliver gennemgået i afsnit 2.3.
-
-Materialet er en grundig gennemgang af hele processen med at udvikle en læringsplan samt af, hvordan du som faglærer anvender Forsvarets skabe-loner og principper for udarbejdelse af læringsplaner. Desuden beskrives metoder til koordination af uddannelse, faglig udvikling af instruktører og evaluering af målopfyldelse.
-
-I lighed med Instruktør i Hæren er der også til denne bog supplerende ma-terialer på Forsvarets Elektroniske Skole (FELS.dk), hvor nogle af bogens emner uddybes. Her vil du kunne finde videoer til nogle af emnerne, ligesom der vil være henvisninger til uddybende materialer til de emner, der kan kræve mere teoretisk tyngde. Disse kan enten anvendes som uddybende forklaring eller inspiration til egen udvikling inden for virket som faglærer.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-10
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-KAPITEL 1 - FAGLÆRERENS ROLLER OG ANSVAR
-
-I dette kapitel af bogen beskrives først de forskellige roller, du som faglærer må forventes at skulle indtage i forbindelse med dit virke. Derefter beskrives væsentlige dele af den faglighed, som gerne skulle ligge til grund for din rolle som faglærer.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-11
-
-1.1 Flere roller
-
-Som faglærer har du flere opgaver og flere roller. Dine forskellige roller er f.eks. forfatter af læringsplanen, faglig rådgiver for chefen, næstkommande-rende (NK) og delingsførere, ansvarlig for udvikling af enhedens instruktører og faglig ekspert for underafdelingens øvrige personel.
-
-
-
-
-
-Fagekspert forForfatter afenhedenslæringsplanpersonel
-
-
-
-
-
-
-Faglæreren
-
-
-
-
-
-
-
-
-Ansvarlig forRådgiver forfaglig udviklingchef og NKaf instruktører
-
-
-
-
-
-Rollerne er ikke rangeret eller prioriteret i forhold til hinanden, så den ræk-kefølge, de bliver præsenteret i, er udelukkende relateret til bogens opbyg-ning.
-
-Der kan være situationer, hvor faglæreren får tildelt yderligere roller i forbin-delse med sit virke, og hvor modellen derfor ikke er helt dækkende.
-
-
-
-
-12
-
-Forfatter af læringsplan
-
-Chefen har betroet dig opgaven med at udforme en læringsplan, som in-struktørerne skal bruge til at planlægge deres lektioner efter. NK skal også bruge læringsplanen for at kunne lægge den plan for uddannelsen, der ind-arbejder alle fag i en hensigtsmæssig rækkefølge med anvendelse af rele-vante faciliteter og ressourcer.
-
-Når du udformer læringsplanen, er du derfor forpligtet til:
-
-• At sikre den nødvendige faglighed i forhold til, hvad soldaten skal kunne efter gennemført uddannelse. Det gør du gennem velbe-skrevne og realistiske mål for faget og lektionerne.
-
-• At finde og beskrive de vigtigste vurderingskriterier, som afspejler de mål, der er sat op for faget og lektionerne, og som instruktører og andre i enheden kan bruge til evaluering af soldaterne.
-
-• At lave grundige didaktiske overvejelser om, hvordan faget skal struktureres, hvilke metoder der er mest effektive til at nå målet, og hvilke ressourcer der bedst understøtter gennemførelsen.
-
-Rådgiver for ledelsen i underafdelingen
-
-Chefen for underafdelingen, NK og delingsførere har alle forskellige roller at udfylde i forbindelse med uddannelsen af enheden. Det er din opgave at støtte dem med den bedst mulige rådgivning inden for dit fag. En del af den opgave er, at du skal sparre med chefen om, hvilke ressourcer, særligt inden for tid og personel, du mener er vigtige for at opnå det læringsudbytte, der kræves. Dette giver chefen mulighed for at vurdere, om ressourcerne kan tildeles, eller der må prioriteres i målet for faget.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-13
-
-Når chefen som den overordnet ansvarlige for enhedens uddannelse laver sit uddannelsesdirektiv, kan han/hun have behov for dine input med udgangs-punkt i din faglige viden om og erfaringer med lokale forhold og rammer.
-
-NK har oftest opgaven med, på baggrund af chefens direktiv, at lave en samlet plan for enhedens uddannelse. Han/hun har brug for dine input om faktorer, der kan være forudsætningsskabende eller afgørende for gennem-førelsen af de fag, du er faglærer for. Han/hun har også brug for dine tilba-gemeldinger, hvis gennemførelsen af dine fag af en eller anden grund ikke følger planen og derfor skal justeres.
-
-Delingsførerne er førere for de soldater, du skal uddanne, og de instruktører, du skal arbejde med. De har derfor brug for dine råd om instruktørernes anvendelse og eventuelle faglige udvikling.
-
-Leder for, og ansvarlig for faglig udvikling af, instruktører
-
-Du vil sjældent både være faglærer og den eneste instruktør, som skal un-dervise i dit fag. Du har derfor en opgave med ledelse og udvikling af de instruktører, som skal undervise i faget sammen med dig.
-
-Hvis faget skal gennemføres på en måde, så alle enhedens instruktø-rer skal kunne undervise i det, kan der være et behov for at gennemgå læringsplanens vigtigste elementer. Enten på et fælles uddannelsesmø-de, hvor alle instruktører deltager, eller med delingsførerne alene.
-
-
-Der kan også være situationer, hvor det giver mening, at det er dig, der leder gennemførelsen af en halv eller hel uddannelsesdag for de enkelte delinger. Her ligger der endnu en type opgave med koordinering og ledelse af instruktørerne.
-
-Uanset hvordan faget gennemføres, er det en del af din opgave at sikre kva-liteten af gennemførelsen. I den forbindelse skal du hjælpe med at udvikle instruktørernes faglighed og pædagogiske færdigheder samt sikre dig, at læringsmålene for faget nås.
-
-
-
-14
-
-Faglig ekspert for enhedens øvrige personel Som faglærer er du sandsynligvis
-
-den person ved enheden, der ved mest om dit fagområde. Dine lede-re, kollegaer og enhedens soldater kan finde på at henvende sig til dig i tilfældige situationer for at finde svar på de spørgsmål, de måtte have i forhold til faget.
-
-1.2 Faglighed
-
-For at kunne indtage de ovenfor beskrevne roller er det vigtigt, at dit virke bygger på en solid faglighed - ikke mindst i rollen som faglig udvikler af enhedens instruktører. Det, at du er fagligt dygtig, skaber gode muligheder for instruktørernes faglige udvikling, hvilket i sidste ende er med til at højne niveauet af den uddannelse, du er ansvarlig for.
-
-Ved siden af din fagfaglige ekspertise vil det bidrage positivt til dit samle-de virke, hvis du også har en interesse og viden inden for pædagogik og didaktik. Det er kombinationen af fagfagligheden og optimal anvendelse af pædagogiske og didaktiske metoder, der sikrer den bedst mulige læring hos enhedens soldater og dermed den bedste uddannelse af dem.
-
-Sidst men ikke mindst er det en stor fordel, hvis dit fag også har din person-lige interesse. De fleste leverer de bedste resultater som faglærere, når de er drevet af indre motivation.
-
-Hvis du ved, du snart får ansvaret for et fag, kan det være en god idé at op-søge kollegaer fra andre enheder og få del i deres erfaringer som faglærere i det givne fag.
-
-Inden for nogle fag findes der også specialiserede faglærerkurser, der klæ-der dig på til dit virke som kompetent faglærer. Din pædagogiske og didak-tiske indsigt kan øges ved, at du forholder dig kritisk refleksivt til dit eget virke som instruktør. Mange har måske prøvet i kortere eller længere peri-oder som instruktør at køre på "autopilot". Men der er altså god mulighed for, at du kan øge din pædagogiske og didaktiske faglighed, hvis du giver dig
-
-
-
-
-15
-
-tiden til at forholde dig til, hvad der fungerer læringsmæssigt, og hvad der skal forbedres.
-
-Der kan være meget hjælp at hente ved kollegial sparring med mere rutine-rede kollegaer. Men sparring med ligestillede kollegaer (peer-feedback) kan også bidrage væsentligt til udvikling. Det kan være i form af fælles refleksi-oner, og har man muligheden for det, kan gensidige observationer af f.eks. undervisningen være meget givende. Endelig er det muligt at tilgå diverse litteratur for at udvide egen horisont. Du kan finde relevant litteratur her, men ud over denne litteratur er internettet naturligvis et sted med uanede muligheder for inspiration omkring pædagogik og didaktik.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-16
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-KAPITEL 2 - PLANLÆGNING
-
-Dette kapitel beskriver faglærerens opgaver i forbindelse med planlægning af faget. Det er bl.a. her, at den væsentlige del, der handler om at udarbejde en læringsplan, bliver gennemgået systematisk. Derfor er det rollen som "forfatter af læringsplanen", der bliver bragt i spil i afsnit 2.3.
-
-Kapitlet indledes med en beskrivelse af de dokumenter, du bør kende som faglærer, da de er udgangspunktet for at skrive læringsplanen. Efter beskri-velsen af dokumenterne bliver du kort præsenteret for Forsvarets uddan-nelsesdokumentation, herunder hvilket sprog der anvendes i de forskellige dokumenter, som enten er KLL-sprog (Kvalifikationsrammen for Livslang Læring) eller LRH-sprog (Leif Rye Hauerslev).
-
-Tredje afsnit er en udførlig beskrivelse af, hvordan læringsplanen udarbej-des gennem syv trin. På den måde placeres beskrivelserne i bogen i samme rækkefølge, som du som faglærer kronologisk bør gå til opgaven med at udarbejde læringsplanen. Sidste afsnit i kapitlet handler om, hvordan du, i
-
-
-
-17
-
-forbindelse med din læringsplan, skal holde øje med muligheden for at digi-talisere de dele af uddannelsen, hvor det giver læringsmæssig mening.
-
-Efterhånden som du opnår rutine i at udarbejde læringsplaner, har du for-mentligt ikke behov for at genbesøge alle dokumenter hver gang. Det anbe-fales dog, at du de første gange følger bogens beskrivelse systematisk, så du er sikker på at have haft berøring med alle relevante dokumenter, som er en forudsætning for en læringsplan af høj kvalitet. En høj kvalitet i den læringsplan, du har ansvaret for, gør det muligt for enheden at opnå en høj kvalitet i den samlede uddannelsesplanlægning, og dette vil være et godt afsæt for en effektiv uddannelse af soldaterne.
-
-2.1 Dokumenter
-
-Forsvarets uddannelsesstrategi
-
-Øverst af væsentlige dokumenter for faglæreren ligger Forsvarets uddannel-sesstrategi (FKOBST FAK.180-0), som angiver den overordnede forståelse af, hvordan vi skal anskue uddannelse.
-
-Grundlaget er, at Forsvarets enheder skal kunne kæmpe og vinde krige in-den for rammen af NATO og koalitioner.
-
-For at løse ovenstående opgave og samtidig understøtte den operative op-gaveløsning skal Forsvarsakademiet, og Forsvarets øvrige uddannelsesen-heder, inddrage tidssvarende undervisningsteknologi og tidssvarende pæ-dagogik i udviklingen af grund-, videre- og efteruddannelser. Desuden skal uddannelser tilrettelægges på en sådan måde, at de i høj grad kan foregå under tilstedeværelse i enhederne frem for under lange skoleophold.
-
-Chefens uddannelsesdirektiv
-
-Med udgangspunkt i afdelingens/bataljonens direktiver og uddannelsespla-ner skriver underafdelingschefen sit direktiv til sin enhed. I dette beskriver han/hun, hvor megen tid der er til rådighed, samt øvrige rammer og res-sourcer for faglærere og instruktører. Herunder også prioritering af emner, fastsættelse af tidsterminer m.m.
-
-F.eks. kan der i enheder ved stående reaktionsstyrke blive lagt særligt vægt på, at faget er et repetitionsfag, som har været gennemført flere gange. Men at der i den kommende periode er behov for at differentiere i uddannelsen,
-
-
-
-18
-
-som en logisk konsekvens af, at der i sådanne enheder er jævnlige udskift-ninger af soldaterne, og derfor kan være stor faglig niveauforskel. Her har chefen altså hjulpet dig ved at beskrive, at enheden stiller med forskellige elevforudsætninger, som er noget af det, du ellers selv skal være opmærk-som på i din planlægning af et fag.
-
-På baggrund af chefens direktiv skal enhedens uddannelsesplanlægger(e) analysere og beregne, hvordan man opnår den samlede uddannelse inden for de rammer, der er givet, og lave en plan for dette. Planen skal inde-holde flere forskellige elementer. Nogle af disse er: grov tidsplan, aktivi-tetsoversigt, detaljeret tidsplan, detaljeret aktivitetsplanlægning, sammen-hængsoversigt og ressourceoversigt.
-
-Denne del af planlægningen ligger ofte hos kompagniledelsen, men du kan som faglærer blive bedt om at deltage i møder eller komme med input til planlægningen. Alle disse delelementer giver chefen det overblik, der sikrer, at enheden når de fastsatte uddannelsesmål og kan korrigere undervejs, hvis situationen kræver det. Din læringsplan, og de overvejelser, den er ud-tryk for, bidrager til at udvikle dette overblik.
-
-Fagintegration
-
-Nogle læringsplaner indgår som dele af en samlet uddannelse, og kan derfor ikke altid justeres. Årsagen er at uddannelsen, herunder læringsplanen, kan have andre fag end traditionelle militære fag integreret, for at opnå nogle lovmæssige krav til den pågældende uddannelse. Derfor skal du som faglæ-rer være lige så opmærksom på fagintegration, som på de rammer chefen giver i sit direktiv.
-
-Fagintegration fremgår af læringsplanens bemærknings- eller henvisnings-felt, og i lektioner med fagintegration, må du ikke ændre rammer og læ-ringsmål. Fagintegration betyder, at der optræder flere fag inde i den enkelte lektion/ læringsaktivitet. Det kan f.eks. være fag som dansk, engelsk eller matematik, også kaldet grundfag, som integreres ind i et eller flere militære fag, via de beskrevne læringsaktiviteter og læringsmål, men som samtidig er dele af en overordnet uddannelse.
-
-Disse grundfagslektioner/-elementer skulle ellers have været taget på egentlige skoleforløb, men Forsvaret har via egen uddannelsesdokumen-
-
-
-
-19
-
-tation beskrevet, hvorledes disse fag understøtter, og gennemføres, under den militære uddannelse, og derfor kan de fagintegreres. Det er principielt ikke anderledes, end når der under større aktiviteter integreres dele af flere fag, f.eks. SKYT, CBRN og GV. Alle fagene skal bidrage til at opnå et fælles læringsmål/-udbytte. Men når fagintegrationen er beskrevet i læringspla-nen, er det information til dig som faglærer, om at nogle af elementerne er inddraget fra uddannelser, der ligger på højere niveau end den aktuelle læringsplan.
-
-Konsekvensen af dette er, naturligvis, at det ikke er tilladt at ændre i formu-leringerne i lektioner med fagintegration. Skulle behovet opstå, SKAL du ret-te henvendelse til den fagansvarlige S7, for at beskrive behov for justering, og få vejledning i, hvordan de relevante læringsmål opnås på andre måder og derefter dokumenteres.
-
-Uddannelsesbeskrivelse
-
-Fra centralt hold er der udarbejdet en uddannelsesbeskrivelse (UDD-be-skrivelse). UDD-beskrivelsen er det overordnede dokument, der beskriver Forsvarets kurser og uddannelser, og som er tilgængelig for alle inden og uden for Forsvaret. Det er ud fra uddannelsesbeskrivelsen, faglæreren skal udarbejde en læringsplan.
-
-Uddannelsesbeskrivelsen beskriver den givne uddannelse i følgende punkter:
-
-• Organisatorisk effekt
-• Formål
-• Forudsætninger
-• Læringsudbytte
-• Indhold
-• Studie- og arbejdsformer
-• Prøver/eksamen/certificering
-• Bemærkninger
-
-
-
-Du kan se et eksempel på en skabelon til uddannelsesbeskrivelse her.
-
-
-UDD-beskrivelsen er sædvanligvis udarbejdet af den tjenestegrensenhed, der er ansvarlig for kurset eller uddannelsens indhold. F.eks. er det Ingeniørregi-mentet, der har ansvaret for udarbejdelse af uddannelsesbeskrivelse til en
-
-
-
-20
-
-CBRN-uddannelse. Dog kan du, hvis du sidder som netop faglærer/sagsbe-handler ved et af de fagansvarlige tjenestegrenscentre, komme til at udar-bejde, eller revidere, en uddannelsesbeskrivelse.
-
-Desuden viser erfaringen, at nyuddannede faglærere nogle gange bliver bedt om støtte i forbindelse med formulering af uddannelsesbeskrivelser. Derfor er der i afsnit 2.2 eksempler på beskrivelse af læringsudbytte. Bogen her præsenterer dig først for det sprog, der skal anvendes i uddannelsesbe-skrivelsen. Det skal nemlig passe ind i nogle formelle rammer.
-
-Men som faglærer skal du primært vide, at uddannelsesbeskrivelsen eksi-sterer, og du skal kunne (og det er altafgørende for dit virke, at du kan) læse og forstå den, så du kan sætte dig ind i, hvad udgangspunktet for indholdet til uddannelsen er.
-
-Læringsplanen
-
-Læringsplanen er, som nævnt, det dokument, du som faglærer er an-svarlig for. Hvor uddannelsesbeskrivelsen sætter brede retninger og rammer for faget, skal læringsplanen beskrive, hvordan faget skal gen-nemføres, og være detalje- og handlingsorienteret. Det er i rollen som "forfatter af læringsplanen", du skal omsætte uddannelsesbeskrivelsens indhold eller justere den læringsplan, der ligger på Hærens Uddannelses-portal (HUP), så det bliver en relevant læringsplan til enhedens instruktø-rer. Hvordan læringsplanen udarbejdes, gennemgås detaljeret i afsnit 2.3. Læringsplanen indeholder 14 punkter, som er listet her:
-
-1. Indledning
-2. Forudsætninger
-3. Formål
-4. Læringsudbytte
-5. Læringsmål
-6. Indhold
-7. Arbejdsform/læringsaktiviteter
-8. Prøver/eksamen/certificering
-9. Sammenhæng/(Alignment)
-10. Modulets/fagets/kursets arbejdsbelastning
-11. Andet
-12. Strukturel oversigt
-13. Læringsoversigt
-14. Bedømmelsesplan
-
-
-
-
-21
-
-Du finder en detaljeret beskrivelse af læringsplanen her, eller på FIIN under HR-uddannelse-kvalifikationsrammen (kan anvendes som skriveskabelon).
-
-
-Men inden du kommer til, hvordan du skal udarbejde din læringsplan, skal du, ligesom med uddannelsesbeskrivelsen, kende det sprog, der anvendes i hhv. uddannelsesbeskrivelser og læringsplaner. Der er lidt forskel, og selv om forskellen kan se minimal ud, er den væsentlig for, hvordan særligt læ-ringsplanen læses og forstås af de instruktører, som skal gennemføre den uddannelse, du er ansvarlig for.
-
-2.2 Sproget i hhv. uddannelsesbeskrivelse og læringsplan
-
-Forsvaret besluttede i 2014 at anvende Kvalifikationsrammen for Livslang Læ-ring (KLL), som allerede på det tidspunkt var i anvendelse i store dele af den danske uddannelsessektor. KLL var blevet til på baggrund af et ønske om og behov i EU for at kunne beskrive uddannelser, så de kunne sammenlignes internationalt (i hvert fald inden for EU). For mange uddannelsesinstitutioner betød det et stort arbejde med at beskrive læring og undervisning. I Forsvaret har vi altid beskrevet ud fra målstyring, så forandringen hos os bestod ude-lukkende i at skulle skrive, læse og forstå et lidt anderledes sprog.
-
-
-EQF	(European Qualification Framework) er EU´s fælles grundlag for nationernes individuelle præcisering af uddannelsen, som beskrives i
-
-NQF	(National Qualification Framework). Denne engelske betegnelse ligger til grund for oversættelsen til
-
-KLL	(Kvalifikationsrammen for Livslang Læring).
-
-
-KLL-sprog i uddannelsesbeskrivelsen
-
-Indførelsen af KLL skulle sørge for en ensretning og kvalitetssikring af den måde, vi i Danmark beskriver vores uddannelser på. Det måske vigtigste formål var ønsket om en ensartet brug af begreber i uddannelsesdokumen-tation samt ensartet opbygning af uddannelsesbeskrivelser.
-
-Alle uddannelser, som er beskrevet i forhold til KLL-rammen, kan indrange-res i en orden, der spænder fra niveau 1 til 8. Niveau 1 svarer til 9. klasses
-
-
-
-22
-
-afgangseksamen, og niveau 8 er ph.d.-niveauet. De mellemliggende niveau-er kan ses af nedenstående figur:
-
-
-Niveauer i Kvalifikationsrammen for Livslang Læring
-
-Niveau 19. klasseNiveau 210. klasseNiveau 3Niveau 4StudentereksamenErhvervsrettet konstabeluddannel-se, Hærens sergentuddannelseNiveau 5Erhvervsakademi-Skydelæreruddannelse, militæruddannelseakademiuddannelse, sprogoffi-cersuddannelseNiveau 6Bachelor, profes-Militær diplomuddannelsesionsbachelor, di-plomuddannelseNiveau 7Kandidat, masterMaster i militære studierNiveau 8Ph.d.
-
-Uddybning af KLL-niveauerne finder du her.
-
-
-
-
-
-De fleste af de uddannelser, du kommer til at beskæftige dig med i dit virke som faglærer, vurderes at ligge på niveauerne 2-4. Enkelte specialistkurser kan ligge på niveau 5, men du vil sandsynligvis have virket som faglærer nogle år, før du evt. kommer til at sidde med ansvar for sådanne uddannelser.
-
-På FAK's forskellige tjenestesteder gennemføres der akkrediterede uddan-nelser inden for niveau 5-7: militær akademiuddannelse (MAU for mellemle-
-
-
-
-23
-
-dere) på niveau 5, militær diplomuddannelse (officersuddannelse/premier-løjtnant) på niveau 6 og master i militære studier (MMS/major) på niveau 7. Når, og hvis, du kommer til at beskæftige dig med disse niveauer, vil du til den tid blive klædt på til det. Denne bog berører ikke disse niveauer yder-ligere.
-
-Det, man som deltager skal have ud af en hvilken som helst uddannelse, be-skrives som læringsudbytte. Ved læringsudbytte forstås, hvad man skal vide og kunne som resultat af en læreproces. Læringsudbyttet er altid beskrevet inden for områderne viden, færdigheder og kompetencer.
-
-Se skemaet på side 25.
-
-
-I beskrivelsen af læringsudbyttet benyttes et ordvalg, der passer til det niveau, uddannelsen hører til på. Ud over læringsudbyttet inden for de re-spektive læringsområder bør læringsudbyttet også indeholde en omfangs-beskrivelse, som er med til at præcisere læringsdybde og -vilkår.
-
-Læringsudbyttet er overordnet og bredt formuleret og fortæller både, hvad en uddannelse skal føre til, og hvad der kan forventes, at en deltager med den respektive kvalifikation ved og kan.
-
-I skemaet på side 26 og 27 er der vist generelle formuleringer for uddan-nelser på niveauerne 3, 4 og 5. Disse tre niveauer er præsenteret, fordi du som nyuddannet faglærer primært kommer til at arbejde med uddannelse på disse niveauer:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-24
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-25
-
-
-VidenFærdighederKompetencerViden er den viden og forståelse, somFærdigheder er, hvad en person kanKompetencer er den bevidste evne tilforventes af en person med en kvalifi-gøre eller udføre med en given kvali-at anvende viden og færdigheder i enkation på et givet niveau. Beskrivelsenfikation på et bestemt niveau. Beskri-given kontekst, eksempelvis arbejdeaf viden omfatter følgende aspekter:velsen af færdighed omfatter følgendeeller studier. Ansvar og selvstændig-tre aspekter:hed er centrale begreber her. Kompe-tence omfatter følgende tre aspekter:
-1. Hvilken type viden der er tale om; 1. Hvilken type færdighed der er tale 1. Handlerummet; i hvilke typer af teoretisk viden (viden om noget eller om; kognitive færdigheder (f.eks. at arbejds- eller studiemæssige sam-nogen) eller praktisk viden (viden om kunne regne), praktiske færdigheder menhænge viden og færdigheder kan formulering af processer, f.eks. hvor- (f.eks. at kunne svejse) eller kommu- bringes i spil. Hvilken grad af uforudsi-
-
-dan man udfører en arbejdsopgave).nikative færdigheder (f.eks. at kunnegelighed og foranderlighed vil der væreudtrykke sig mundtligt eller skriftligt)i disse sammenhænge?samt kreative færdigheder.
-
-2. Hvor kompleks den pågældende 2. Hvilken opgaveløsning færdigheden 2. Samarbejde og ansvar; i hvor høj viden er; hvor forskellige situationer skal anvendes til; opgavens komplek- grad man kan varetage ansvaret for
-
-den pågældende viden kan anvendessitet, hvilket vil sige, hvilke krav dersit eget og andres arbejde. Hvor kom-i, samt hvor uforudsigelige situationerstilles til udvælgelse og vurdering afplekse samarbejdssituationer kan manden beherskes i.viden, der indgår i opgaveløsningen.indgå i?
-
-
-3. Om der er tale om forståelse; for- 3. Hvilken kommunikation der kræves; 3. Læring; i hvor høj grad man kan ståelse kommer til udtryk, når man hvilke målgrupper der skal kommuni- tage ansvar for sin egen læring og kan forklare noget for andre eller vise, keres med, hvor komplekst budskabet kompetenceudvikling.
-
-at man kan anvende sin viden i forskel-er, og hvilke virkemidler der anvendes ilige sammenhænge.kommunikationen.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-26
-
-
-NiveauVidenFærdighederKompetencer•Skal have viden om basale•Skal kunne udføre praktiske•  Skal kunne tage ansvar formetoder og normer inden forarbejdsopgaver inden for fa-afgrænsede arbejdsprocesser.et erhvervs- eller fagområde.get/erhvervet.•  Skal kunne indgå i tværfagligt•Skal have forståelse af egne•Skal kunne løse faglige pro-samarbejde inden for et er-indflydelsesmuligheder påblemer.hvervs eller et fags praksis.arbejdsmarkedet og i sam-•Skal kunne søge og vurdere•  Skal kunne indgå aktivt i læ-3fundet.information med relevans forringssituationer inden for eten praktisk arbejdsopgave in-erhvervs- eller fagområde.den for et fag eller et erhverv.•  Skal kunne anvende fagligterminologi i kommunikatio-nen med kollegaer, medstude-rende og brugere.•Skal have viden om begreber,•Skal kunne vælge og anvende•  Skal kunne tage ansvar forprincipper og processer indenrelevante redskaber, metoder,arbejdsprocesser i normaltfor et erhvervs- eller fagom-teknikker og materialer indenforudsigelige arbejds- ellerrådes praksis eller i almenefor et erhvervs- eller fagom-studiesituationer.fag.råde.•  Skal kunne planlægge og tage•Skal have forståelse af sam-•Skal kunne identificere etansvar for egne og fælles ar-menhænge mellem fagligepraktisk og/eller teoretiskbejdsprocesser og resultater.4problemer og samfundsmæs-problem.•  Skal kunne opsøge videreud-sige/internationale forhold.•Skal kunne vurdere kvalitetendannelse og faglig udvikling iaf eget og andres arbejde istrukturerede læringsmiljøer.forhold til en given standard.•  Skal kunne anvende erhvervs-og fagområdets terminologi ikommunikationen med sam-arbejdspartnere og brugere.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-27
-
-
-•  Skal have viden om praksis og•  Skal kunne anvende og kom-•  Skal kunne indgå i udviklings-anvendelse af metode og teoribinere et alsidigt sæt fær-orienterede og/eller tværfagli-inden for et erhvervs- ellerdigheder, der knytter sig tilge arbejdsprocesser.fagområde.fagområdets praksis og ar-•  Skal kunne varetage afgræn-•  Skal have forståelse af praksisbejdsprocesser.sede ledelses- og planlæg-og/eller de vigtigste anvendte•  Skal kunne vurdere prak-ningsfunktioner i relation til5teorier og metoder og kunnesisnære problemstillinger ogerhvervs- og fagområdetsforstå erhvervets anvendelsejustere arbejdsgange og ar-praksis.af disse.bejdsprocesser.•  Skal kunne identificere og•  Skal kunne formidle prak-udvikle egne muligheder forsisnære problemstillinger ogfortsat videreuddannelse iløsningsmuligheder til samar-forskellige læringsmiljøer.bejdspartnere og brugere.
-
-
-
-
-
-
-Når uddannelser niveausættes, gøres det ud fra de beskrevne læringsudbytter. Der skelnes mellem "best-fit"- og "full-fit"- uddannelser.
-
-I "best-fit"-uddannelser kan læringsudbytterne svinge omkring det niveau uddannelsen indrangeres på. Det betyder, at der på sergentuddannelsen (niveau 4) både kan findes enkelte læringsudbytter beskre-vet til hhv. niveau 3 og/eller 5. Men flertallet af de beskrevne udbytter ligger på niveau 4, da uddannel-sen ellers skulle rangeres anderledes.
-
-I "full-fit"- uddannelser, som er de akkrediterede uddannelser, skal alle læringsudbytter være beskrevet til det niveau uddannelsen er indrangeret på. F.eks. skal alle læringsudbytter på den militære diplomud-dannelse (niveau 6) beskrives med formuleringer, der svarer til præcis niveau 6.
-
-I det efterfølgende er et eksempel på, hvordan læringsudbyttet kan udfor-mes, når det ændres fra den generelle formulering fra ovenstående tabel til en konkret beskrivelse af dele af en uddannelse:
-
-Eksempel: Køreuddannelse (niveau 3)
-
-
-Viden
-
-Soldaten har:
-
-Viden om køretøjets opbygning og anvendelse inden for færdselslo-vens gyldighedsområde.
-
-Færdigheder
-
-Soldaten kan:
-
-Under garnisonstjeneste udføre praktiske opgaver i forbindelse med klargøring af køretøj, herunder de forskellige eftersyn.
-
-Kompetencer
-
-Soldaten kan:
-
-Tage ansvar for køretøjets klargøring, både i forbindelse med daglig tjeneste og inden udrykning efter anvisning fra foresatte.
-
-
-
-Du kan se, at anvendelsen af ord fra den generelle beskrivelse går igen i beskrivelsen af læringsudbyttet, men nu med nogle relevante beskrivelser for uddannelsen til kører.
-
-Nedenstående er eksempler på forskellen mellem niveau 3 og 5 inden for forskellige emner. Niveauerne 3 og 5 er valgt i eksemplerne for at vise en tydelig forskel på niveauerne:
-
-
-
-
-
-
-
-
-28
-
-Viden
-
-En soldat (på niveau 3) skal have viden om regelbaserede omgangs-former mellem menige og befalingsmænd.
-
-En soldat (på niveau 5) skal have viden om, hvorfor omgangsformer mellem menige og befalingsmænd er udformet, som de er, hvordan praksis kan variere i organisationen, og hvilken betydning det kan have for samspillet mellem menige og befalingsmænd.
-
-Færdigheder
-
-En soldat (på niveau 3) skal kunne anvende de korrekte begreber for komponenter på KØTJ samt eftersynsbegreber ved henvendelse til vedligeholdelsessektionen.
-
-En soldat (på niveau 5) skal kunne formidle eventuelle problemer i forbindelse med eftersyn af køretøjer samt løsningsforslag for sam-me til vedligeholdelsessektionen.
-
-Kompetencer
-
-En soldat (på niveau 3) skal kunne tage ansvar for egen sikringsret-ning under gruppens fremrykning.
-
-En soldat (på niveau 5) skal på baggrund af delingsførerens befaling kunne varetage befalingsudgivelse for gruppens fremrykning, herun-der gruppens samlede sikring.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-29
-
-Du bruger altså kvalifikationsrammen til at finde beskrivelser, der svarer til niveauet for den uddannelse, du ønsker at beskrive. Når du efterfølgen-de udfærdiger uddannelsesbeskrivelsen, bruger du formuleringer fra de re-spektive læringsområder i den relevante faglige kontekst. På den måde kan man efterfølgende, ud fra uddannelsesbeskrivelsen, se, hvilket niveau i kva-lifikationsrammen uddannelsen ligger på.
-
-
-
-OBS:
-
-I uddannelsesbeskrivelsen fokuseres der på, hvad der skal læ-res, og ikke hvem der skal lære det.
-
-Uanset om man er oberst eller konstabel, er uddannelsen på gevær stadig samme niveau.
-
-
-
-Omfangsbeskrivelsen eller konteksten, hvori viden, færdigheder og kompe-tencer skal udfoldes, er et væsentligt element i læringsudbyttet. Når kate-gorien og niveauet er fastsat, er det væsentligt at få beskrevet "i forhold til hvad og hvordan?". Her angives omfanget af, bredden eller dybden samt omstændighederne ved anvendelsen af viden, færdigheder og kompeten-cer. Omfangsbeskrivelsen er en prosatekst, hvori fagligt relevante beskri-velser anvendes til præcisering af læringsudbyttet.
-
-Her følger to eksempler på læringsudbytter inden for fagene skyttetjene-ste og gevær af M/95-familien. Eksemplerne er valgt for at vise, hvordan uddannelsesudbyttet kan beskrives, og eksemplerne anvendes i resten af kapitlet for at tydeliggøre omskrivningen fra læringsudbytte til læringsmål og den senere nedbrydning til relevante læringsmål i enkeltlektioner samt disse læringsmåls "tegn på læring". Sidst i dette kapitel er indsat en over-sigt, der viser den samlede bearbejdning, der beskrives gennem kapitlet, fra læringsudbytte til enkeltlektioners læringsmål og tegn på læring for disse.
-
-
-
-
-
-
-
-
-
-
-
-
-30
-
-Eksempel: Beskrivelse af (dele af) læringsudbytte fra skyttetjeneste:
-
-Viden:
-
-Har viden om forskellige metoder til kommandoforplantning i forskel-lige taktiske situationer for gruppen i dagslys og mørke.
-
-Færdigheder:
-
-Kan anvende kommandoforplantning og relevante meldinger i relation til den igangværende opgaveløsning under indsættelse i grupperam-men, både i dagslys og mørke.
-
-Kompetencer:
-
-Tager ansvar for relevant kommunikation i forskellige taktiske situati-oner i grupperammen i dagslys og mørke.
-
-Eksempel: Beskrivelse af (dele af) læringsudbytte fra geværuddannelsen:
-
-Viden:
-
-Har viden om sikkerhedsbestemmelserne for anvendelse af geværet, både i dagslys og mørke.
-
-Færdighed:
-
-Kan udføre relevante arbejdsopgaver med geværet, herunder betje-ning, adskillelse/samling og vedligeholdelse under daglig uddannelse og øvelser.
-
-Kompetencer:
-
-Tager ansvar for overholdelse af relevante sikkerhedsbestemmelser i forbindelse med indsættelse af geværet under daglig uddannelse og vagttjeneste.
-
-
-Du kan finde den færdige uddannelsesbeskrivelse for faglæ-rerkurset her:
-
-
-I de næste afsnit kan du se, hvordan du kommer fra læringsudbytte over fagets læringsmål til enkeltlektioners læringsmål, bl.a. ved at få kendskab til det sprog, du senere skal anvende i din læringsplan.
-
-
-
-
-31
-
-LRH-taksonomien og læringsmålet i læringsplanen LRH-taksonomien er udviklet til brug på bl.a. erhvervsuddannelser i det civi-le (udviklet af Leif Rye Hauerslev og Undervisningsministeriet - deraf navnet på taksonomien). I forbindelse med implementeringen af KLL i Forsvaret blev denne taksonomi valgt til at beskrive læringsmål for alle Forsvarets uddannelser placeret op til og med KLL-niveau 5 (undtagen akademiuddan-nelsen, som er underlagt regler for akkrediterede uddannelser).
-
-Taksonomien dækker over de samme tre læringsområder, viden, færdig-heder og kompetencer, som KLL-rammen, men LRH-taksonomien har sin styrke ved at have (mange) specifikke handleverber inden for hvert lærings-område, der angiver, hvordan læringen skal komme til udtryk i soldatens handling.
-
-Taksonomien angiver, ud over læringsområdet, læringsdybden i tre niveauer (grundlæggende, alsidig og kompleks), således at handleverbet beskriver en adfærd, som forudsætter en læringsdybde på enten grundlæggende, alsidigt eller komplekst niveau. Det er disse handleverber, der anvendes i beskrivel-sen af læringsmål i læringsplanen.
-
-Som du kan se af skemaet, definerer de verber, der bliver anvendt, både det læringsområde og det niveau, læringsaktiviteten skal forsøge at ram-me. Hvor man i uddannelsesbeskrivelserne har større frihed i sit ordvalg, er anvendelsen af verberne i LRH-sproget altså med til at identificere både læringsområde og -niveau.
-
-Det er vigtigt, du overholder denne anvendelse i læringsplanen, for dine instruktører afkoder læringsmålenes niveau ved hjælp af handleverberne. Denne afkodning hjælper dem til at vælge hensigtsmæssige metoder til at fremme læring hos enhedens soldater.
-
-
-
-
-
-
-
-
-
-
-
-
-
-32
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-33
-
-
-VidenFærdighederKompetencerKomplekst niveau:Deltageren kan:Komplekst niveau:Deltageren kan:Komplekst niveau:Deltageren kan:(Forstå)- Forklare(Avanceret, elite,- Uddrage(Kan selvstændigt- Innovere- Sammenligneekspert)- Eksperimentereudvikle)- Skabe- Reflektere- Frembringe- Planlægge- Vælge- Udvælge- Se forskelle- Kritisere- Evaluere- Tilvirke- Bedømme- Formidle- Generalisere- Generere- Vurdere- Selvstændiggøre- Variere- Udvikle- ForholdeAlsidigt niveau:Deltageren kan:Alsidigt niveau:Deltageren kan:Alsidigt niveau:Deltageren kan:(Vide)- Redegøre for(Øvede, rutine)- Beherske(Kan handle selv-- Se sammenhænge- Diskutere- Indhentestændigt i ukendte- Afgøre- Demonstrere- Skelnesituationer)- Tage initiativ- Udlede- Afprøve- Tage ansvar- Løse- Begrunde- Udarbejde- Udføre- AnvendeGrundlæggendeDeltageren kan:GrundlæggendeDeltageren kan:GrundlæggendeDeltageren kan:niveau:- Gentageniveau:- Efterligneniveau:- Foretage(Have kendskab)- Referere(Begynder)- Medvirke(Kan handle i- Være bevidst- Navngive- Iagttagekendte situationer- Acceptere- Reproducere- Identificeremed eller uden- Registrere- Søge vejledningvejledning)- Opsøge- Beskrive- Imitere
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-34
-
-Viden - er vores grundlag for at kunne handle. At handle uden at vide, hvad vi gør, eller hvordan vi gør det, giver ikke mening. Vi anskuer viden i tre dimensioner: viden om, hvorfor vi handler, viden om, hvordan vi handler og viden om hvad vores handlinger skal resultere i. Jo mere vi ved inden for disse tre dimensioner, des mere kvalificeret kan vi handle.
-
-Vi beskriver viden i tre niveau bl.a. således:
-
-
-Kompleks viden - deltageren forståremnet på en måde, så deltageren somindivid kan forholde sig kritisk til detForståog vurdere dets anvendelighed i denpågældende situation.Alsidig viden - deltageren selv kanudlede væsentlige detaljer af stoffet,diskutere emnet i forhold til andre em-ner og kan redegøre for, hvad emnetVideindeholder, og hvordan de forskelli-ge elementer bidrager til at udgørehelheden.Grundlæggende viden - får delta-Havekendskabgerne, når de bliver præsenteret foremnet og reflekterer over indholdet.
-
-
-Færdigheder - beskriver det, deltageren skal kunne; kognitivt, kreativt, kommunika-tivt eller rent kropsligt.
-
-Vi beskriver færdigheder på tre niveauer bl.a.
-således:
-
-
-
-
-
-Komplekse færdigheder - er evnenAvanceret,elite,til at kunne eksperimentere inden foremnet, til at kunne agere avanceretekspertog fleksibelt og til at kunne evalueresin egen adfærd.Færdigheder på dette niveau ereliteniveau.Alsidige færdigheder - her beher-rutineretsker deltageren sit fag i en sådanlevant end en anden adfærd. På dettegrad, at deltageren kan afprøve detsanvendelighed og skelne imellem,hvornår en adfærd vil være mere re-Øvet,niveau opfører soldaten sig rutineretinden for feltet.Grundlæggende færdigheder -lærer vi ved at øve det, der skal kun-Begyndernes. Her er behov for, at deltagerenved, hvad der skal ske, og en begræn-set form for refleksion er nødvendig.Men det er den styrende øvning, dersikrer færdigheden.
-
-
-Kompetencer - beskrivelse af kompetencer udtrykker vores evne til gennem handling at møde en udfordring. I handlingen gør vi brug af vores viden og færdigheder og af vores personlige egenskaber i øvrigt.
-
-De centrale begreber i forhold til kompetence er ansvarlighed og selvstændighed.
-
-Vi beskriver kompetencer på tre niveauer bl.a.
-således:
-
-
-Kompetencer med høj kompleksitetselvstændigtudvikle- deltageren kan både se forskelleog generalisere - kan selvstændigtog ansvarligt udvikle processer ogprocedurer - evnen til ikke blot atregistrere fordele og ulemper, men tilat inddrage disse overvejelser medKanhenblik på at skabe nyt eller på athandle på nye måder.KanhandleselvstændigtiukendtesituationerAlsidige kompetencer - deltagerenkan registrere sammenhænge ogafgøre fordele og ulemper i forhold tilen forestående handling.Deltageren kan selvstændigt tageinitiativ til - og dermed også tage an-svar for - sin handling og kan handle ikendte og ukendte situationer.KanhandleikendteGrundlæggende kompetencer -situationerunderdeltageren kan handle i kendte situa-vejledningtioner og som regel under vejledning.Deltageren registrerer, hvad der
-foregår, og er bevidst om sin situation og om sine muligheder. Her udnytter deltageren sin grundlæggende viden og færdigheder.
-
-Opgaven som "forfatter af læringsplanen" er altså at sikre, at instruktøren kan læse og forstå fagets samlede læringsmål og de enkelte lektioners mål. Det kræver, at du har en grundig forståelse af LRH-taksonomien, og hvilken påvirkning den har på didaktikken* i uddannelsen.
-
-
-*Didaktik
-
-Didaktik omfatter både overvejelser over, hvad der skal læres, og hvordan der skal undervises og læres.
-
-(Kilde: Den store danske (denstoredanske.lex.dk))
-
-
-
-
-
-Omskrivning fra KLL til LRH - fra beskrivelse af læringsudbytte til beskrivelse af læringsmål
-
-En uddannelsesbeskrivelse skal omskrives til en læringsplan, fordi KLL-ram-men kan være svær at omsætte til præcise mål for læring. Derfor bruges LRH-taksonomien til at skrive læringsplanen, for meget mere præcist at be-skrive, hvordan viden, færdigheder og kompetencer skal komme til udtryk i soldatens handling.
-
-Præcise læringsmål for uddannelsen hjælper dig i din senere analyse af faget og den efterfølgende nedbrydning i delelementer, som er grundlaget for, at der kan laves en læringsplan. Lad os starte med et eksempel på, hvordan læringsmålet gerne skulle se ud, når du er færdig med at beskrive det:
-
-Læringsmålet består grundlæggende af tre elementer: et læringsobjekt, et handleverbum og en omfangsbeskrivelse, som alle skal være til stede for at danne et specifikt beskrevet læringsmål (som instruktørerne kan arbejde ud fra).
-
-Læringsobjektet er det, der skal læres, f.eks. at adskille og samle et våben eller at efterse geværet.
-
-Handleverbet beskriver den handling og det niveau, soldaten skal demon-strere læringsobjektet med, f.eks. at redegøre for noget eller tage initiativ til noget.
-
-
-
-35
-
-Omfangsbeskrivelsen hjælper til at beskrive kompleksiteten, samt i hvilken sammenhæng og under hvilke forhold viden, færdigheder og kompetencer skal kunne bringes i spil. I omfangsbeskrivelsen kan indgå beskrivelse af:
-
-• sted (f.eks. træning på garnison eller øvelsesplads)
-
-• hvilken faglighed og kvalitet der forventes
-
-• om soldaten er alene eller sammen med andre
-
-• om det er om dagen eller om natten
-
-• om det er i simulator eller virkelighed
-
-• om der er opsat en tidsbegrænsning
-
-• hvilken præcision der forventes
-
-• etc.
-
-
-
-
-
-Læringsobjekt + Handleverbum + Omfangsbeskrivelse = Læringsmål
-
-Nedenfor er eksempler på læringsmål med ovennævnte farvekoder:
-
-Viden:
-
-Soldaten kan mundtligt redegøre for forskellige metoder til kommandofor-plantning, afhængigt af om det skal foregå i dagslys eller mørke, under kam-plarm eller overholdelse af lyddisciplin.
-
-Færdighed:
-
-Soldaten behersker relevante betjeningsgreb med GV i almindeligt forekom-mende situationer både i dagslys og mørke.
-
-Omsætning af fagets læringsudbytte til fagets læringsmål
-
-Når du beskriver fagets læringsmål, i læringsplanens punkt 5, skal du tage udgangspunkt i læringsudbyttet fra uddannelsesbeskrivelsen. Det betyder,
-
-
-
-36
-
-du skal forholde dig til kompleksiteten/intentionen i læringsudbyttet og be-skrive dette ved anvendelse af LRH-taksonomien. Denne omskrivning la-ves, fordi resten af læringsplanen ikke længere vil referere til KLL-rammen, men derimod til læringsmål med udgangspunkt i LRH-taksonomien. Vær opmærksom på, at nogle verber går igen fra KLL til LRH.
-
-I LRH-sproget anvendes verberne specifikt til at rammesætte niveau og om-råde, og et verbum kan derfor ikke altid overføres direkte fra læringsudbytte til læringsmål. F.eks. bruges ordet "anvende" i KLL og findes i LRH under alsidige færdigheder. Hvis du vurderer, at intentionen fra læringsudbyttet er, at læringsmålet skal være på alsidigt niveau, kan du fastholde verbet. Ellers skal du i stedet bruge et andet handleverbum, der dækker "anvende", men enten på et højere eller lavere taksonomisk niveau.
-
-LRH-taksonomien har tre niveauer, og alle tre kan i princippet anvendes, uanset om det er en uddannelse på KLL-niveau 3 eller 5. Det skal forstås så-ledes, at en soldat, der skal være kører på en kampvogn (KVG) (KLL-niveau 3), sagtens kan have et læringsmål med handleverbet "vurdere" i sin kører-uddannelse (kompleks færdighed), når det handler om terrænets passabi-litet, mens en soldat, der skal lære at være KVG-kommandør (KLL-niveau 5), kan have et læringsmål, der indeholder handleverbet "identificere", an-gående forskellige terræntyper i forhold til KVG anvendelse (grundlæggende færdighed).
-
-Det betyder, du skal kigge på uddannelsens placering på kvalifikations-rammen og bruge din omfangsbeskrivelse i læringsmålet til at nuancere den højere kompleksitet i uddannelsen af KVG-kommandøren i forhold til KVG-køreren, når du omskriver læringsudbytte til læringsmål. Valg af hand-leverbum placerer læringsmålet på et kompleksitetsniveau, men dette kan (og skal) nuanceres med en omfangsbeskrivelse.
-
-Se følgende eksempel, hvor et læringsudbytte er omskrevet til læringsmål for faget:
-
-
-
-
-
-
-
-
-
-37
-
-Eksempel, læringsud-Eksempel, læringsmål for faget skytte-byttetjenesteViden:Viden:Har viden om forskelligeKan demonstrere, hvilke kommandotegn deranvendelser af kommando-skal anvendes i forhold til formationsændrin-forplantning i mulige takti-ger i gruppen, når instruktøren spørger omske situationer for gruppennormalt anvendte formationer.i dagslys og mørke.Soldaten kan mundtligt redegøre for forskel-NB: Her opdeles lærings-lige metoder til kommandoforplantning, af-udbyttet i to fagmål.hængigt af om det skal foregå i dagslys ellermørke, under kamplarm eller overholdelse aflyddisciplin.Færdigheder:Færdigheder:Kan anvende kommando-Kan udføre kommandoforplantning i gruppenforplantning og relevanteunder indsættelse i forskellige taktiske akti-meldinger i relation til denviteter i både dagslys og mørke.igangværende opgaveløs-ning under indsættelsei grupperammen, både idagslys og mørke.Kompetencer:Kompetencer:Tager ansvar for relevantTager ansvar for, og initiativ til, relevantkommunikation i forskel-kommunikation i grupperammen under øvel-lige taktiske situationer ise og enhedsskydninger i dagslys og mørke.grupperammen i dagslysog mørke.
-I ovenstående eksempel er læringsudbyttet inden for viden så omfangsrigt, at der er behov for to (og nogle gange flere) læringsmål, for at det bliver beskrevet ordentligt.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-38
-
-Eksempel, læringsud-Eksempel, læringsmål for faget geværbytteM/95-familienViden:Viden:Skal have viden om sikker-Kan redegøre for sikkerhedsbestemmelser ihedsbestemmelserne forforhold til GV anvendelse i garnison/på SKBanvendelse af geværet.samt med løs AMM i samtale med instruktøreller kollega.Færdigheder:Færdigheder:Skal kunne udføre rele-Behersker relevante betjeningsgreb medvante arbejdsopgaver medGV i almindeligt forekommende situationergeværet, herunder betje-både i dagslys og mørke.ning, adskillelse/samlingog vedligeholdelse.Kompetencer:Kompetencer:Skal kunne tage ansvar forTager ansvar for og initiativ til egen og an-anvendelse af relevantedres overholdelse af sikkerhedsbestemmel-sikkerhedsbestemmelser iser i omgang med våben.forbindelse med indsættel-se af geværet.
-Du skal være meget opmærksom på, at hvis du vælger flere handleverber i samme læringsmål, så skal de tages fra samme niveau fra LRH-skemaet, f.eks. fra viden/alsidig eller færdighed/kompleks, som det er vist i eksemplet fra skyttetjeneste under kompetencemålet.
-
-En sammenblanding af to læringsdybder på samme objekt giver ikke me-ning, da et handleverbum på det mere komplekse niveau vil forudsætte, at soldaten kan honorere det lavere niveau. F.eks. må det forventes, at man både kan beskrive (grundlæggende) og redegøre (alsidigt), før man kan for-klare (komplekst).
-
-Hvis der er mere end et læringsobjekt i målet, og du vurderer, at de hø-rer til på hvert sit taksonomiske niveau, skal du dele læringsmålet op i to selvstændige læringsmål. Hvis du har et læringsmål, der består af både færdighed og kompetencer, skal du ligeledes adskille det til to selvstændige læringsmål og beskrive disse i hver deres læringsområde.
-
-
-
-
-
-39
-
-Efter at have gennemgået det sprog, der skal anvendes til at beskrive de for-skellige læringsmål i læringsplanen, følger nu et afsnit med en systematisk gennemgang af, hvordan læringsplanen skal udarbejdes.
-
-2.3 Sådan udarbejdes læringsplanen
-
-Det praktiske arbejde med at udarbejde læringsplanen kan beskrives gen-nem syv faser:
-
-
-Syv faser til udarbejdelse af læringsplan
-
-Fase 1Formulering af fagets læringsmålFase 2Udarbejdelse af bedømmelsesplan for fagetFase 3Valg og beskrivelse af fagets indholdFase 4Strukturering af fagets indholdFase 5Sekvensering af fagets indholdFase 6Udfærdigelse af læringsmål for lektioner og læringsoversigtFase 7Strukturel oversigt
-Der kan være steder i processen, hvor det i praksis viser sig svært at holde faserne adskilt, men for modellens og anskueliggørelsens skyld beskrives de her med skarp afgrænsning mellem faserne.
-
-Som udgangspunkt kan du overføre flere dele fra uddannelsesbeskrivelsen til læringsplanen, men kernen i dit arbejde vil, som beskrevet, være omsæt-ningen af læringsudbyttet fra uddannelsesbeskrivelsen til et læringsmål for faget i læringsplanen, nedbrydningen af fagmålet til læringsmål i lektionerne og opsætning af vurderingskriterier med henblik på sikring af målopfyldelse.
-
-Fase 1, formulering af læringsmål og delvis færdiggørelse af forside Læringsmålene er styrende for fagets indhold og danner samtidig også grundlaget for bedømmelsesplanen i fase 2. Derfor skal fagets læringsmål formuleres som det første i processen. Læringsmålene formuleres, som nævnt, i LRH-sprog med udgangspunkt i uddannelsesbeskrivelsens lærings-udbytter (KLL/NQF).
-
-
-
-
-40
-
-Hvis der ikke ligger en uddannelsesbeskrivelse, skal denne laves, in-den udarbejdelsen af læringsplanen går i gang. Er læringsudbyttets om-fangsbeskrivelse mangelfuld, er det vigtigt, du opsøger uddannelses-beskrivelsens forfatter for at få den beskrevet eller selv formulerer en. (Se side 36-37 for omskrivning fra læringsudbytte til fagets læringsmål.)
-
-Når læringsmålene er formuleret, er det en god idé igen at sammenholde dem med uddannelsesbeskrivelsens læringsudbytte. På den måde er du sik-ker på, at alle læringsmål hænger sammen med et læringsudbytte. Ved at lave denne kontrol nu undgår du, at der er flere læringsmål end nødvendigt, eller at der er dele af læringsudbyttet, der ikke er repræsenteret i lærings-målene.
-
-Når du er færdig med at formulere læringsmålene for faget, er næste skridt udarbejdelse af bedømmelsesplanen, så du sikrer dig, at der er sammen-hæng mellem mål og slutprøve.
-
-Fase 2, udarbejdelse af bedømmelsesplan for faget
-
-Jf. "Implementering af Kvalifikationsrammen for Livslang Læring" (HST-skri-velse af 8. juli 2015) stilles der krav om, at alle læringsplaner har en bedøm-melsesplan. Bedømmelsesplanen skal beskrive soldatens forventede hand-ling, når læringsforløbet er gennemført.
-
-Bedømmelsesplanen laves så tidligt i produktionen af læringsplanen for at sikre sammenhæng mellem de netop formulerede læringsmål og den be-dømmelse, der skal finde sted til sidst i uddannelsesforløbet. På den måde undgår du, at enkeltdele fra udvalgte lektioner træder for meget frem i en afsluttende bedømmelse, eller at der er væsentlige dele, der bliver udeladt. Det er de overordnede læringsmål, der skal rammesætte bedømmelsen.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-41
-
-Bedømmelsesplanen skrives ind i pkt. 14 i læringsplanen. Afhængigt af hvil-ken uddannelse læringsplanen beskriver, kan en bedømmelsesplan være meget simpel. Formålet er at sikre, at der gennemføres en struktureret eva-luering af soldatens viden, færdigheder og kompetencer.
-
-Bedømmelsesplanen udformes ud fra nedenstående model:
-
-Fokuspunkter/kompe-BedømmelseBemærkningtencemål (hvilken læring(de forudsætninger/(hvilke målepunkterbedømmes?)vilkår, der bedømmeser der?)under)Her oplistes kompetence-Her skal du beskrive,Vurderingskriterier:målene fra fagets læ-på hvilken måde ogHer skal der stå mål -ringsmål.under hvilke forholdbedømmelsen skalbare beskrivelser afHvis der er meget tungt-foregå.soldatens adfærd.vejende videns- ellerDisse oplistes ifærdighedsmål, somikke dækkes af kom-punktform og skrivespetencemålet, bør dei klart sprog (hvad erogså trækkes med over idet, du vil se?).bedømmelsesplanen.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-42
-
-Eksempel på bedømmelsesplan for ét af kompetencemålene for HBU´s SKYT-uddannelse:
-
-Fokuspunkter/kompe-BedømmelseBemærkningtencemål (hvilken læring(de forudsætninger/(hvilke målepunkterbedømmes?)vilkår, der bedømmeser der?)under)1. Kompetence:Kompetencen be-Vurderingskriterier:Soldaten kan se sam -dømmes af GF vedSoldaten:gennemførelse afmenhængen mellem ele-FELT 1-3.•Gennemførermenterne i enkeltmandskamp.GF melder tilbageuopfordret klartil DF om sin kontroltil kamp indenaf enkeltmand efterhver indsættelse.øvelsen.•Finder selv un-Kan GF ikke nå atder ildkampenfå overblik over alleildstilling medi GRP på den en-til- og afgangs-kelte FELTØV, skalveje og opret-han/hun, på næsteholder følingFELTØV, fokusere påmed FJ, til dennede soldater, han/huner væk, eller an-mangler, samt dem,den ordre gives.der udviste manglen-•Fastholder ob-de kompetence påservation afden forrige FELTØV.modstanderensplacering/bevæ-gelse og frem-sender uopfor-dret melding omsamme.2. Kompetence:Være bevidst om ...
-
-I ovenstående eksempel, hvor GF skal kontrollere de beskrevne vurderings-kriterier under feltøvelsen, skal soldaten have trænet sammenhængen på en forudgående uddannelsesdag, og dette har selvfølgelig betydning for ud-formningen af læringsplanen.
-
-
-
-
-
-43
-
-Del- og slutmål
-
-Ud over en slutprøve kan du indlægge delprøver i forløbet, så du løbende kan holde øje med, om soldaterne har nået de forventede læringsmål, og justere undervisningsplanen om nødvendigt. Brug af delprøver kan særligt være en fordel, når du arbejder med læringsplaner med mange lektioner eller med emner, der skal danne grundlag for forståelsen af efterfølgende emner.
-
-Delprøven/-erne indsættes som lektioner undervejs, men i kolonnen "læ-ringsmål" skal du beskrive, hvad prøvens formål er, og formulere det delmål, der skal måles på, samt henvise til det bilag, du har lavet, og som prøven skal gennemføres efter.
-
-Dine overvejelser omkring delprøver skal stadig tage udgangspunkt i relati-onsmodellen (se nedenfor).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Relationsmodellen illustrerer, hvilke sammenhænge der er mellem lærings-mål, læringsaktiviteter og slutprøve/bedømmelsesplan. Der er dobbeltpile på modellen for at illustrere en gensidig påvirkning.
-
-Læringsmål og prøver
-
-Prøven skal udformes, så den afspejler de læringsmål, der er opsat for forlø-bet. Det er læringsmålene, der skal være styrende for prøvens udformning. For at prøven kan være så retvisende som muligt, er det vigtigt, den priori-teres højt, både i udformning og gennemførelse.
-
-
-
-
-
-44
-
-Læringsmål og læringsaktivitet
-
-Læringsmålet er styrende for, hvilke aktiviteter der indgår i uddannelsen. Det handleverbum, der anvendes i beskrivelsen af læringsmålet, er define-rende for, hvordan aktiviteterne skal foregå. Anvendes f.eks. "at vurdere" i læringsmålet, vil det medføre, at der skal være læringsaktiviteter i ud-dannelsesforløbet, der giver soldaten mulighed for at vurdere frem for kun at blive præsenteret for skoleløsninger. Som et led i at nå det/de fastsatte læringsmål er det også vigtigt, der fokuseres på det taksonomiske niveau, som beskrives i læringsmålet. Læringsaktiviteterne skal, evt. gennem flere lektioner, bygge op til opnåelse af det beskrevne niveau, så soldaterne lærer det, der er hensigten med forløbet.
-
-Læringsaktivitet og prøver
-
-Læringsaktiviteterne skal, ud over at bygge op til læringsmålene, også klar-gøre soldaterne til prøven. Det er dog vigtigt, at prioriteten i læringsaktivi-teterne er at opfylde læringsmålene og ikke at træne en prøvesituation. Det hensigtsmæssige ved, at aktiviteterne ligner prøveformen, er, at soldaterne opnår det mest retvisende resultat i prøven, hvis selve prøvesituationen ikke er fremmed for dem. Det er i den kontekst, at læringsaktiviteterne skal understøtte prøven, og ikke ved at træne specifikt til den.
-
-Prøveformer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Bedømmelsen af faget skal være relevant for fagets anvendelse, og derfor kan der ikke her beskrives én ideel form for prøve eller kontrol. Du har sik-
-
-
-
-
-45
-
-kert været igennem forskellige uddannelseskontroller i din foreløbige tjene-ste, så du har allerede et indre bibliotek af prøveformer at vælge mellem.
-
-Nogle af de mest almindelige nævnes her:
-
-• Handleprøver, herunder handlebaner eller opstillede situationer, hvor handling påkræves.
-
-• Skriftlige prøver, herunder multiple choice- eller rangeringsprøver.
-
-• Mundtlige prøver, herunder fremlæggelse eller refleksionsspørgs-mål.
-
-
-
-Eksempel:
-
-I førstehjælp består slutprøven af fire handleprøver samt en skriftlig prøve om viden. Denne kombination er et godt eksempel på et fag, hvor viden er relevant, men hvor denne viden også skal kunne omsættes til handlinger. Der er altså sammenhæng mellem uddannelsens læringsmål og prøveformen. Samtidig afspejles læringsmålene også i læringsaktiviteterne i uddannelsen, da en stor del består af praktiske øvelser. På den måde støtter undervisningen, at læringsmålene nås, samtidig med at soldaterne natur-ligt forberedes til slutprøven.
-
-
-
-Du finder uddybende tekst om de forskellige prøveformer og eksempler på deres styrker på FELS.dk:
-
-Prøver og karaktergivning
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-46
-
-Du skal vælge metode til prøven ud fra, om det er viden, færdigheder eller kompetencer, du vil måle på.
-
-Vidensmål kan oftest måles gennem mundtlige eller skriftlige prøver, mens færdigheder typisk skal måles med handleprøver.
-
-Vurdering af kompetencemål vil kræve en prøveform, hvor de handlinger, der vurderes, udføres i en specifik kontekst. I en evaluering kan soldaternes kompetencer derfor vurderes på handlinger f.eks. under den afsluttende øvelse, i forbindelse med enhedsuddannelse eller udrykning til skydeter-ræn, hvor selvstændigheden og ansvarligheden kommer til udtryk. En sådan evaluering vil ofte ske på baggrund af observationer i situationen. Der bør udfærdiges kontrolskemaer til hjælp for observatørerne. Både for at sikre, at bedømmelsen foretages ud fra de kriterier, du har beskrevet i bedøm-melsesplanen, at der sker en ensartet bedømmelse, og at du selv kan bruge resultaterne til din afsluttende evaluering af faget.
-
-Når du tager stilling til, hvordan prøven skal gennemføres, skal du også tage stilling til, hvilken bedømmelsesskala der er relevant at anvende. Er det nok blot at konstatere, om soldaten er bestået eller ej, eller skal karaktererne bruges til at indplacere soldaterne i en rækkefølge?
-
-Den simpleste bedømmelsesskala er bestået eller ikke bestået. Skalaen er tydeligt konsekvent men jo ikke særligt anvendelig til nuancering, og du skal derfor være bevidst om, hvad du bruger den til. Du skal samtidig være op-mærksom på at lave en præcis beskrivelse af den præstation, der lige netop skal til for at udløse bedømmelsen bestået.
-
-Eksempel på kontrolskema for bedømmelsen bestået/ikke bestået:
-
-VurderingHvad skal der som minimum præsteres for at opnå "be-stået"?Bestået-Soldaten beskriver ...-Soldaten anvender ...-Etc.-
-
-47
-
-5-skalaen gør det muligt f.eks. at beregne gennemsnit af flere prøver. Sam-tidig har den også den fordel, at der til hver karakter på skalaen er knyttet et udsagn, der udtrykker, i hvilket omfang præstationen er tilfredsstillende.
-
-Når du udformer en prøve, skal du nøje overveje vægtningen af de forskel-lige målepunkter i forhold til point, der tildeles, så væsentlige dele vægtes relativt højere.
-
-Eksempel på 5-skalaen:
-
-BenævnelseTalværdiSærdeles tilfredsstillende5,0 - 4,5Meget tilfredsstillende4,4 - 3,5Tilfredsstillende3,4 - 2,5Ret tilfredsstillende2,4 - 1,5Mindre tilfredsstillende1,4 - 0,5Ikke tilfredsstillende0,4 - 0,0
-7-trinsskalaen er en absolut skala, hvor den absolutte målopfyldelse i prøven udløser den øverste karakter på skalaen. Den beskrives ikke yderligere her i bogen, da den kun skal anvendes på længere/akkrediterede uddannelser, men du kan læse mere om den her:
-
-Link til 7-trinsskalaen på uvm.dk
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-48
-
-Fase 3, valg og beskrivelse af indhold
-
-Når fagets mål og bedømmelsesplanen med slutprøve er udarbejdet, kom-mer turen til at analysere alle de elementer, der udgør det, som soldaten skal lære. Dette skal nedbrydes til passende portioner og sættes i en logisk rækkefølge. Alt dette skal struktureres (fase 4) og beskrives i læringsplanen som læringsmål for de enkelte lektioner (fase 6). Beskrivelsen skal være præcis, så den er enkel for instruktørerne at anvende, når de skal uddanne soldaterne.
-
-Din opgave i fase 3 er at undersøge, hvad dit fag egentlig består af. Du har udarbejdet det samlede mål for faget, lavet en bedømmelsesplan, og du har fået en oplistning af indhold (læringsplanens pkt. 6). Nu skal du bruge din fagfaglighed til at formulere alle de emner og punkter, du mener, soldaterne skal lære. Det kan både være inden for videns-, færdigheds- og kompeten-ceområdet. Gå gerne sammen med andre, der har faglig indsigt, og som kan være en støtte i processen.
-
-Du skal tage udgangspunkt i fagets tema (f.eks. uddannelse i GV M/10, signaltjeneste etc.) og derfra arbejde dig længere og længere ned i alle de elementer, der hører til, at en soldat kan beherske faget til det beskrevne niveau. Pas på ikke i denne del af processen at begynde at sætte tingene sammen, prioritere vigtighed eller sætte tid på emnerne. Disse dele følger i de næste faser.
-
-En grundig analytisk tilgang er et godt fundament for udviklingen af en brug-bar læringsplan. Jo grundigere analyse, desto større er muligheden for, at instruktørerne i hver enkelt lektion kan tilrettelægge undervisning, som sik-rer, at soldaterne opfylder de relevante læringsmål i uddannelsen.
-
-En metode til at påbegynde analysearbejdet er en brainstorm. I en brain-stormmodel har du fordel af "fri leg", hvor de emner, du vælger, kan inspi-rere til nye emner. I denne fase kan det være en fordel at bruge post-its (analoge eller digitale), så de idéer og ord, der er noteret, kan flyttes rundt i fase 4 og 5. Notér derfor også kun ét ord/én idé på hver post-it.
-
-Du er, efter den indledende brainstorm, nødt til at se på de enkelte ord/ handlinger, der er beskrevet på dine post-its, og analysere på, om det note-rede afføder yderligere detaljer eller yderligere relevante handlinger.
-
-
-
-49
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-50
-
-
-Betjene GV
-
-sikkert
-
-
-
-
-Overholde
-
-sikkerhed
-
-
-
-
-Skyde med
-
-gevær
-
-
-
-Knælende sky-
-
-destilling
-
-
-
-
-Forståelse for geværets funktionering
-
-
-
-
-Skyde
-
-enkeltskud og
-bygeild
-
-
-
-
-Liggende sky-VedligeholdeTilpasse tilStående skyde-Gevær m/10geværetterrænstillingdestilling
-
-
-
-
-GennemføreAfladeOpbygning afUdføre månedligFunktioneringfunktions-skydestillingog daglig vedl.kontrolLadeEfterseKlar til kontrolSkyde-Adskille ogVedligeholdeinstruktionSkydestillingersamle GVgeværet
-
-
-
-
-KrigsmæssigFredsmæssigUdføre vedl.Udføre felt-Udføre skyt-Udføre sigte-sikkerhedsikkerhedefter skydningSkyde-tens selvkontrolteknikUdføre aftræks-mæssig vedl.tekniske data1, 2 og 3teknik
-Når du er færdig, og der ikke længere kan afdækkes flere detaljer med spørgsmål som: "Hvordan?", "Hvorledes?" og "Hvad er forudsætningen for dette?", har du en tavle med et antal delelementer, som tilsammen udgør alt det, soldaterne skal lære, og som derfor skal indgå i læringsplanen.
-
-Når du ikke kan finde på flere emner, er det en god idé at lægge arbejdet fra dig i en kortere eller længere periode og vende tilbage og se, om ikke der skulle være et enkelt emne eller to, der er blevet glemt. Det er vigtigt i den-ne del af processen at få det hele med, da de næste faser ellers bliver svæ-rere at arbejde med. Skulle der alligevel dukke relevante emner op senere, skal de selvfølgelig skrives med ind i læringsplanen. Det er vigtigt, at du i fase 3 holder dig til at udvælge (alle) relevante emner for faget og beskrive disse enkeltvis og først derefter strukturerer (fase 4) og sekvenserer (fase
-
-5) fagets indhold. Derved undgår du at sætte emner sammen på en måde, som kommer til at begrænse dig senere.
-
-Fase 4, strukturering af fagets indhold
-
-Når du har færdiggjort din brainstorm, skal du strukturere indholdet til din læringsplan i et mindmap, så emnerne har en logisk sammenhæng. Du kan i samme proces danne et hierarki i dine emner, sådan at nogle får karakter af en overskrift eller et afsnit. Andre emner kan så måske logisk underordnes disse overskrifter.
-
-Eksempel på et mindmap (reduceret form): Se næste side.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-51
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-52
-
-
-Funktionering
-
-
-Overholde
-
-sikkerhed
-
-
-Skyde med
-
-gevær
-
-Gevær m/10Betjene GVsikkert
-
-
-Vedligeholde
-
-geværet
-
-Skydestillinger
-
-
-
-
-Liggende sky-
-
-destilling	Stående skyde-
-stilling
-
-
-
-Tilpasse til
-
-terræn	Opbygning Tilpasse til Opbygning terræn
-
-
-
-Efterse
-
-Lade
-
-
-
-
-Aflade
-
-
-
-
-Genlade
-
-
-
-
-Klar til kontrol
-
-
-Knælende sky-
-
-destilling
-
-
-Opbygning
-
-Tilpasse til
-
-terræn
-
-Efter arbejdet med dit mindmap skal du gerne kunne overføre indholdet til et strukturskema. I denne proces kan det vise sig, at det måske giver mening at slå nogle overskrifter/emner sammen.
-
-Ovenstående eksempel med seks "hovedoverskrifter" er i det efterfølgende reduceret til tre overskrifter.
-
-Eksempel på strukturskema på baggrund af mindmappet (reduceret form):
-
-Se næste side.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-53
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-54
-
-
-Betjene GV
-
-sikkert
-
-
-
-
-Efterse
-
-
-
-Lade
-
-
-
-Aflade
-
-
-
-Genlade
-
-
-
-Klar til kontrol
-
-
-
-
-
-
-
-
-Adskille og
-
-samle GV
-
-
-
-Forståelse for
-
-geværets
-funktionering
-
-
-Gennemføre
-
-funktions-
-kontrol
-
-
-
-
-Vedligeholde
-
-geværet
-
-
-
-Udføre måned-lig og daglig vedl.
-
-
-
-Udføre vedl. ef-
-
-ter skydning
-
-
-
-Udføre felt-
-
-mæssig vedl.
-
-
-
-Gevær M/10
-
-
-
-
-
-
-
-
-
-
-
-Skydestillinger
-
-
-
-
-Liggende sky-KnælendedestillingskydestillingOpbygning afOpbygning afskydestillingskydestillingTilpasse tilTilpasse tilterrænterræn
-
-
-
-
-Skyde medgeværSkyde-instruktionSkyde-Udføre sigte-tekniske datateknikStående skyde-Udføre skyt-tens selvkontrolstilling1, 2 og 3Opbygning afskydestillingTilpasse tilterræn
-
-
-
-
-
-Overholde
-
-sikkerhed
-
-
-
-Krigsmæssig
-
-sikkerhed
-
-Udføre aftræks-
-
-teknik
-
-Fredsmæssig
-
-sikkerhed
-
-Skyde
-
-enkeltskud og
-bygeild
-
-Struktureringen fortsætter med, at du nu behandler én hovedoverskrift ad gangen og gør den "helt færdig". Du skal altså undersøge, om alle underem-ner er placeret under den rigtige overskrift, men samtidig også om emnet, som overskriften dækker over, er helt udtømt. Det er vigtigt, at hvert emne er helt udtømt i struktureringsskemaet, da det er det indhold, du skal bruge til at beskrive de enkelte læringsaktiviteter, når du senere skal lave lektio-nerne.
-
-Som eksempel benytter vi her hovedoverskriften "Betjene GV sikkert" og holder os til strengen med indholdet "efterse, lade, aflade, genlade og klar til kontrol".
-
-I eksemplet her har der i denne del af struktureringsprocessen vist sig et behov for at tilføje yderligere emner under Betjene GV sikkert (se emnerne inden for den stiplede ramme). Sådan kan eventuelle mangler blive tydelige, når du gennemgår hovedoverskrifterne en ad gangen, og det er derfor en vigtig del af processen. Se næste side.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-55
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-56
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-57
-
-
-
-
-
-
-Gevær M/10Betjene GVVedligeholdeSkyde medsikkertgeværetgeværOverholdesikkerhedAdskille ogUdføre måned-Skyde-EfterseEfterse i mørkelig og dagligsamle GVinstruktionvedl.KrigsmæssigsikkerhedForståelse forUdføre vedl. ef-Skyde-Udføre sigte-Udføre aftræks-LadeFyld magasingeværetsSkydestillingerfunktioneringter skydningtekniske datateknikteknikFredsmæssigsikkerhedGennemføreUdføre felt-funktions-Udføre skyt-SkydeAfladeTøm magasinmæssig vedl.Liggende sky-KnælendeStående skyde-kontroltens selvkontrolenkeltskud ogdestillingskydestillingstilling1, 2 og 3bygeildGenladeTaktisk genlad-Hastig genlad-Opbygning afOpbygning afOpbygning afningningskydestillingskydestillingskydestillingKlar til kontrolKlar til kontrolTilpasse tilTilpasse tilTilpasse tili mørketerrænterrænterræn
-
-
-De nye emner skal naturligvis også være repræsenteret på det samlede struktureringsskema, som nu ser sådan ud:
-Bemærk, at der i dette eksempel kun er uddybet én hovedoverskrift (i den grønne ramme). Alle hovedoverskrifter skal naturligvis gennemgås på sam-me måde.
-
-Når du har færdiggjort dit struktureringsskema, har du en logisk opstilling af indholdet, og der er skabt sikkerhed for, at alt væsentligt er medtaget.
-
-Det er velkendt, at det i praksis er svært at adskille processen med at lave en brainstorm (indhold (fase 3)) og et mindmap (strukturering (fase 4)). Den stramme adskillelse, som er beskrevet her, har til formål at give dig et over-blik over de syv faser, som du kan vende tilbage til, når du de første gange skal udarbejde en læringsplan.
-
-Fase 5, sekvensering af fagets indhold
-
-Når du har færdiggjort struktureringen af emnerne, skal du sætte dem i en læringsmæssigt hensigtsmæssig rækkefølge. Det skal naturligvis være på en sådan måde, at det kan gennemføres inden for den overordnede tidsram-me, faget har fået tildelt i chefens uddannelsesdirektiv. Inden for den ram-me skal du benytte din faglighed til at sætte faget logisk sammen og opdele det i læringsmæssigt passende mængder på en måde, der sikrer bedst mulig læring for soldaterne.
-
-Ud over den afsatte tid, både samlet og til hver enkelt lektion, skal sekven-seringen i høj grad handle om, at læringen planlægges didaktisk og pædago-gisk hensigtsmæssigt. Det giver f.eks. ikke så god mening at lade soldaterne øve sig i skudafgivelse med gevær, før de har lært at lade og aflade geværet. Og med sådan en analyse af dine emner vil rækkefølgen (sekvenseringen) falde på plads.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-58
-
-NB: Der er ofte flere løsninger på, hvordan et fags lærings-plan sekvenseres. Ovenstående eksempel med skudafgi-velse og ladning af gevær bør altid ligge i samme række-følge. Men der kan være en faglærer, der synes, emnet om vedligeholdelse skal ligge på ét tidspunkt, mens en anden faglærer har grund til at lægge emnet et andet sted i ud-dannelsesforløbet.
-
-Læringsplaner er derfor ikke absolut rigtige eller forkerte i deres opbygning, men kan variere inden for nogle områ-der. Samtidig er der dog emner, som altid bør sekvenseres på samme måde, uanset hvem der laver læringsplanen. F.eks. vil det være svært at finde en fagligt god grund til, at man sætter soldaterne til at skyde, før de har lært at lade deres gevær
-
-
-Det er i sekvenseringsfasen, og i rollen som "forfatter af læringsplanen", at du viser, du har høj fagfaglig indsigt og samtidig godt kendskab til relevante dele af didaktik og pædagogik.
-
-For at tydeliggøre, hvilke emner der indholdsmæssigt hænger sammen og derfor bør indgå i samme lektion, kan du markere dine post-its. Dette gøres mest overskueligt ved at farvekode dem. Nogle emner fra en post-it kan godt optræde i flere lektioner (sikkerhedsbestemmelser mv.).
-
-Ofte er der emner, der er afledt af samme hovedemne, og som derfor hø-rer logisk sammen. Det er i nogle lektioner nødvendigt at inddrage dele fra andre hovedemner. Eller det kan være nødvendigt at gennemgå to hove-demner i samme lektion. Når du har taget stilling til dette, skal du angive lektionernes rækkefølge.
-
-Eksempel på sekvensering (reduceret form). Se næste side.
-
-
-
-
-
-
-
-
-59
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-60
-
-
-
-Gevær M/10Betjene GVVedligeholdeSkyde medsikkertgeværetgeværOverholdesikkerhedAdskille ogUdføre måned-Skyde-EfterseEfterse i mørkelig og dagligsamle GVinstruktionvedl.
-
-KrigsmæssigsikkerhedForståelse forUdføre vedl. ef-Skyde-Udføre sigte-Udføre aftræks-LadeFyld magasingeværetsSkydestillingerfunktioneringter skydningtekniske datateknikteknikFredsmæssigsikkerhedGennemføreUdføre felt-funktions-Udføre skyt-SkydeAfladeTøm magasinmæssig vedl.Liggende sky-KnælendeStående skyde-kontroltens selvkontrolenkeltskud ogdestillingskydestillingstilling1, 2 og 3bygeild
-GenladeTaktisk genlad-Hastig genlad-Opbygning afOpbygning afOpbygningafningningskydestillingskydestillingskydestillingtil kontrolTilpasse tilTilpassetilKlar til kontrolKlarTilpasse tili mørketerrænterrænterræn
-I eksemplet her er farvekodningen foretaget ved at sætte en farvet magnet på hver post-it for at illustrere emner, der logisk kan sættes sammen i lek-tioner.
-
-Som du kan se, er både din fagfaglighed og didaktiske faglighed i spil i fase
-
-5. Begge dele er med til at sikre sammenhængen mellem indhold, soldatens forudsætninger og den tid, der er nødvendig for at nå læringsmålet.
-
-Fase 6, udarbejdelse af læringsmål for lektioner og læringsoversigt Efter du har sekvenseret de udvalgte emner, skal du formulere læringsmål for hver enkelt lektion. I denne forbindelse er det vigtigt, at du husker Hiim og Hippes relationsmodel, og hvordan relationsmodellens elementer påvir-ker hinanden.
-
-Lektionernes læringsmål er mere konkrete end de fagmål, der blev beskre-vet på i indledningen til læringsplanen (efter de blev omsat fra læringsudbyt-te i uddannelsesbeskrivelsen). Det er dog væsentligt, at du sørger for, der hele tiden er en sammenhæng mellem læringsmålene i de enkelte lektioner og de overordnede læringsmål for den fulde læringsplan. Ved hele tiden at holde lektionernes læringsmål op mod læringsplanens læringsmål sikres en god sammenhæng i læringsplanen. Samtidig understøtter lektionernes læ-ringsmål den samlede bedømmelsesplan, som blev udarbejdet i fase 2.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Hiim og Hippes relationsmodel
-
-
-
-61
-
-Når du skal udforme og beskrive læringsmålene for de enkelte lektioner, skal du igen bruge LRH-taksonomiens sprog. Det er stadig vigtigt at huske på, at læringsmål beskrives af et handleverbum, et læringsobjekt og en omfangs-beskrivelse.
-
-Omfangsbeskrivelsen skal anvendes til at tydeliggøre detaljer omkring læ-ringsobjektet og handleverbet, så læringsmålet bliver præcist for instruktø-ren. I omfangsbeskrivelsen kan du i detaljer beskrive, om læringsaktiviteten hører til i et klasselokale eller i felten, i en undervisningssituation eller i en taktisk situation, i dagslys eller mørke, eller om den skal udføres alene eller sammen med andre. Læringsmålet skal sætte rammerne for læringsaktivi-teter, som understøtter nøjagtigt dét, soldaterne skal lære.
-
-Se eksempler på de næste sider, hvor der er vist omskrivning fra fagets læ-ringsmål til lektionsmål.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-62
-
-Eksempel fra fag: Gevær M/95-familien
-
-Læringsmål for faget:Læringsmål for en førstegangslektion:Viden:Viden:Kan redegøre for sikkerhedsbestem-Kan referere til, eller søge vejledningmelser i forhold til GV anvendelse iom, situationer, hvor geværet skal ef-garnison/på SKB samt med løs AMM iterses under daglig anvendelse på sky-samtale med instruktør eller kollega.debane eller i garnison. Referencen skermundtligt til instruktør eller kollega, derkan søges vejledning i egen notatbog.(Bemærk, at der i denne lektion eret handleverbum på lavere taksono-misk niveau end det, der er beskre-vet i fagmålet. Gennem gentagelserog progression i faget nås det tak-sonomiske niveau, der stræbes ef-ter i fagmålet).Færdigheder:Færdigheder:Behersker relevante betjeningsgrebEfterligner betjeningsgrebet "eftersemed GV i almindeligt forekommendeGV" i etsituationer både i dagslys og mørke.UV-lokale eller udendørsområde medgodelysforhold.(Bemærk, at der i denne lektion eret handleverbum på lavere taksono-misk niveau end det, der er beskre-vet i fagmålet. Gennem gentagel-ser og progression i faget nås dettaksonomiske niveau, der stræbesefter).Kompetencer:Kompetencer:Tager ansvar for og initiativ til egenNILog andres overholdelse af sikkerheds-(Der angives intet kompetencemålbestemmelser i normal omgang medvåben.for denne førstegangslektion, da detikke vurderes relevant at forvente,soldaterne opnår at kunne udførekompetente handlinger på baggrundaf en afholdt lektion om emnet).
-
-
-
-
-
-63
-
-Eksempel fra fag: SKYT
-
-Læringsmål for faget:Læringsmål for en førstegangslektion:Viden:Viden:Kan redegøre for forskellige variationerKan mundtligt beskrive forskellige va-af kommandoforplantning i en samtaleriationer af kommandoforplantning imed egen gruppe, gruppefører og/ellergruppen sat i relation til, hvilke fysiskeinstruktør, når adspurgt.faktorer der kan påvirke kommandofor-plantningen.(Bemærk, at der i denne lektion eret handleverbum på lavere takso-nomisk niveau end det, der er be-skrevet i fagmålet.Gennem gentagelser og progressi-on i faget nås det taksonomiske ni-veau, der stræbes efter i fagmålet).Færdigheder:Færdigheder:Kan udføre kommandoforplantning iKan medvirke til kommandoforplant-gruppen under indsættelse i forskelligening i gruppen under kamp fra stilling itaktiske aktiviteter i både dagslys ogdagslys under enhedsuddannelse.mørke.Kan udføre kommandoforplantning igruppen under patrulje i fjendtligt om-råde i mørke under øvelse.(Her er der behov for at opdelefagets overordnede mål i flere læ-ringsmål for lektionen).Eksempel, læringsmål for en ruti-neringslektion:Kompetencer:Kompetencer:Tager ansvar for, og initiativ til, relevantTager initiativ til entydig og hurtigstkommunikation i grupperammen undermulig kommandoforplantning underøvelse og enhedsskydninger i dagslysgruppens kamp fra stilling i forbindelseog mørke.med enhedsskydning i dagslys.
-Særligt i beskrivelse af vidensmål er det en god idé, at omfangsbeskrivel-sen, ud over at nuancere læringsobjektet, også beskriver, hvordan solda-tens viden skal komme til udtryk, altså hvordan de handlinger, handleverbet
-
-
-
-64
-
-beskriver, skal udføres. Det kan f.eks. være i samtale med andre eller i en skriftlig prøve.
-
-Omfangsbeskrivelserne inden for læringsområderne færdigheder og kom-petencer giver ofte støtte til handleverbum og læringsobjekt i samme be-skrivelse. Samlet set skal omfangsbeskrivelsen være med til at beskrive, hvordan soldaten udfører sin handling i praksis.
-
-Men da viden er et grundlag for handlinger inden for færdigheder og kompe-tencer, er der ikke altid en tydelig handling indlejret i handleverber i videns-området. Derfor skal disse handleverber i nogle tilfælde have en specifik beskrivelse, så instruktøren får hjælp til at finde ud af, om soldaten besidder den nøjagtige viden, der danner grundlaget for de senere handlinger.
-
-Som en del af beskrivelsen af læringsmålene skal du også beskrive, hvad der skal observeres, for at det kan sandsynliggøres, at læringen har fundet sted. Dette foregår ved, at du via din faglighed beskriver tegn på læring. Der bør være 1-3 tegn pr. læringsaktivitet (maksimalt 3). Når du beskriver "tegn på læring", er du ikke begrænset til anvendelsen af handleverberne (LRH), som det var tilfældet i målbeskrivelsen, men kan beskrive disse tegn med mere frie formuleringer.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-65
-
-Eksempel: Læringsmål med tegn på læring
-
-Ved lektionens afslutning kan soldaten:
-
-Viden:
-
-Referere til, eller søge vejledning om, situationer, hvor geværet skal ef-terses under daglig anvendelse på skydebane eller i garnison. Referencen sker mundtligt til instruktør eller kollega, der kan søges vejledning i egen notatbog.
-
-Færdigheder:
-
-Efterligne betjeningsgrebet "efterse GV" i en undervisningssituation med gode lysforhold.
-
-Tegn på læring:
-
-• Nævner fire af syv situationer for "efterse GV" (før/efter SKB, inden VB-betjening, skydeinstruktion, adskillelse, VEDL og ved modtagelse) eller slår dem op i egen notesbog.
-
-• Efterser MAG før GV ved "efterse GV".
-
-• Kigger i kammer og pibe under "efterse GV".
-
-
-Beskrivelserne af hhv. læringsmål med tilhørende omfangsbeskrivelser og tegn på læring skrives med det samme ind i læringsoversigten. Tegn på læring giver instruktører et fælles grundlag for at definere den ønskede læring. Hvis du ikke beskriver dem i læringsplanen, giver du instruktørerne dårligere forudsætninger for deres arbejde, fordi der ikke er entydige pejle-mærker for, at læringen går i den ønskede retning. Rutinerede instruktører kan godt selv opstille relevante tegn på læring, men da du sandsynligvis er i besiddelse af den højeste faglighed, skal du definere tegnene på læring for det fag, du er ansvarlig for.
-
-
-
-
-
-66
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-67
-
-Figuren nedenfor viser beskrivelsen af en lektion i læringsplanens pkt. 12, læringsoversigt. Læringsmålet er i centrum. De øvrige felter skal indeholde informationer til instruktøren om tid, overskrift på emnet, evalu-eringsmetode, nøjagtige henvisninger samt øvrige bemærkninger, f.eks. i form af gode råd til metoder eller placering.
-
-
-AKTI-EMNELÆRINGSMÅLEVALHENVBEMVITET+TID1xxVed lektionens afslutning kan soldaten:Prøveform:Henvis-Emner i kronolo-xx min.Viden:mundtlig,ning tilgisk rækkefølge,bilag,forslag til meto-Færdigheder:skriftlig,regle-der, opstilling oghandleprø-ment,hjælpemidler.Kompetencer:lærings-ve.videoer,(Der er ikke altidf.eks. frakompetencemål i de enkelte lektioner).FELS.dkeller an-Tegn på læring:det, deranven-des somfagligtgrundlag.
-
-Fagets mål i taksonomisk niveau opnås enten ved, at lektionerne har en progression, der bygger på et tidligere opnået niveau, eller at du aktivt an-vender det lærte i uddannelsens forløb.
-
-F.eks. er det ikke nødvendigt at have en lektion med et læringsmål om at beherske (færdighed/alsidigt) efterse gevær, selv om det måske er fagets forventede slutniveau. Fordi soldaterne kommer til at efterse geværet, hver gang de anvender det, er det rimeligt at forvente, der er gennemført nok gentagelser til, at det relevante niveau (alsidigt) er opnået ved afslutningen af uddannelsen. Også selv om der ikke er en lektion, der specifikt beskriver dette læringsmål med det relevante niveau. Dette kan beskrives i feltet med "Læringsmål". Det skal bemærkes, at "bevidstløse" og ureflekterede gentagelser aldrig er et mål i sig selv. Når der her skrives, at soldaternes anvendelse af GV tilsikrer det relevante læringsmål for faget, kræver disse gentagelser stadig tilbagemelding fra instruktørerne samt refleksion, moti-vation og bevidsthed fra deltagerne. Så du skal som faglærer sørge for at facilitere de nævnte omstændigheder, så antallet af kvalitetsfyldte gentagel-ser er det, der befordrer læringen.
-
-Eksempel på udfyldt læringsoversigt for første lektion i faget gevær M/95-fa-milien:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-68
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-69
-
-
-AKTI-EMNELÆRINGSMÅLEVALUE-HENVIS-BEMÆRKNINGERVITET+RINGNINGTID1Sikkerheds-Ved læringsaktivitetens afslutning kan solda-Formativ -HRN 111-Undervisnings-90 min.bestem-ten:praktisk/001, pkt.aktiviteter:melserViden:mundtlig2.2.2.,Foredrag U-form,A23-26 ogeksercermetode -Referere til, eller søge vejledning om, situati-A32-35følg migEfterse GVDobbeltcirkleroner, hvor geværet skal efterses under dagliganvendelse på skydebane eller i garnison.ADVARSEL omReferencen sker mundtligt til instruktør eller"efterse"kollega, der kan søges vejledning i egen no-Udrustningtatbog.Færdigheder:Husk basis/TYR(ekstra MAG tilEfterligne betjeningsgrebet "efterse GV" i enefterse)undervisningssituation med gode lysforhold.*FokuspunkterTegn på læring:Ekstra MAGSikringNævner fire af syv situationer for "efterse GV"MundingshætteMAG(før/efter SKB, inden VB-betjening, skydein-Ladegrebstruktion, adskillelse, VEDL og ved modtagel-Kammerse) eller slår op i notesbog.PibeEfterser MAG før GV ved "efterse GV".Bundstykke(MAG)Kigger i kammer og pibe under "efterse GV".* Der gennemføres ikke yderligere undervis-ning i "efterse". Fagets kompetencemål opnåsved gentagen anvendelse af betjeningsgrebetunder den daglige anvendelse af GV.
-
-Fase 7, udfærdigelse af strukturel oversigt
-
-Det sidste, du skal lave i læringsplanen, er den strukturelle oversigt. Selv om denne oversigt blot er læringsoversigten i overskriftsform, er den meget relevant for dem, der skal sidde med enhedens uddannelsesplanlægning.
-
-I den strukturelle oversigt skal fremgå lektionsnummer, tid til rådighed, emne/indhold og evt. bemærkninger til lektionen.
-
-Lektionsnummer og tid anvendes af enhedens uddannelsesplanlægger, når der udfærdiges en detaljeret tidsplan, som senere omsættes til enhedens øvelsesliste. Læringsplanen og den strukturelle oversigt er altså med til at give input til sådanne dele af planlægningen. Det samme gør sig gældende for emnet, der bliver ført på øvelsesliste.
-
-Bemærkningsfeltet kan have stor værdi, idet du her kan/skal notere væsent-lige deltaljer, som har betydning for afvikling af lektionen. Det kan være, at der skal bestilles et særligt lokale, at lektionen skal ligge før/efter en be-stemt lektion fra et andet fag, eller at soldaterne skal medbringe noget, de ikke normalt har på sig. Der skal naturligvis findes en balance mellem, hvor meget der skrives, og den hjælp, det kan give.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-70
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-71
-
-På de næste sider vises en samlet sammenhæng fra det overordnede læringsudbytte, over fagets og enkelt-lektioners læringsmål, til tegn på læring. Siderne er en opsamling på bogens eksempler fra side 30 til 66.
-
-LæringsudbytteLæringsmål for fagetLæringsmål for lektionerTegn på læringHar viden om forskelligeKan demonstrere, hvilke kom-Kan beskrive forskelligeNævner formuleringer imetoder til kommandofor-mandotegn der skal anvendesvariationer af kommando-betydningen: høje råb un-plantning i forskellige takti-i forhold til formationsændrin-forplantning i gruppen, nårder kamplarm, hvisken ogske situationer for gruppenger i gruppen, når instruktørenadspurgt af instruktør ellertegnsprog under lyddisci-i dagslys og mørke.spørger om normalt anvendtegruppefører.plin.formationer.Soldaten kan mundtligt rede-gøre for forskellige metoder tilkommandoforplantning, af-hængigt af om det skal foregåi dagslys eller mørke, underkamplarm eller overholdelse aflyddisciplin.Kan anvende kommando-Kan udføre kommandofor-Kan medvirke til kommand-Videreformidler korte ogforplantning og relevanteplantning i gruppen under ind-oforplantning i gruppennøjagtige budskaber, dermeldinger i relation til densættelse i forskellige taktiskeunder kamp fra stilling iforstås af modtageren.igangværende opgaveløs-aktiviteter i både dagslys ogdagslys under enhedsud-Benytter sig af tegn/be-ning, under indsættelsemørke.dannelse.i grupperammen både irøring og sagte tale for atdagslys og mørke.Kan udføre kommandofor-undgå afsløring.plantning i gruppen underpatrulje i fjendtligt områdei mørke under øvelse.
-
-
-Tager ansvar for relevant kommunikation i forskel-lige taktiske situationer i grupperammen i dagslys og mørke.
-
-
-Tager ansvar for, og initiativ til, relevant kommunikation i grupperammen under øvelse og enhedsskydninger i dagslys og mørke.
-
-
-Tager initiativ til entydig og hurtigst mulig kom-mandoforplantning under gruppens kamp fra stilling i forbindelse med enheds-skydning i dagslys.
-
-
-Opsøger afsender ved tvivlstilfælde/uklarheder.
-
-LæringsudbytteLæringsmål for fagetLæringsmål for lektionerTegn på læringSkal have viden om sikker-Kan redegøre for sikkerheds-Kan referere til, eller søgeNævner fire af syv si-hedsbestemmelserne forbestemmelser i forhold til GVvejledning om, situationer,tuationer for at "efter-anvendelse af geværet.anvendelse i garnison/på SKBhvor der skal efterses GVse GV" (før/efter SKB,samt med løs AMM i samtaleunder daglig anvendelse påinden VB-betjening,med instruktør eller kollega.skydebane eller i garnison.skydeinstruktion,Referencen sker mundtligtadskillelse, VEDL og vedtil instruktør eller kollega,modtagelse) eller slår op ider kan søges vejledning iegen notesbog.egen notesbog.
-
-Skal kunne udføre rele-Behersker relevante betje-vante arbejdsopgaver medningsgreb med GV undergeværet, herunder betje-almindeligt forekommendening, adskillelse/samling ogsituationer både i dagslys ogvedligeholdelse.mørke.
-
-
-Efterligner betjeningsgre-Efterser MAG før GV vedbet "efterse GV" i en un-"efterse GV".dervisningssituation medKigger i kammer og pibegode lysforhold.under "efterse GV".
-
-72
-
-
-
-Skal kunne tage ansvar forTager ansvar for og initiativ til- (Ikke relevant til første-- (Ikke relevant til første-anvendelse af relevanteegen og andres overholdelsegangslektion).gangslektion).sikkerhedsbestemmelser iaf sikkerhedsbestemmelser iforbindelse med indsættel-normal omgang med våben.se af geværet.
-2.4 Digitalisering
-
-Som en del af din planlægning skal du som faglærer holde øje med, hvor den moderne teknologi kan understøtte soldaternes læring. Der er rige mulighe-der for at anvende digitale medier og platforme til at give flere muligheder for læring. Samtidig skal du også kende de iboende begrænsninger, som kombinationen af militære fag og digitale medier kan støde ind i.
-
-Tilgængelighed
-
-To åbenlyse fordele ved at anvende digitale medier er, at de kan øge tilgæn-geligheden for læring og tilgodese forskellige læringsstile. Med øget tilgæn-gelighed menes der, at den lærende kan genbesøge uddannelsesmaterialer flere gange. Det kan være i forbindelse med en læringsvideo om våbenad-skillelse og navnelære, hvor der er mulighed for, at soldaten kan se videoen igen, når behovet opstår. På nogle platforme er der endda mulighed for at indbygge quizzer i videoerne, så de får et interaktivt præg, som så kan for-stærke læringen. Ydermere kan demonstrationer af f.eks. taktiske aktivite-ter tydeliggøres, så det er muligt at diskutere disse i klasselokalet, i stedet for at disse diskussioner kun kan foregå i terræn, samtidig med praktisk indøvelse, og altså låst i tid og sted. Læringsvideoer må aldrig komme til at erstatte øvefaser i praktisk undervisning, men kan med fordel tænkes ind i flest mulige vise-forklare-faser i faget. Udover den øgede tilgængelighed, som kan hjælpe til fastholdelse af viden, skaber videoerne også større sik-kerhed for ensartethed ved flere gennemførelser af faget.
-
-Læringsstile
-
-Med læringsvideoer eller anden visualisering tilgodeses også læring hos de soldater, som er mere visuelt orienterede. Fra tiden som instruktør kan du sikkert huske formuleringen "vise - forklare - øve", hvor netop forevisnin-gen er en væsentlig forudsætning for forklaringerne af enkeltdele eller -be-vægelser, inden soldaterne selv øver emnet. Ved anvendelse af læringsvide-oer kan du sørge for, at alle har "bedst udsyn" til det relevante, og samtidig har soldaterne mulighed for at se emnet præsenteret flere gange, hvis de har behov for dette. Ud over videoer kan visualisering også dække over vir-tual reality (VR)- eller augmented reality (AR)-animationer, f.eks. anvendt til at vise et våbens funktionering eller en taktisk enheds bevægelse i terræn. Disse animationer giver ofte en mere virkelighedsnær forståelse af våbnet eller enhedens virke, som potentielt kan løfte soldatens samlede læringsni-veau.
-
-
-
-73
-
-Klassifikation
-
-Ud over de nævnte fordele er der i den militære kontekst nogle områder, du som faglærer skal være opmærksom på. Et af disse er, hvorvidt det under-visningsmateriale, der udvikles, er klassificeret til et niveau, der muligvis ikke tillader fri tilgængelighed. Det åbenlyse er, at klassifikationer fra "Til Tjenestebrug" og derover ikke skal være tilgængelige på internetbaserede platforme. Det næste er, om f.eks. emner som våbenbetjening skal ligge frit tilgængeligt på diverse internetbaserede platforme. Her er det værd at se på, hvad der er af muligheder for at begrænse adgang og hvilke relevante platforme der er at vælge imellem. Forsvarets Elektroniske Skole (FELS) på internettet har f.eks. en begrænset tilgængelighed i den forstand, at bruger-ne skal have et militært MA-nummer for at kunne få adgang.
-
-Ophavsret og GDPR
-
-Ud over at være opmærksom på klassifikation skal du også være sikker på ikke at bryde ophavsretlige regler til billed- og videomateriale. Du er nemlig selv ansvarlig for, at det, du producerer og gør tilgængeligt, ikke er beskyt-tet af nogen af disse regler. Det løses nemmest ved at tage billederne selv. Du skal være opmærksom på, om der indgår materiel, der ikke må tages billeder af. Ligeledes skal de personer, der deltager på billederne, have givet samtykke til denne anvendelse.
-
-Selv om de sidste afsnit nævner nogle områder, som kan virke begrænsen-de, er det en god idé, at du som faglærer ser på mulighederne for at udvide læringen for soldaterne. Det kan de digitale medier og platforme hjælpe med ved at øge tilgængeligheden og anvendeligheden. Det må dog ikke kompro-mittere den integritet, der også hører til det militære system, uanset om det drejer sig om klassifikation af materialer eller enkeltpersoners ufrivillige involvering.
-
-Når du beslutter dig for at gøre læring tilgængelig via digitale medier, kan du anvende egne erhvervede færdigheder til dette. Men der er også hjælp at hente på FELS.dk, hvor der ligger instruktionsvideoer til video-, skærm- eller lydoptagelser samt redigering af disse. Endvidere er der kurser, der gør dig i stand til at oprette mere eller mindre komplekse forløb, på netop FELS.dk, så læringen hos dine soldater kan tilgodeses bedst muligt.
-
-
-
-
-
-74
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-KAPITEL 3 - TILRETTELÆGGELSE
-
-I kapitlet om tilrettelæggelse beskrives nogle af de nævnte aktiviteter, du som faglærer har ansvaret for, samt andre opgaver, du med fordel kan løse. Flere af aktiviteterne kan også indgå i hhv. planlægnings- eller gennemfø-relsesfaserne, men for overblikkets og systematikkens skyld er disse akti-viteter beskrevet i dette kapitel. Det er primært rollerne som "rådgiver for chef og NK" samt "ansvarlig for faglig udvikling af instruktører", der er i spil i dette kapitel.
-
-3.1 Læringsplan og rammer
-
-Tilrettelæggelse handler om at få den læringsplan, du allerede har skrevet, justeret eller revideret i din planlægningsfase, til at passe med de ændringer der kan dukke op.
-
-
-
-
-
-
-
-
-75
-
-Ændringerne kan forårsages af seks faktorer, som du måske kan huske fra dit instruktørvirke:
-
-• Mål
-• Indhold
-• Læreprocessen
-• Læringsforudsætninger
-• Rammefaktorer
-• Vurdering/Evaluering
-
-
-Som udgangspunkt har målet for dit fag været styrende i planlægningen, men enhver påvirkning af en af faktorerne, kan potentielt have konsekven-ser for alle de andre i gennemførelsen.
-
-I praksis sker der oftest ændringer i rammefaktorerne, mens dit fag gen-nemføres. I det følgende beskrives tre eksempler på de konsekvenser så-danne ændringer kan have på det samlede forløb:
-
-1) Chefens prioriteringer ændres, ift. den tid han/hun tildelte dit fag. Dette kan betyde at du skal justere dine læringsaktiviteter, som så vil have betyd-ning for læreprocessen. Hvis det ikke er tilstrækkeligt at tilpasse læringsak-tiviteterne, kan det i sidste ende være nødvendigt at justere målet.
-
-2) De planlagte lokaler skal anvendes til andet, og dit fag er f.eks. henvist til uddannelse udenfor. Sådanne ændringer kan nemt få konsekvenser for både læreproces og indhold. I sådan en situation skal du igen justere eller ændre i læringsaktiviteterne, og det kan være nødvendigt at afsætte mere tid eller tildele flere instruktører til lektionen for at nå læringsmålet.
-
-3) Dine instruktører melder, at de ikke har nået målet for den senest afhold-te lektion. En sådan situation har betydning for soldaternes læringsforud-sætninger, og vil sandsynligvis betyde at næste lektion ikke kan starte som den oprindeligt var planlagt. I sådan en situation er det igen muligt at justere med tildeling af mere tid eller flere instruktører.
-
-Uanset hvilken af ovenstående, eller andre, faktorer der bliver påvirket, kan du være nødsaget til at lave justeringer af målet. Alternativt bør du notere de oplevede ændringer i rammefaktorerne, sådan at din evaluering af fagets gennemførelse og målopfyldelse bliver præcis (mere om dette i KAP 5). Det
-
-
-
-76
-
-er også væsentligt, at du holder enhedens uddannelsesplanlæggere orien-teret, så de har mulighed for at justere på de dele af planlægningen, de har ansvaret for. På den måde kan justeringerne måske holdes på et minimum.
-
-For at tilsikre at planen efterleves, og den ønskede læring sker, skal du som faglærer være godt inde i alle delelementerne fra planen. Lige fra beskrivel-sen af formålet med faget, over selve lektionerne og deres indhold, til den plan du lægger for evaluering. Ved at kende detaljerne, kan du identificere afvigelser, og få rettet dem tidligst muligt i forløbet. Der vil sandsynligvis altid være større eller mindre ændringer, som vil medføre behov for koordi-nering og justering for at gennemføre faget på bedst mulig vis. Koordinering og justering kan ske på forskellige måder. Det kan være i form af mindre formelle samtaler med de enkelte instruktører eller uddannelsesplanlægge-re, være mere strukturerede som f.eks. enhedens uddannelsesmøder eller foregå som egentlig befalingsmandsuddannelse.
-
-3.2 Aktiviteter
-
-Faglærermøde med uddannelsesplanlæggere ved enheden
-
-Et par af de områder, du skal være opmærksom på som faglærer, er sam-menhængen med andre fag og enhedsuddannelsen. Her træder du ind i rollen som "rådgiver for chefen/ledelsen". For sker der justeringer i gen-nemførelsen af de øvrige fag, efter planen er blevet lagt, skal du sikre dig, det ikke påvirker sammenhængen med dit fag. Hvis det gør, skal du have afklaret med chefen og NK, hvilke tiltag der skal iværksættes for at imødegå eventuelle negative konsekvenser.
-
-Der kan som nævnt også opstå den situation, at der skal indføres et helt nyt fag, som enheden skal forholde sig til. Og her gælder det samme, nemlig at du skal tage stilling til, hvordan dit fag påvirker, eller påvirkes af, det nye fagområde.
-
-Alle enkeltfag skal understøtte enhedens samlede operative virke. Derfor skal de justeringer, der måtte blive foretaget inden for dit fag, sættes i re-lation til enhedsuddannelsen. Eventuelle udfordringer skal du løse med din chef eller NK. Ligeledes skal du, hvis der sker ændringer i enhedens operati-ve standarder, sikre dig, dit fag understøtter disse ændringer.
-
-
-
-
-
-77
-
-Møde med instruktører
-
-Enheden kan organisere anvendelsen af instruktører på flere måder. Der kan være fag, alle instruktører i delingen skal kunne undervise i. Dette kun-ne typisk være almene fag som SKYT. Der kan også være fag, som der er dedikeret særlige instruktører til. Dette kunne eksempelvis være fag som militær fysisk træning eller førstehjælp.
-
-Er du faglærer for et fag, som alle skal kunne undervise i, vil det være prak-tisk at afholde et møde med jævne intervaller. På den måde kan du både understrege fagets overordnede mål og beskrive fokuspunkterne for den kommende periode.
-
-Har du faste instruktører til rådighed, har du en mindre gruppe at forholde dig til og kan gå dybere i detaljer omkring faglighed og didaktik med denne gruppe i løbet af fagets gennemførelse.
-
-Det kan i praksis være svært at samle alle de relevante instruktører til et møde. For ud over uddannelse skal enheden også prioritere eksterne akti-viteter som f.eks. vagttjeneste og andre afgivelser, afspadsering og kompe-tenceudvikling af instruktører. Og instruktørerne i dit fag kan også være in-volveret i andre fag, som kræver deres tid eller tilstedeværelse. Alternativet til et samlet møde kan være individuelle samtaler med de forskellige instruk-tører eller skriftlige instruktioner. Møderne er det mest ressourcekrævende, men giver også den bedste mulighed for kvalitetssikring. Du bør derfor som fagansvarlig have interesse i, og ihærdigt forsøge, at få gennemført koordi-nationen som møder.
-
-I særlige situationer, hvor du selv som faglærer står for dele af gennemfø-relsen af lektionerne, vil mødet blive kaldt instruktørmøde. I det store hele indgår samme indhold i mødet, men uddannelsen kan struktureres på en måde, som bringer faglæreren særligt i anvendelse, hvilket gennemgås i næste afsnit.
-
-Udvikling af instruktører
-
-Afhængigt af den enhed, du er i, kan der være stor forskel på instruktører-nes erfaring. Derfor skal du, evt. i samarbejde med delingsførerne, afdæk-ke, hvem der har det relevante faglige niveau inden for dit område. Det er
-
-
-
-
-78
-
-også delingsførerne, du skal samarbejde med, når du i den daglige uddan-nelse skal gennemføre den nødvendige faglige udvikling af instruktørerne.
-
-Det kan være, chefen har planlagt underafdelingsledet befalingsmandsud-dannelse inden for dit fagområde. Så er det vigtigt, at han/hun er orienteret om, hvilke områder du ser som særligt relevante, samt om der er observeret behov for fagligt løft af instruktørerne.
-
-3.3 Andre eksempler på tilrettelæggelse
-
-Faglærerstyrede uddannelsesdage eller lektioner
-
-Ressourcemæssigt vil det kun sjældent kunne lade sig gøre, at faglæreren deltager i gennemførelsen af alle lektioner, men i de fleste fag er der læ-ringsobjekter, hvor du med fordel kan skabe tyngde med din egen personli-ge tilstedeværelse i gennemførelsen.
-
-Det kan være ved særligt komplekse elementer, eller når der skal laves uddannelsesdage, hvor læringsmålene for dagen er særligt omfangsrige. I sådanne tilfælde kan du med fordel gennemføre lektionerne i delingsramme med en styret anvendelse af delingens instruktører. Sådanne faglærerstyre-de uddannelsesdage har den fordel, at instruktørerne bliver aflastet i deres forberedelse i en i øvrigt travl hverdag, da de kun skal fokusere på de de-lelementer, du skal bruge dem til i lektionerne. Derudover giver det dig en større mulighed for at sikre en ensartet kvalitet i gennemførelsen for hele delingen.
-
-Instruktørmøde
-
-Gennemførelse af faglærerstyrede uddannelsesdage kræver overvejelser om både organisationsformer og koordinering mellem faglærer og instruk-tører.
-
-Møder til tilrettelæggelse af den type undervisning kaldes instruktørmøder. Instruktørmødet har til formål at sikre, at alle instruktørerne har en helheds-
-
-
-
-
-
-
-
-
-
-
-79
-
-forståelse af lektionen, at alle ved, hvilke opgaver de skal løse på dagen, og hvordan de skal løse dem. Det er også på instruktørmødet, at du har mulig-heden for at sikre dig, instruktørerne har den fornødne faglighed.
-
-
-
-
-Tommelfingerregler for det gode instruktørmøde:
-
-• Giv instruktørerne et varsel forud for mødet, så de kan sætte sig ind i læringsmålene, og hvilken faglig-hed det kræver.
-
-• Mødet skal være konkluderende, ikke et oplæg til flere møder.
-
-• Gennemfør så vidt muligt mødet på den lokalitet, hvor undervisningen skal finde sted, ligesom du ville gøre, hvis det var førervirke.
-
-• Afklar, hvem der gør hvad inden, under og efter lekti-onen. Både hvad angår materiel, soldater og terræn.
-
-• Sikr dig, at alle kender planen og deres opgaver i lek-tionen, og at de har fagligheden på plads.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-80
-
-Organisering af faglærerstyrede uddannelsesdage
-
-Der kan være flere måder at organisere læringsrummet på, når du undervi-ser i holdstørrelser som en deling. Et typisk eksempel på holdundervisning er på skydebanen, hvor nogle gennemfører skydninger, mens de øvrige skal gennemføre andre aktiviteter på ventelinjen. Her må skydelederen på for-hånd have overvejet, og instrueret sine instruktører i, hvilke aktiviteter de skal udføre med de ventende soldater.
-
-Nedenfor beskrives to organisationsformer, podie- og stationsprincippet, som er særligt anvendelige til den daglige uddannelse. Enten i situationer, hvor faglæreren har muligheden for at deltage aktivt, eller hvor fagets og lektionens karakter kræver faglærerens tyngde i gennemførelsen.
-
-Disse to former giver dig stor indflydelse på kvaliteten af undervisningen, og samtidig giver de dig mulighed for at vurdere soldaternes læring samt instruktørernes faglige og pædagogiske niveau. Ved begge organisations-former sætter du retning og niveau, fordi du er aktivt deltagende. Samtidig frigøres du i perioder af lektionen til at observere gennemførelsen.
-
-I begge former skal instruktørerne have en helhedsforståelse af lektionen, men skal kun gennemføre de dele, du vil bruge dem til.
-
-Podieprincippet
-
-Delingen samles om faglæreren, som vil præsentere dagens lektion, herun-der skabe forståelse for nødvendigheden af lektionens struktur.
-
-Han/hun gennemfører første vise-forklare-fase af lektionen, hvorefter grup-perne trækker ud til instruktørerne og gennemfører øvefasen.
-
-Ved næste fase trækker grupperne tilbage til faglæreren og får vist og for-klaret næste læringsobjekt, hvorefter grupperne igen trækker ud til instruk-tørerne og gennemfører øvefasen.
-
-Dette gentages i overensstemmelse med den plan, faglæreren har lagt for lektionen.
-
-
-
-
-
-
-
-81
-
-Afprøvning af læringsmålet kan gennemføres som en del af øvefaserne, men faglæreren kan også danne sig et kvalificeret overblik ved at gennemføre afprøvningen samlet, inden lektionen afsluttes.
-
-Endelig er det faglærerens opgave at sammenfatte dagens lektion, drage konklusioner og skabe forbindelse til det videre forløb for på den måde at skabe en rød tråd i faget.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-82
-
-Stationsprincippet
-
-Dette princip kan bruges, når der skal arbejdes med læringsaktiviteter, der kan deles op i kortere og af-hinanden-uafhængige elementer.
-
-Delingen samles om faglæreren, som i podieprincippet, for at få præsenteret lektionen og få forståelse af lektionens struktur.
-
-Dernæst fordeles delingen ud på det planlagte antal stationer. Ved hver station er der en instruktør, som gennemfører én af de planlagte aktiviteter. Grupperne roterer nu mellem stationerne med det interval, faglæreren har planlagt.
-
-Hvis stationsprincippet bruges i forbindelse med prøver, skal faglæreren have overvejet, hvordan ventepladsen før/efter hver station er placeret, så soldaterne ikke kommunikerer om gennemførelsen.
-
-Afprøvning af læringsmålet kan ligge ved de enkelte stationer, men hvis det er vigtigt, der ses en sammenhæng mellem lektionerne, skal afprøvningen ligge samlet under styring af faglæreren.
-
-Slutteligt sammenfatter faglæreren dagens lektion, drager konklusioner og skaber den røde tråd videre i faget.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-83
-
-Denne organisationsform kræver særlig opmærksomhed på to punkter:
-
-• Der må ikke være læring på en station, der er en forudsætning for læ-ringsaktiviteten på en anden station.
-
-• Der må ikke være tidsmæssig forskel i gennemførelsen af de enkelte stationer. Hvis det sker, opstår der en flaskehals med spildtid til følge.
-
-Bestilling af uddannelsesmateriel
-
-Der kan være fordele ved, at det er dig, der bestiller det uddannelsesmate-riel, der skal anvendes til lektionen. Nogle gange, fordi det støtter instruk-tørerne i deres forberedelse, andre gange, fordi det kan lette koordination internt i enheden, hvis det er dig, der, som den fagansvarlige, står for ma-teriel. Der kan også være situationer, hvor det at bestille og afhente mate-riellet bliver uhensigtsmæssigt omkostningsfyldt, hvis du lader hver enkelt instruktør gøre det selv.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-84
-
-Et eksempel er skiver, der skal hentes på et depot længere væk. Hvis hver DEL selv skal hente, tager det tid, og der anvendes måske også flere køre-tøjer til formålet. Hvis det bliver gjort samlet, har du øget effektiviteten. Du behøver selvfølgelig ikke indsætte dig selv som pedel for dine instruktører. Du kan sagtens nøjes med at stå for bestilling og lade en eller flere af in-struktørerne hente på et passende tidspunkt. Alt dette er noget, instruktør-møderne kan anvendes til at koordinere.
-
-Koordination med naboenheder
-
-I nogle situationer opstår der behov for at koordinere med andre enheder end din egen. Det kan f.eks. ske ved anvendelse af eksterne faciliteter som GSIMS, C-øvelseshus eller andre uddannelsesspecifikke lokaliteter. Selv om NK har gjort alt for at skaffe dig det, du skal bruge, kan der opstå udfordrin-ger, hvad angår faciliteter eller uddannelsesmateriel. Derfor kan der være situationer, hvor det er mest hensigtsmæssigt, at du koordinerer med kolle-gaer uden for din enhed.
-
-Hvis det er en større koordineringsopgave, er det oftest hensigtsmæssigt at lade NK stå for det eller som minimum være med i processen. Men i andre situationer kan det være nok at se din kollega i øjnene og aftale, at hans/ hendes enhed skal hurtigt væk fra faciliteten, fordi I selv skal anvende den lige efter - eller omvendt. Det øger soldaternes læring, hvis sådanne ting er på plads, og de ikke oplever ventetid/spildtid, fordi der er opstået misforstå-elser i tilrettelæggelsesprocesserne.
-
-Aktivitetsbeskrivelse til enhedsuddannelse
-
-Efterhånden som du opnår rutine i dit virke som faglærer, og afhængigt af hvilke fag du får ansvaret for, kan du sagtens få til opgave at gennemføre større aktiviteter for dele af din enhed. Det kan både dreje sig om enheds-uddannelse på øvelser og i skydeterræn. Disse aktiviteter er en væsentlig del af enhedens samlede uddannelse og kræver derfor særlig planlægning og tilrettelæggelse. I HRN 210-910, beskrives det, hvordan enheden skal planlægge sin enhedsuddannelse.
-
-
-
-
-
-
-
-
-
-85
-
-I det nævnte reglement er en udførlig gennemgang af, hvordan du skal lave en aktivitetsbeskrivelse til disse former for enhedsuddannelse. For at tilgå aktivitetsbeskrivelsen henvises der til HRN 210-910.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-86
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-KAPITEL 4 - GENNEMFØRELSE
-
-I dette kapitel om gennemførelse får du et andet perspektiv på gennemfø-relse end det, du havde som instruktør. Som faglærer er dit fokus ikke på gennemførelsen af den enkelte lektion, men på gennemførelse af faget som helhed.
-
-I kapitlet berøres alle faglærerens fire roller. Forudsætningen for at kunne udfylde en hvilken som helst af disse roller er, at du har modtaget tilba-gemeldinger eller selv gjort nogle observationer af gennemførelsen af ud-dannelsen. Hvordan disse tilbagemeldinger og observationer kan indhentes, beskrives i de næste afsnit. Derefter beskrives det, hvordan du kan bruge den indsigt, du har fået gennem tilbagemeldinger eller observationer i de forskellige roller, du indtager som faglærer.
-
-
-
-
-
-
-
-
-87
-
-4.1 Observation af uddannelse
-
-I din tid som instruktør brugte du observation af uddannelse som grundlag for din evaluering af læringsmålene. Som faglærer skal du nu observere både gennemførelsen af faget, soldaternes udvikling og instruktørernes vir-ke for at kunne evaluere og identificere potentielle udviklingsbehov.
-
-Når du selv observerer, skal du forsøge at forholde dig så objektivt som muligt til faglige mål.
-
-Her vil blive gennemgået nogle få perspektiver på observation.
-
-Struktureret eller ustruktureret observation
-
-Med struktureret observation menes, at du på forhånd har besluttet, hvor-dan, og efter hvad, du vil observere. Kontrolskemaer er eksempler på struk-tureret observation. Det kan være sværere end som så at lave observa-tion af undervisning, da der ofte sker mange ting på en gang. Derfor kan struktureret observation hjælpe dig med at holde fokus på det, du vil kigge efter. Ulempen er, at den kan give dig skyklapper på, og du derfor ikke ser helheder, som kan være relevante for at forstå de delelementer, du har ob-serveret.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-88
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Med ustruktureret observation menes, at du går til opgaven med et åbent sind og tager de indtryk til dig, der måtte dukke op.
-
-Ustruktureret observation har den fordel, at du kigger på helheden og først derefter identificerer mønstre, som kan være af betydning, og som du ikke på forhånd vidste, du ville kigge efter.
-
-Ulempen er, at det kræver meget at holde øje med det hele, og får du ikke noteret dine observationer undervejs, kan de blive unøjagtige, hvis du sene-re skal prøve at genskabe dem efter hukommelsen.
-
-Direkte eller indirekte observation
-
-I det andet perspektiv skelnes der mellem direkte og indirekte observation.
-
-Med direkte observation menes, at du er til stede og selv observerer situa-tionerne.
-
-Direkte observation giver dig mange flere indtryk og informationer, ikke kun hvad angår pædagogikken og fagligheden men også stemning, kultur etc. Ulempen kan være, at din tilstedeværelse kan påvirke situationen, da de fleste bliver påvirket, når de føler, de observeres af deres foresatte.
-
-
-
-89
-
-Indirekte observation er, når du ikke selv har været til stede og indsamle data, men observerer data, en anden har indsamlet, som f.eks. en video-optagelse af en lektion, resultater af prøver, samtaler med dem, der har deltaget etc.
-
-Indirekte observation giver dig muligheden for at fordybe dig i de tilveje-bragte data og finde flere ting og detaljer. Ser du f.eks. en videooptagelse af en lektion, vil du måske få øje på detaljer, du ikke ville have fået øje på, hvis du havde observeret undervisningen direkte, og observationerne kan veri-ficeres af andre. Ulempen er, at data er løsrevet fra konteksten og miljøet, samt at datakvaliteten kan variere meget.
-
-4.2 Hvor og hvordan skal du bruge dine observationer?
-
-I det følgende gives eksempler på, hvordan du kan anvende observationerne i de forskellige faglærerroller:
-
-Forfatter af læringsplan
-
-Observationer kan give inspiration til ændringer i disponering af tiden, for-slag til undervisningsmetoder, didaktiske overvejelser, såsom fysiske ram-mer, og andet, der kan skrives ind i læringsplanen. Sørg derfor for at forank-re dine observationer til senere brug.
-
-Rådgiver for chef og NK
-
-Dine observationer kan også give input til potentielle omprioriteringer eller reguleringer af forløbet. Observationerne kan danne grundlag for en dialog med chefen om dennes prioriteringer eller med NK angående justeringer af tilrettelæggelsen af forløbet.
-
-Udvikler af instruktører
-
-Det er tidligere beskrevet, at en af dine opgaver er at varetage den faglige udvikling af instruktørerne inden for dit fagområde. Dine observationer af instruktørernes undervisning skaber et relevant fundament for din tilbage-melding til dem.
-
-Tiden til tilbagemelding er ofte knap, men tilbagemelding er et meget vigtigt punkt, da det er her, soldaten/instruktøren får hjælp af den erfarne til at re-flektere over gode og dårlige opgaveløsninger. Via refleksion er der mulighed
-
-
-
-
-90
-
-for læring, der har en god chance for at bide sig fast, hvis tilbagemeldingen gives på den rigtige måde.
-
-Fagekspert for enhedens personel
-
-Selv om det er instruktørerne, der står med den store del af den praktiske undervisning, har du selvfølgelig også et ansvar for udvikling af de soldater, du har med at gøre. Det kan have stor værdi for den enkelte soldat at vide, at du som faglærer er en kompetenceperson, de kan gå til. Nogle soldater er dybt engagerede i de forskellige fag og har interesser, der ligger ud over det, der er beskrevet i læringsplanen. Det kan betyde, at instruktørerne nogle gange kommer til kort over for spørgsmål i undervisningen. Observerer du sådanne episoder, er det en god idé, at du som faglærer er tilgængelig.
-
-Ud over de soldater, der er særligt nysgerrige, er der også nogle, der blot søger faglig afklaring inden for pensum. De har måske ikke villet spørge instruktørerne i undervisningssituationen eller har som nævnt ikke fået et fyldestgørende svar. Når sådanne situationer observeres, har du en god mulighed for at påvirke soldaternes oplevelse af uddannelsesforløbet, ikke alene inden for dit fag, men også i forhold til deres oplevelse i almindelighed.
-
-Tilbagemeldingsmetoder
-
-Når der i dette afsnit beskrives metoder til tilbagemelding, skal dette ikke forveksles med evaluering af faget (evaluering behandles i kapitel 5). Ne-denstående er den type tilbagemelding, som gives til instruktøren umiddel-bart efter afholdt undervisning, og er derfor placeret i kapitlet om gennem-førelse.
-
-Alle instruktører har arbejdet med tilbagemelding til soldater. Tilbagemel-dinger kan have mange former, lige fra den daglige snak om småjusterin-ger til mere formelle tilbagemeldinger i forbindelse med daglig uddannelse, skydninger eller enhedsuddannelse. Nogle af de værktøjer, der typisk er i brug, er ros-ris-ros eller tre fastholdelsespunkter og tre forbedringspunkter.
-
-Du skal kunne give tilbagemelding, både til soldaterne og til instruktørerne, med henblik på deres videre udvikling.
-
-Tilbagemelding, der fremmer modtagerens refleksion og tvinger ham/hende til overvejelser vedrørende opgaveløsningen, har oftest stærkere påvirkning
-
-
-
-91
-
-end almindelig videregivelse af observationer. En af de metoder, der kan anvendes, er udviklet af Karl Tomm. Metoden inkluderer både lineær afkla-ring af det skete, og hvad der så skal gøres ved det, og cirkulær afklaring af årsager og muligheder. 
-
-
-Se mere på FELS.dk om metoden.
-
-
-Enhver tilbagemelding, der bliver mødt med modstand, vil pr. definition falde til jorden, når du har vendt ryggen til. Derfor bør du også have et kendskab til, hvilke faktorer der kan udløse modstand mod læring og tilbagemeldinger.
-
-Knud Illeris har formuleret en model om læring, som bl.a. også behandler "Barrierer mod læring". I modellen beskrives, hvilke udtryk en sådan mod-stand kan antage, så du kan være opmærksom på disse og enten forsøge at undgå, de opstår, eller minimere konsekvenserne af potentielle barrierer mod læring. 
-
-
-Se mere på FELS.dk om modellen.
-
-
-Endelig skal du også sørge for, din tilbagemelding fører til læring, som kan håndteres af den tilbagemeldte og ikke bliver afvist, fordi soldaten eller in-struktøren finder den uoverskuelig at følge op på.
-
-Vygotsky har formuleret en model, "Zonen for nærmeste udvikling", som du kan finde mere om på FELS.dk.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-92
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-KAPITEL 5 - EVALUERING
-
-Femte kapitel handler om evalueringen af faget. Den første del af kapit-let beskriver sammenhængen mellem evaluering og kontrol i uddannelsen. Derefter ses på de praktiske dele af evalueringen, såsom hvem der skal have hvad at vide, men også på, hvordan du sikrer, at erfaringer og evaluering fra et netop gennemført forløb forankres og anvendes til udvikling af lærings-planen, enhedens instruktører og/eller dig selv som faglærer.
-
-5.1.  Anvendelse af evaluering og kontrol som begreber
-
-Ligesom i instruktørvirke, skelnes der her mellem anvendelsen af ordene kontrol og evaluering. Kontrollen retter sig mod nemt mål- og observerbare elementer, mens evalueringen bruges når der skal måles på mere komplek-se og sammenhængende handlinger. Evaluering kan dannes på baggrund af både konkrete resultater fra kontroller, men også ved at bringe andre input ind i det samlede billede. Et eksempel, ud over de meget konkrete resultater fra del- eller slutkontroller, kunne være en beskrivelse af oplevelser fra en af de instruktører eller soldater, der har været igennem dit uddannelsesforløb.
-
-
-
-93
-
-Et andet eksempel kunne være at lade din vurdering af f.eks. instruktører-nes niveau eller engagement, indgå i den samlede evaluering.
-
-Under en skydeperiode kan både kontrol og evaluering anvendes, men du skal som faglærer være præcis i din anvendelse af begreberne. Ved gen-nemførelse af en reaktionsbane, kan elementer fra både SKYT og GV-fagene kontrolleres. Faglæreren udfærdiger et kontrolskema som instruktøren kan anvendes, hvor elementer fra begge fag indgår. Entydige emner til kontrol kunne være:
-
-Havde soldaten gjort "Klar til kamp?"
-
-Anvendte soldaten "Indekser - verificer - pres"?
-
-Traf soldaten skiven?
-
-Disse svar fra kontrolskemaet kan give input til en karakter eller en bedøm-melse om bestået/ikke bestået.
-
-Evaluering af elementer fra SKYT og GV-fagene kan gennemføres på en handlebane. Her skal der observeres mod handlinger, som ikke er entydigt målbare:
-
-Indtog soldaten lavest mulige skydestilling? (afhængig af bevoksningen kan dette variere fra soldat til soldat).
-
-Valgte soldaten en alternativ stilling efter ildåbning? (der kan være flere mu-ligheder, men opgaven skal kunne løses fra stillingen).
-
-Det er stadig væsentligt med et skema, til at fastholde de observationer, der skaber grundlaget for evalueringen. Dette skema laves af faglæreren, med henvisning til relevante mål fra de involverede fag. Men fordi de rigtige løsninger kan se forskellige ud, skal evalueringsformen anvendes på dette stadie i uddannelsen. Evalueringen er en mere kompleks sammenfatning som inddrager kontekst, forventet handling og faktisk handling.
-
-
-
-
-
-
-
-94
-
-5.2.  Evaluering af faget
-
-Når uddannelsen er gennemført, skal der samles op på, hvordan det er gået. Ikke kun på soldaternes målopfyldelse, selv om det selvfølgelig er særdeles vigtigt, men også på måden uddannelsen er blevet gennemført, jf. faglære-rens opgave fra starten af bogen:
-
-
-
-
-At sikre en struktureret gennemførelse og revision eller udvik-ling af fag, som giver kompetente soldater på en, for enheden, så effektiv måde som muligt.
-
-
-
-Grundlaget for en relevant evaluering af faget er, at der i forbindelse med gennemførelsen er foretaget observationer af, om forløbet er gået som plan-lagt, og om resultaterne er blevet som forventet. To vigtige kontrolarter til dette er hhv. forløbskontrol og resultatkontrol.
-
-Forløbskontrol og resultatkontrol (forfatter af læringsplaner) Forløbskontrollen kan både udføres af dig selv som faglærer og af andre fra enheden med uddannelsesansvar. Denne kontrol kan være helt elemen-tær, f.eks. at du som faglærer holder øje med, om soldaterne har deltaget i lektion x, fordi denne lektion er en vigtig forudsætning for den næste, der kommer. Kontrollen kan også bestå i, at f.eks. chef eller NK observerer afholdte lektioner og holder øje med, om der er et passende antal instruk-tører til stede, om de forventede hjælpemidler og uddannelsesfaciliteter er tilgængelige, eller om de metoder, der bliver anvendt i undervisningen, er de bedste til formålet. Fælles for de forskellige dele af forløbskontrollen er, at hvis det observerede kan rettes til undervejs i forløbet, gøres dette. Hvis ikke, bør afvigelserne noteres og rettes til næste gennemførelse, eller når planlægningen justeres.
-
-
-
-
-
-
-
-
-
-
-
-
-95
-
-Resultatkontrollen handler om at kontrollere, om soldaterne har nået må-let. Har de det, er det naturligvis godt, men du skal stadig lave en analyse af både din resultat- og forløbskontrol for at se på, hvordan du kan udvikle faget.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Til at vurdere målopfyldelse har du data, indsamlet på baggrund af din be-dømmelsesplan, at forholde dig til.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Har soldaterne ikke opfyldt fagets læringsmål, skal du hurtigst muligt have identificeret årsagen. Kilderne til manglende målopfyldelse kan være vidt forskellige, og her skal du kombinere observationerne fra dine forløbs- og resultatkontroller.
-
-
-
-96
-
-Forskellige årsager til manglende målopfyldelse kan være: Læringsplanen er upræcis/mangelfuld/dårligt struktureret, mangler i uddannelsesplanlæg-ningen i enheden, manglende kompetencer hos instruktører og delingsfø-rere eller manglende faciliteter/materiel. Desuden kan uhensigtsmæssige didaktiske valg eller manglende viden om soldaternes forudsætninger være medvirkende til en manglende målopfyldelse. I princippet alle elementer, som kunne være blevet opdaget ved en systematisk gennemførelse af for-løbskontrol, hvilket der dog kan mangle ressourcer til undervejs i forløbet.
-
-Et eksempel på hvordan der kan skabes input til en evaluering af faget, ved kontrol af enkeltelementer til de forskellige faser af fagets planlægning, til-rettelæggelse og gennemførelse.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Ved at have planlagt hvilke emner, der skal indgå i den endelige evaluering, er du allerede i gang med at skabe en struktur til dine observationer i for-løbskontrollen, som det også er beskrevet under "Struktureret observation" i KAP. 4. De kan altså både danne grundlag for en tilbagemelding på instruk-tørvirket, men også, som her, give input til den samlede evaluering af faget.
-
-
-
-
-
-97
-
-I løbet af fagets gennemførelse er det vigtigt, at du gemmer de forskellige observationer, enten digitalt eller ved at opbevare kontrolskemaerne til de skal anvendes i evalueringen. Når du sørger for til stadighed at have dine observationer tilgængelige, giver du dig selv de bedste muligheder for at evaluere faget præcist og objektivt, og dermed sikre den fortsatte udvikling af dit fag, og dig selv som faglærer.
-
-Tilbagemelding til chef/NK (rådgiver for chef og NK)
-
-Efter gennemførelsen skal du sikre dig, at chef og NK får din vurdering af både uddannelsesresultatet og -forløbet, så din vurdering kan være supple-ment til deres egne observationer.
-
-I tilbagemeldingen til din chef skal du være ærlig i både observationer og analyse, også hvis noget ikke er gået som planlagt. Denne ærlige tilbage-melding skal være med til at sikre, at næste gennemførelse af faget får det forventede udbytte, evt. via relevante justeringer fra chefens uddannelses-direktiv. Dele af tilbagemeldingen kan bestå af kommentarer om, hvorvidt du som faglærer fik tildelt de ressourcer, du blev stillet i udsigt under plan-lægningsfasen, eller om de rammer, du blev tildelt fra chef og NK, på anden vis er ændret. Du har i den forbindelse et ansvar for, at faglærervirket får bedre vilkår til næste uddannelsesperiode, ved at beskrive kompagniledel-sens bidrag til gennemførelse af dit fag.
-
-Evaluering af samarbejde med instruktører (ansvarlig for faglig ud-vikling af instruktører)
-
-Ud over de tilbagemeldinger til instruktørerne, der er gennemført efter af-holdte lektioner, og som blev beskrevet i kapitel 4, er det hensigtsmæssigt at gennemføre en overordnet evaluering af hele fagets gennemførelse. I en sådan evaluering kan gode elementer fra den netop afsluttede gennemfø-relse blive konsolideret. Men der kan også afdækkes behov for ændringer i kommende gennemførelser.
-
-Det kan handle om anvendte metoder i undervisningen, men også andet, som f.eks. instruktørens personlige ambitioner. Nogle instruktører har må-ske ønske om, at deres fremtidige udvikling går i en anden retning, og vil derfor gerne undervise i andre fag. Eller de kan have ønske om at blive tildelt andre roller og andet ansvar i faget. På den måde kan en evaluering af faget danne et godt fundament for tilrettelæggelsen af næste gennemførelse.
-
-
-
-98
-
-Faglærerens egen udvikling
-
-Slutteligt skal det handle om din egen udvikling som faglærer. Se på dig selv og dit virke i funktionen, tag bestik af, hvordan det går, og hvordan du kan blive endnu dygtigere.
-
-• At være faglærer er også at lede andre mellemledere, så kan ledel-sesuddannelse forstærke løsningen af denne opgave?
-
-• Du er enhedens fagekspert. Kan det blive bedre? Er der kurser, der giver dig en stærkere faglig profil?
-
-• Du er kompagniledelsens rådgiver på dit fagområde. Er der viden om uddannelsesplanlægning og styring i kompagniramme, der kan styrke denne rådgivning? Hvordan kan du i så fald opnå denne?
-Er der hjælp at hente internt i enheden, eller findes der relevante kurser?
-
-• At lave uddannelsesdokumentation, som f.eks. læringsplaner, har en vis kompleksitet. Er der relevant efteruddannelse, som kan hjælpe dig til at holde kvaliteten oppe, så enheden får bedst mu-lige produkt?
-
-• At være faglærer kræver også viden om pædagogik og didaktik. Kan pædagogisk efteruddannelse styrke dig i din opgaveløsning?
-
-Disse punkter kan ligne det, der er beskrevet i kapitel 1 om faglærerens faglighed. En evaluering efter fagets gennemførelse kan være et passende tidspunkt også at evaluere egen faglighed og ambitioner og dermed afklare, om der er dukket nye behov for faglig udvikling op.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-99
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Scan QR-koden og log på FELS-LMS.
