@@ -157,14 +157,14 @@ async function callback(request, response) {
         const { threadId } = JSON.parse(body);
         const threadMessages = await openai.beta.threads.messages.list(
           threadId
-        );
+        ); // Fetch messages for the thread
         let messages = threadMessages.data.map((message) => ({
           role: message.role,
           text: message.content.map((content) => content.text.value),
-        }));
+        })); // Map the messages to a simpler format
         messages.reverse(); // Reverse the array of messages
         response.writeHead(200, { "Content-Type": "application/json" });
-        return response.end(JSON.stringify({ messages }));
+        return response.end(JSON.stringify({ messages })); // Return the messages
       } catch (error) {
         console.error("Error fetching messages:", error);
         response.writeHead(500, { "Content-Type": "application/json" });
@@ -195,6 +195,7 @@ async function callback(request, response) {
           );
         }
 
+        // Initialize variables for assistant and thread IDs
         let assistantId;
         let threadId = currentThread;
 
@@ -210,7 +211,7 @@ async function callback(request, response) {
               })
             );
           }
-          assistantId = assistant.id;
+          assistantId = assistant.id; // Store the assistant ID
         } catch (error) {
           console.error("Error creating assistant:", error);
           throw error;
@@ -220,7 +221,7 @@ async function callback(request, response) {
           let thread;
           let user;
           try {
-            thread = await createThread();
+            thread = await createThread(); // Create a new thread
           } catch (error) {
             console.error("Error creating thread:", error);
             response.writeHead(500, { "Content-Type": "application/json" });
@@ -228,7 +229,7 @@ async function callback(request, response) {
           }
 
           try {
-            user = await getUser(userName);
+            user = await getUser(userName); // Fetch the user
             if (!user) {
               response.writeHead(404, { "Content-Type": "application/json" });
               return response.end(
@@ -242,7 +243,7 @@ async function callback(request, response) {
           }
 
           try {
-            await addThreadToUser(user.name, thread);
+            await addThreadToUser(user.name, thread); // Add the thread to the user
             threadId = thread;
           } catch (error) {
             console.error("Error adding thread to user:", error);
@@ -253,7 +254,7 @@ async function callback(request, response) {
 
         try {
           console.log("Adding user message to thread...");
-          await addMessage(threadId, question);
+          await addMessage(threadId, question); // Add the user message to the thread
         } catch (error) {
           console.error("Error adding user message to thread:", error);
           throw error;
@@ -272,7 +273,7 @@ async function callback(request, response) {
           response.writeHead(200, {
             "Content-Type": "text/event-stream",
             "Cache-Control": "no-cache",
-            Connection: "keep-alive",
+            "Connection": "keep-alive",
             "Thread-Id": threadId, // Include thread ID in the response headers
           });
 
@@ -283,25 +284,25 @@ async function callback(request, response) {
             })
             .on("textCreated", () => {
               console.log("Event: textCreated");
-              response.write("data: \nassistant >\n\n");
+              response.write("data: \nassistant >\n\n"); // Write a new line to the response
             })
             .on("textDelta", (textDelta) => {
               console.log("Event: textDelta:", textDelta.value);
-              response.write(`data: ${textDelta.value}\n\n`);
+              response.write(`data: ${textDelta.value}\n\n`); // Write the assistant response to the response
             })
             .on("toolCallCreated", (event) => {
               console.log("Event: toolCallCreated:", event.type);
-              response.write(`data: [TOOL CALL] ${event.type}\n\n`);
+              response.write(`data: [TOOL CALL] ${event.type}\n\n`); // Write a tool call event to the response
             })
             .on("end", () => {
               console.log("Event: end");
-              response.write("data: [DONE]\n\n");
+              response.write("data: [DONE]\n\n"); // Write a done event to the response
               return response.end(); // End response when streaming finishes
             })
             .on("error", (error) => {
               console.error("Stream error:", error);
               if (!response.writableEnded) {
-                response.write("data: [ERROR]\n\n");
+                response.write("data: [ERROR]\n\n"); // Write an error event to the response
                 return response.end(); // End response if an error occurs
               }
             });
@@ -360,6 +361,7 @@ async function callback(request, response) {
   );
 }
 
+// Funktion til at hente filstien fra URL
 function getPathName(url) {
   let questionMark = url.indexOf("?");
   if (questionMark < 0) questionMark = url.length;
@@ -370,6 +372,8 @@ function getPathName(url) {
   return url.substring(slash + 1, questionMark);
 }
 
+// Funktion til at oprette en assistent, hvis den ikke allerede findes
+// med tilhørende Vector Store
 async function createAssistantIfNeeded() {
   // Initialize OpenAI client
   dotenv.config();
@@ -404,13 +408,14 @@ async function createAssistantIfNeeded() {
       (
         path // Add the paths to the files
       ) => fs.createReadStream(path)
-    );
+    ); // Create a read stream for each file
 
     // Create a vector store including our two files.
     let vectorStore = await openai.beta.vectorStores.create({
       name: "Hjemmeværnsskolens dokumentation",
     });
 
+    // Upload the files to the vector store
     await openai.beta.vectorStores.fileBatches.uploadAndPoll(vectorStore.id, {
       files: fileStreams,
     });
@@ -434,6 +439,8 @@ async function createAssistantIfNeeded() {
       },
     });
     console.log("New assistant created:", assistant);
+
+    // List the vector store files
     const vectorStoreFiles = await openai.beta.vectorStores.files.list(
       _vectorStoreId
     );
@@ -457,10 +464,10 @@ async function createThread() {
   const openai = new OpenAI({ apiKey, organization });
   try {
     console.log("Creating a new thread...");
-    const thread = await openai.beta.threads.create();
+    const thread = await openai.beta.threads.create(); // Create a new thread
     let threadId = thread.id;
     console.log("Thread created with ID:", threadId);
-    return threadId;
+    return threadId; // Return the thread ID
   } catch (error) {
     console.error("Error creating thread:", error);
     throw error;
@@ -477,11 +484,11 @@ async function getUser(userName) {
   }
   const openai = new OpenAI({ apiKey, organization });
   try {
-    const data = await fs.readFileSync("./assets/jsonLogin/users.json", "utf8");
+    const data = await fs.readFileSync("./assets/jsonLogin/users.json", "utf8"); // Read user data from file
     const users = JSON.parse(data);
 
-    const user = users.find((user) => user.name === userName);
-    return user;
+    const user = users.find((user) => user.name === userName); // Find the user by name
+    return user; // Return the user
   } catch (error) {
     console.error("Error reading user data:", error);
     throw error;
@@ -498,18 +505,14 @@ async function addThreadToUser(userName, threadId) {
   }
   const openai = new OpenAI({ apiKey, organization });
   let user;
-  let users;
   let thread;
   try {
-    const data = await fs.readFileSync("./assets/jsonLogin/users.json", "utf8");
-    users = JSON.parse(data);
-
-    user = users.find((user) => user.name === userName);
+    user = await getUser(userName); // Use getUser function to get the user
     if (!user) {
       throw new Error("User not found");
     }
   } catch (error) {
-    console.error("Error reading user data:", error);
+    console.error("Error getting user data:", error);
     throw error;
   }
   try {
@@ -517,17 +520,18 @@ async function addThreadToUser(userName, threadId) {
     // Make object with thread ID and created_at to push to user threads
     thread = { id: _currentThread.id, created_at: _currentThread.created_at };
   } catch (error) {
-    console.error("Error repacking thread:", error);
+    console.error("Error retrieving thread data:", error);
     throw error;
   }
+  // Add the thread to the user's threads
+  user.threads.push(thread);
   try {
-    user.threads.push(thread); // Add thread ID to user"s threads
-    await fs.writeFileSync(
-      "./assets/jsonLogin/users.json",
-      JSON.stringify(users, null, 4)
-    );
+    const data = await fs.readFileSync("./assets/jsonLogin/users.json", "utf8"); // Read user data from file
+    const users = JSON.parse(data);
+    const updatedUsers = users.map((u) => (u.name === userName ? user : u)); // Update the user data
+    await fs.writeFileSync("./assets/jsonLogin/users.json", JSON.stringify(updatedUsers, null, 2)); // Write the updated user data to the file
   } catch (error) {
-    console.error("Error updating user threads:", error);
+    console.error("Error updating user data:", error);
     throw error;
   }
 }
@@ -546,7 +550,7 @@ async function addMessage(threadId, message) {
     await openai.beta.threads.messages.create(threadId, {
       role: "user",
       content: message,
-    });
+    }); // Add the user message to the thread
   } catch (error) {
     console.error("Error adding user message to thread:", error);
     throw error;

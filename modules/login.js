@@ -9,7 +9,7 @@ export function createLoginComponent(containerId, updateUserName) {
                 <img src="assets/hjv_logo.svg" alt="Login" width="100">
                 <br>
                 <h1>Velkommen</h1>
-                <p>For at kunne anvende Verner, skal du først logge ind!</p>
+                <p>For at kunne anvende Verner, skal du først logge ind.</p>
                 <br>
                 <label for="username">Username:</label>
                 <input type="text" id="username" required>
