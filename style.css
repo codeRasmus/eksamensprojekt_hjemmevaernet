@@ -283,10 +283,6 @@ header #nav_logo {
   margin: 0 0 0 10px;
 }
 
-.user #user_info div #user_name::before {
-  content: var(--userName);
-}
-
 #user_info div {
   display: flex;
   justify-content: flex-start;
