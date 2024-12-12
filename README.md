@@ -4,6 +4,6 @@ Brugernavn og adgangskoder kan findes i /assets/jsonLogin/users.json
 
 
 eller vent...
-Hint ⤵️ 
+Hint -
 User: Underviser
 Password: underviser123
