@@ -141,7 +141,7 @@ async function askAssistant(userInput) {
           if (text === "[DONE]") {
             // Når vi er færdige, tilpas Markdown-strukturen
             finalResponse = finalResponse
-              .replace(/(\d+)\.(\s*\*\*)/g, "**$1.**$2") // Inkluder tal og punktum indenfor **
+              .replace(/(\d+)\.(\s*\*\*)/g, "\n\n**$1.**$2") // Inkluder tal og punktum indenfor **
               .replace(/(#+)/g, "\n$1") // Sikr linjeskift før headings
               .replace(/- /g, "\n- "); // Sikr linjeskift før listeelementer
             console.log("Indsætter svar:", finalResponse);
